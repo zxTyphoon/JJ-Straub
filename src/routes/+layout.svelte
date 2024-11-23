@@ -29,7 +29,7 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase">Jue (ü?) rgen J Straub</strong>
+				<strong class="text-xl uppercase">JJ Straub</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<a
