@@ -29,9 +29,17 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase">JJ Straub</strong>
+				<a href="/">
+				<strong class="text-xl uppercase" >JJ Straub</strong>
+			</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
+				<a
+					class="btn btn-sm variant-ghost-surface"
+					href="/contact"
+				>
+					Contact
+				</a>
 				<a
 					class="btn btn-sm variant-ghost-surface"
 					href="https://www.instagram.com/jjstraub1"
@@ -56,6 +64,7 @@
 				>
 					Filmmakers Profile
 				</a>
+				
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>

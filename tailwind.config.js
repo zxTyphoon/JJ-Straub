@@ -1,14 +1,21 @@
-import { join } from 'path'
+import { join } from 'path';
+import { fileURLToPath } from 'url';
 
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
-import { skeleton } from '@skeletonlabs/tw-plugin'
+import { skeleton } from '@skeletonlabs/tw-plugin';
+
+// Resolve __dirname in an ES Module context
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 export default {
 	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')],
+	content: [
+		'./src/**/*.{html,js,svelte,ts}',
+		join(__dirname, 'node_modules', '@skeletonlabs', 'skeleton', '**/*.{html,js,svelte,ts}')
+	],
 	theme: {
-		extend: {},
+		extend: {}
 	},
 	plugins: [
 		forms,
@@ -18,10 +25,10 @@ export default {
 				preset: [
 					{
 						name: 'hamlindigo',
-						enhancements: true,
-					},
-				],
-			},
-		}),
-	],
+						enhancements: true
+					}
+				]
+			}
+		})
+	]
 };
