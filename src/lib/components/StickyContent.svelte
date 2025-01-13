@@ -9,26 +9,18 @@
 </script>
 
 <section class="grid grid-cols-2 gap-4">
-	<slot />
 	<h2 class="sticky" class:isStuck data-position="top" use:sticky={true} on:stuck={handleStuck}>
 		Hello, I'm Juergen Jean (JJ) Straub.
 		<br /><br />
 		As an actor my focus is characters, which I studied with Lee Strasberg, Stella Adler and Uta Hagen
 		in NYC.
 		<br /><br />
-		Represented by the www.Empire-Agency.com. As a dual citizen, German and American, I live in Berlin
+		Represented by 
+		<a href="https://www.empire-agency.com" target="_blank"> Empire-Agency</a>. As a dual citizen, German and American, I live in Berlin
 		now.
 		<br /><br />
-		I am passionate about bringing stories to life in ways that captivate and inspire.
-		<br /><br />
-		Acting is not just my profession—it's my lifelong passion, and I strive to make every performance
-		authentic and memorable.
-		<br /><br />
-		Collaboration is at the heart of my work. Whether working with directors, writers, or fellow actors,
-		I aim to create compelling and meaningful characters.
-		<br /><br />
-		Feel free to reach out to my agent
-		<a href="mailto:linda.b@empire-agency.com?bcc=jj@jjstraub.com">Linda Bose</a>
+		Feel free to reach out to my agent Linde Bose by <br>
+		<a href="mailto:linda.b@empire-agency.com?bcc=jj@jjstraub.com">E-Mail (linda.b@empire-agency.com)</a> or <br> <a href="tel:+493020059089">Phone (+49 (0) 3020059089)</a>
 		to discuss potential collaborations or upcoming opportunities.
 		<br /><br />
 		Want to see some of my work?
@@ -38,6 +30,7 @@
 		</a>
 		<br /><br />
 	</h2>
+	<slot />
 </section>
 
 <style>
@@ -47,8 +40,8 @@
 
 	.sticky {
 		position: sticky;
-		padding: 2rem;
-		background-color: rgba(128, 128, 128, 0.5);
+		padding: 1rem;
+		background-color: rgba(150, 150, 150, 0.75);
 		border-radius: 10px;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		transition: all 0.3s ease-in-out;
@@ -58,10 +51,12 @@
 		justify-self: end;
 		margin-bottom: 20px;
 		height: fit-content;
+		margin-left: 10px;
+		margin-right: -10px;
 	}
 
 	.sticky[data-position='top'] {
-		top: 1px;
+		top: 5px;
 	}
 
 	a {

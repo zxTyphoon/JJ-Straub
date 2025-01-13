@@ -24,7 +24,7 @@
 		<AppBar>
 			<svelte:fragment slot="lead">
 				<a href="/">
-				<strong class="text-4xl ml-5 uppercase" >JJ  Straub</strong>
+				<strong class="text-4xl ml-2 uppercase" >JJ  Straub</strong>
 			</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
@@ -32,7 +32,7 @@
 					class="btn btn-sm variant-ghost-surface text-xl "
 					href="/contact"
 				>
-					Contact
+					Legal
 				</a>
 				<a
 					class="btn btn-sm variant-ghost-surface text-xl "
@@ -60,17 +60,10 @@
 				</a>
 				<a
 					class="btn btn-sm variant-ghost-surface text-xl "
-					href="/version2"
+					href="/"
 				>
-					Version2
+					Curriculum Vitae
 				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface text-xl "
-					href="/version3"
-				>
-					Version3
-				</a>
-
 				
 			</svelte:fragment>
 		</AppBar>
