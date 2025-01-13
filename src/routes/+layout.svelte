@@ -17,31 +17,25 @@
 	hljs.registerLanguage('typescript', typescript);
 	storeHighlightJs.set(hljs);
 
-	// Floating UI for Popups
-	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
-	import { storePopup } from '@skeletonlabs/skeleton';
-	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
-<!-- App Shell -->
 <AppShell>
 	<svelte:fragment slot="header">
-		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
 				<a href="/">
-				<strong class="text-xl uppercase" >JJ Straub</strong>
+				<strong class="text-4xl ml-5 uppercase" >JJ  Straub</strong>
 			</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<a
-					class="btn btn-sm variant-ghost-surface"
+					class="btn btn-sm variant-ghost-surface text-xl "
 					href="/contact"
 				>
 					Contact
 				</a>
 				<a
-					class="btn btn-sm variant-ghost-surface"
+					class="btn btn-sm variant-ghost-surface text-xl "
 					href="https://www.instagram.com/jjstraub1"
 					target="_blank"
 					rel="noreferrer"
@@ -49,7 +43,7 @@
 					Instagram
 				</a>
 				<a
-					class="btn btn-sm variant-ghost-surface"
+					class="btn btn-sm variant-ghost-surface text-xl "
 					href="https://www.facebook.com/JJStraub/"
 					target="_blank"
 					rel="noreferrer"
@@ -57,17 +51,29 @@
 					Facebook
 				</a>
 				<a
-					class="btn btn-sm variant-ghost-surface"
+					class="btn btn-sm variant-ghost-surface text-xl "
 					href="https://www.filmmakers.eu/de/actors/j-j-straub"
 					target="_blank"
 					rel="noreferrer"
 				>
 					Filmmakers Profile
 				</a>
+				<a
+					class="btn btn-sm variant-ghost-surface text-xl "
+					href="/version2"
+				>
+					Version2
+				</a>
+				<a
+					class="btn btn-sm variant-ghost-surface text-xl "
+					href="/version3"
+				>
+					Version3
+				</a>
+
 				
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
-	<!-- Page Route Content -->
 	<slot />
 </AppShell>
