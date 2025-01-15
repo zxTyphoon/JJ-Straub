@@ -34,6 +34,7 @@
 				>
 					Legal
 				</a>
+				<!-- Add Logo instead of name-->
 				<a
 					class="btn btn-sm variant-ghost-surface text-xl "
 					href="https://www.instagram.com/jjstraub1"

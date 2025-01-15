@@ -26,7 +26,7 @@
 	import Reinfressen1 from '$lib/img/JJStraub_empireagency-Reinfressen1.jpg';
 	import Notruf from '$lib/img/JJStraub_empireagency-SAT1-Notruf.jpg';
 	import TJ from '$lib/img/JJStraub_empireagency-TJ.jpg';
-	import Face from '$lib/img/JJStraub_empireagency-Face.jpg';
+	import JJStraub from '$lib/img/JuergenStraub1.jpg';
 
 	import Headshot from '$lib/img/JJStraub_Headshot.jpg';
 
@@ -145,6 +145,14 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
+			<img class="rounded-lg mb-4 w-full" src={JJStraub} alt="JJ Straub" />
+			<!-- 	<figcaption
+				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
+			>
+				JJ Straub
+			</figcaption> -->
+		</figure>
+		<figure class="relative">
 			<img class="rounded-lg mb-4 w-full" src={NYPD} alt="NYPD" />
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
@@ -177,22 +185,6 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={RedBloom} alt="RedBloom CIA" />
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				RedBloom CIA
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Face} alt="JJ Straub" />
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				JJ Straub
-			</figcaption>
-		</figure>
-		<figure class="relative">
 			<img class="rounded-lg mb-4 w-full" src={Jawlock} alt="Jawlock DR Dentist" />
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
@@ -206,6 +198,14 @@
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
 				Feeder - The Vet
+			</figcaption>
+		</figure>
+		<figure class="relative">
+			<img class="rounded-lg mb-4 w-full" src={RedBloom} alt="RedBloom CIA" />
+			<figcaption
+				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
+			>
+				RedBloom CIA
 			</figcaption>
 		</figure>
 		<figure class="relative">
