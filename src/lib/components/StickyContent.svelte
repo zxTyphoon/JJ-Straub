@@ -19,7 +19,7 @@
 		<a href="https://www.empire-agency.com" target="_blank"> Empire-Agency</a>. As a dual citizen, German and American, I live in Berlin
 		now.
 		<br /><br />
-		Feel free to reach out to my agent Linde Bose by <br>
+		Feel free to reach out to my agent Linda Bose by <br>
 		<a href="mailto:linda.b@empire-agency.com?bcc=jj@jjstraub.com">E-Mail (linda.b@empire-agency.com)</a> or <br> <a href="tel:+493020059089">Phone (+49 (0) 3020059089)</a>
 		to discuss potential collaborations or upcoming opportunities.
 		<br /><br />

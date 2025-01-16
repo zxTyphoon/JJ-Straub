@@ -107,45 +107,69 @@
 				Piano Bar - John
 			</figcaption>
 		</figure>
+		<figure class="relative">
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-Kingdom-Come-Deliverance.jpg'}
+				alt="Kingdom Come Deliverance"
+			/>
+			<figcaption
+				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
+			>
+				Kingdom Come Deliverance - Game - Motion Capture
+			</figcaption>
+		</figure>
 		<figure class="relative cursor-pointer">
 			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-TheOffer.jpg'}
-				alt="The Offer"
+			class="rounded-lg mb-4 w-full"
+			src={'/img/JJStraub_empireagency-TheOffer.jpg'}
+			alt="The Offer"
 			/>
 			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
+			class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
-				The Offer
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-RapunzelsFluch2.jpg'}
-				alt="Rapunzel's Curse"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Rapunzels Fluch 2 - Oberkommisar Schulz
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-TheWindow1.jpg'}
-				alt="The Window"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				The Window - Frederick
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
+			The Offer
+		</figcaption>
+	</figure>
+	<figure class="relative">
+		<img
+		class="rounded-lg mb-4 w-full"
+		src={'/img/JJStraub_empireagency-RapunzelsFluch2.jpg'}
+		alt="Rapunzel's Curse"
+		/>
+		<figcaption
+		class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
+		>
+		Rapunzels Fluch 2 - Oberkommisar Schulz
+	</figcaption>
+</figure>
+<figure class="relative">
+	<img
+	class="rounded-lg mb-4 w-full"
+	src={'/img/JJStraub_empireagency-TheWindow1.jpg'}
+	alt="The Window"
+	/>
+	<figcaption
+	class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
+	>
+	The Window - Frederick
+</figcaption>
+</figure>
+<figure class="relative">
+	<img
+		class="rounded-lg mb-4 w-full"
+		src={'/img/JJStraub_Golfing.jpg'}
+		alt="Golfing"
+	/>
+	<figcaption
+		class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
+	>
+		Golfing
+	</figcaption>
+</figure>
+<figure class="relative">
+	<img
+	class="rounded-lg mb-4 w-full"
 				src={'/img/JJStraub_empireagency-SAT1-Notruf.jpg'}
 				alt="SAT1 Notruf"
 			/>
@@ -292,11 +316,14 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_empireagency-Ali-LA.jpg'} alt="Ali" />
+			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_Smiling.jpg'} alt="Smiling" />
+		</figure>
+		<figure class="relative">
+			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_empireagency-Diamanten.jpg'} alt="Diamanten" />
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
-				Diamanten - Alis Boss about to fire him
+				Diamanten - Ali
 			</figcaption>
 		</figure>
 		<figure class="relative">
