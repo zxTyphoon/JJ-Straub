@@ -39,7 +39,7 @@
 	let showBackToTop = false;
 
 	function scrollHandler(event) {
-		showBackToTop = event.currentTarget.scrollTop > 200;
+		showBackToTop = event.currentTarget.scrollTop > 300;
 	}
 
 	function scrollToTop() {
@@ -148,7 +148,7 @@
 	<slot />
 	{#if showBackToTop}
 		<button
-			class="fixed bottom-12 right-12 p-2 bg-primary-700 text-white rounded-full shadow-lg"
+			class="fixed bottom-12 right-12 p-2 bg-primary-800 text-white rounded-full shadow-lg"
 			on:click={scrollToTop}
 		>
 			↑ Top

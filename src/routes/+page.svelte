@@ -14,7 +14,7 @@
 	</div>
 
 	<section class="columns-1 lg:columns-2 xl:columns-3 gap-4 relative bottom-0 left-0 w-full">
-		<div class="absolute bottom-0 left-0 w-full h-1/6 bg-gradient-to-t from-primary-100"></div>
+		<div class="absolute bottom-0 left-0 w-full h-1/6 bg-gradient-to-t from-primary-300"></div>
 		<figure class="relative">
 			<img
 				class="rounded-lg mb-4 w-full"
