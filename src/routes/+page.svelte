@@ -1,55 +1,26 @@
 <script>
-	import Ali from '$lib/img/JJStraub_agenturspotlight-Ali-LA.jpg';
-	import Cutting from '$lib/img/JJStraub_agenturspotlight-CuttingSur.jpg';
-	import EBay from '$lib/img/JJStraub_agenturspotlight-eBay.jpg';
-	import Feeder from '$lib/img/JJStraub_agenturspotlight-Feeder.jpg';
-	import General from '$lib/img/JJStraub_agenturspotlight-General.jpg';
-	import LAKings from '$lib/img/JJStraub_agenturspotlight-LA-Kings.jpg';
-	import Rapunzel from '$lib/img/JJStraub_agenturspotlight-RapunzelsFluch2.jpg';
-	import Sylvia from '$lib/img/JJStraub_agenturspotlight-Sylvia.jpg';
-	import Offer from '$lib/img/JJStraub_agenturspotlight-TheOffer.jpg';
-	import Wald from '$lib/img/JJStraub_agenturspotlight-TheWald.jpg';
-	import Window from '$lib/img/JJStraub_agenturspotlight-TheWindow1.jpg';
-	import Loewe from '$lib/img/JJStraub_agenturspotlight-VonLoewenberg.jpg';
-	import Pate from '$lib/img/JJStraub_empireagency-DerPate-HeadShot.jpg';
-	import Farmer from '$lib/img/JJStraub_empireagency-Farmer.jpg';
-	import FBI from '$lib/img/JJStraub_empireagency-FBI-Karma.jpg';
-	import Jawlock from '$lib/img/JJStraub_empireagency-Jawlock-DR-Dentist.jpg';
-	import Peace from '$lib/img/JJStraub_empireagency-JJ-peace.jpg';
-	import Karma from '$lib/img/JJStraub_empireagency-Karma-PI.jpg';
-	import KinoLoop from '$lib/img/JJStraub_empireagency-L.I.F.E.-KinoLoop.jpg';
-	import Life from '$lib/img/JJStraub_empireagency-Life-KinoLoop.jpg';
-	import NYPD from '$lib/img/JJStraub_empireagency-NYPD.jpg';
-	import Piano from '$lib/img/JJStraub_empireagency-Piano-Bar.jpg';
-	import Professor from '$lib/img/JJStraub_empireagency-Professor.jpg';
-	import RedBloom from '$lib/img/JJStraub_empireagency-RedBloom-CIA.jpg';
-	import Reinfressen1 from '$lib/img/JJStraub_empireagency-Reinfressen1.jpg';
-	import Notruf from '$lib/img/JJStraub_empireagency-SAT1-Notruf.jpg';
-	import TJ from '$lib/img/JJStraub_empireagency-TJ.jpg';
-	import JJStraub from '$lib/img/JuergenStraub1.jpg';
-
-	import Headshot from '$lib/img/JJStraub_Headshot.jpg';
-
 	import StickyContent from '$lib/components/StickyContent.svelte';
 </script>
 
-<main>
+<main id="page">
 	<div>
 		<StickyContent>
 			<img
 				class="mr-25 w-auto rounded-lg mb-5 transition-all duration-300 filter grayscale hover:grayscale-0"
-				src={Headshot}
+				src={'/img/JJStraub_Headshot.jpg'}
 				alt="JJ Straub Headshot"
 			/>
 		</StickyContent>
 	</div>
 
-	<section
-		class="columns-1 lg:columns-2 xl:columns-3 gap-4 relative bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-gray-800"
-	>
-		<!-- <div class="absolute bottom-0 left-0 w-full h-1/6 bg-gradient-to-t from-black"></div> !-->
+	<section class="columns-1 lg:columns-2 xl:columns-3 gap-4 relative bottom-0 left-0 w-full">
+		<div class="absolute bottom-0 left-0 w-full h-1/6 bg-gradient-to-t from-primary-100"></div>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={LAKings} alt="LA Kings" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-LA-Kings.jpg'}
+				alt="LA Kings"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -57,7 +28,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Peace} alt="JJ Peace" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-JJ-peace.jpg'}
+				alt="Make me feel"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -65,7 +40,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Cutting} alt="Cutting Sur" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-CuttingSur.jpg'}
+				alt="Cutting Sur"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -73,7 +52,7 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={EBay} alt="EBay" />
+			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_empireagency-eBay.jpg'} alt="EBay" />
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -81,7 +60,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={General} alt="General" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-General.jpg'}
+				alt="General"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -89,7 +72,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Reinfressen1} alt="Reinfressen 1" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-Reinfressen1.jpg'}
+				alt="Reinfressen 1"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -97,7 +84,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Sylvia} alt="Sylvia" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-Sylvia.jpg'}
+				alt="Sylvia"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -105,7 +96,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Piano} alt="Piano Bar" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-Piano-Bar.jpg'}
+				alt="Piano Bar"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -113,7 +108,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative cursor-pointer">
-			<img class="rounded-lg mb-4 w-full" src={Offer} alt="The Offer" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-TheOffer.jpg'}
+				alt="The Offer"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -121,7 +120,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Rapunzel} alt="Rapunzel's Curse" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-RapunzelsFluch2.jpg'}
+				alt="Rapunzel's Curse"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -129,7 +132,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Window} alt="The Window" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-TheWindow1.jpg'}
+				alt="The Window"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -137,7 +144,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Notruf} alt="SAT1 Notruf" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-SAT1-Notruf.jpg'}
+				alt="SAT1 Notruf"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -145,7 +156,7 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={JJStraub} alt="JJ Straub" />
+			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_Headshot2.jpg'} alt="JJ Straub" />
 			<!-- 	<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -153,7 +164,7 @@
 			</figcaption> -->
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={NYPD} alt="NYPD" />
+			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_empireagency-NYPD.jpg'} alt="NYPD" />
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -161,7 +172,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Farmer} alt="Farmer" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-Farmer.jpg'}
+				alt="Farmer"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -169,7 +184,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Life} alt="L.I.F.E" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-Life-KinoLoop.jpg'}
+				alt="L.I.F.E"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -177,7 +196,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={FBI} alt="FBI Karma" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-FBI-Karma.jpg'}
+				alt="FBI Karma"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -185,7 +208,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Jawlock} alt="Jawlock DR Dentist" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-Jawlock-DR-Dentist.jpg'}
+				alt="Jawlock DR Dentist"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -193,7 +220,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Feeder} alt="Feeder" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-Feeder.jpg'}
+				alt="Feeder"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -201,7 +232,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={RedBloom} alt="RedBloom CIA" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-RedBloom-CIA.jpg'}
+				alt="RedBloom CIA"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -209,7 +244,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={KinoLoop} alt="L.I.F.E. KinoLoop" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-L.I.F.E.-KinoLoop.jpg'}
+				alt="L.I.F.E. KinoLoop"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -217,7 +256,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Karma} alt="Karma PI" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-Karma-PI.jpg'}
+				alt="Karma PI"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -225,7 +268,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Pate} alt="Der Pate HeadShot" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-DerPate-HeadShot.jpg'}
+				alt="Der Pate HeadShot"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -233,7 +280,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Loewe} alt="Von Loewenberg" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-VonLoewenberg.jpg'}
+				alt="Von Loewenberg"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -241,7 +292,7 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Ali} alt="Ali" />
+			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_empireagency-Ali-LA.jpg'} alt="Ali" />
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -249,7 +300,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Professor} alt="Professor" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-Professor.jpg'}
+				alt="Professor"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -257,7 +312,7 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={TJ} alt="TJ" />
+			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_empireagency-TJ.jpg'} alt="TJ" />
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -265,7 +320,11 @@
 			</figcaption>
 		</figure>
 		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={Wald} alt="The Wald" />
+			<img
+				class="rounded-lg mb-4 w-full"
+				src={'/img/JJStraub_empireagency-TheWald.jpg'}
+				alt="The Wald"
+			/>
 			<figcaption
 				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
 			>
@@ -273,5 +332,4 @@
 			</figcaption>
 		</figure>
 	</section>
-	<div class="color-gray-300 h-full text-center">Design by S</div>
 </main>
