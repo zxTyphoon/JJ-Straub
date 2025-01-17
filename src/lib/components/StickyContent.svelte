@@ -41,7 +41,7 @@
 		<p>{$_('living')}</p>
 		<br />
 		<p>
-			{$_('contact')} <br />
+			{$_('contact')}
 			<a href="mailto:linda.b@empire-agency.com?bcc=jj@jjstraub.com">
 				E-Mail (linda.b@empire-agency.com)
 			</a>
