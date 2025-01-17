@@ -26,6 +26,10 @@
 	hljs.registerLanguage('typescript', typescript);
 	storeHighlightJs.set(hljs);
 
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+	injectSpeedInsights();
+
 	import { afterNavigate } from '$app/navigation';
 
 	afterNavigate((params) => {
