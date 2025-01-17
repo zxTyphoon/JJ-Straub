@@ -27,10 +27,10 @@
 	
 	<section class="mb-8">
 		<h2 class="text-2xl font-semibold mb-2">Privacy Policy</h2>
-		<p>Our website does not collect any personal data from users. We do not track, store, or share any personal information.</p>
-		<p>Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.</p>
+		<p>Our website collects only anonymous data to help us understand usage patterns and improve our services. We do not track, store, or share any personal information.</p>
+		<p>Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites and cannot accept responsibility or liability for their respective privacy policies.</p>
 		<p>If you have any questions about this privacy policy, feel free to contact us.</p>
-	</section>
+	  </section>	  
 	
 	<section class="mb-8">
 		<h2 class="text-2xl font-semibold mb-2">Representation</h2>
