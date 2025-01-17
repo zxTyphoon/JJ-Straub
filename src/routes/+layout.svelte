@@ -1,6 +1,12 @@
 <script>
 	import '../app.postcss';
-	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
+	import {
+		AppShell,
+		AppBar,
+		Drawer,
+		initializeStores,
+		getDrawerStore
+	} from '@skeletonlabs/skeleton';
 
 	// Highlight JS
 	import hljs from 'highlight.js/lib/core';
@@ -54,7 +60,103 @@
 			elemPage.scrollTo({ top: 0, behavior: 'smooth' });
 		}
 	}
+
+	initializeStores();
+
+	const drawerStore = getDrawerStore();
+
+	function drawerOpen() {
+		drawerStore.open({});
+	}
 </script>
+
+<Drawer position="right" width="w-1/2" transitions="transition-all duration-300 ease-in-out">
+	<div class="grid grid-cols-2 gap-4 px-2 py-4 items-center">
+		<a
+			class="btn btn-sm variant-ghost-surface text-xl"
+			href="https://www.linkedin.com/in/jj-straub/"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<img class="w-auto" src={LinkedIn} alt="LinkedIn" /></a
+		>
+		<a
+			class="btn btn-sm variant-ghost-surface text-xl"
+			href="https://www.facebook.com/JJStraub/"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<img class="w-auto" src={Facebook} alt="Facebook" />
+		</a>
+		<a
+			class="btn btn-sm variant-ghost-surface text-xl"
+			href="https://www.imdb.com/name/nm0833707/"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<img class="w-auto" src={IMDB} alt="IMDB" />
+		</a>
+		<a
+			class="btn btn-sm variant-ghost-surface text-xl"
+			href="https://x.com/JJStraub4real"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<img class="w-auto" src={X} alt="X" />
+		</a>
+		<a
+			class="btn btn-sm variant-ghost-surface text-xl"
+			href="https://www.instagram.com/jjstraub1"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<img class="w-auto" src={Instagram} alt="Instagram" />
+		</a>
+		<a
+			class="btn btn-sm variant-ghost-surface text-xl"
+			href="https://www.youtube.com/user/JJatUtube"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<img class="w-auto" src={YouTube} alt="YouTube" />
+		</a>
+		<a
+			class="btn btn-sm variant-ghost-surface text-xl"
+			href="https://www.xing.com/profile/Juergen_Straub23"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<img class="w-auto" src={XING} alt="XING" />
+		</a>
+		<a
+			class="btn btn-sm variant-ghost-surface text-2xl flex items-center justify-center w-auto"
+			href="/JJStraub_empireagency-Vita-11-2025.pdf"
+			download="JJStraub_empireagency-Vitae-11-2025.pdf"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="h-5 w-5"
+				viewBox="0 0 20 20"
+				fill="currentColor"
+			>
+				<path
+					fill-rule="evenodd"
+					d="M16.293 9.293a1 1 0 011.414 1.414l-7 7a1 1 0 01-1.414 0l-7-7a1 1 0 011.414-1.414L9 14.586V3a1 1 0 112 0v11.586l5.293-5.293z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+			<span>Vitae</span>
+		</a>
+	</div>
+	<a
+		class="btn btn-sm variant-ghost-surface text-2xl mx-2"
+		href="https://www.filmmakers.eu/de/actors/j-j-straub"
+		target="_blank"
+		rel="noreferrer"
+	>
+		<img class="w-auto" src={Filmmakers} alt="Filmmakers" />
+	</a>
+</Drawer>
 
 <AppShell id="page" class="relative" on:scroll={scrollHandler}>
 	<svelte:fragment slot="header">
@@ -65,96 +167,109 @@
 				</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-				<a
-					class="btn btn-sm variant-ghost-surface text-xl"
-					href="https://www.instagram.com/jjstraub1"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<img class="h-7" src={Instagram} alt="Instagram" />
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface text-xl"
-					href="https://www.facebook.com/JJStraub/"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<img class="h-7" src={Facebook} alt="Facebook" />
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface text-xl"
-					href="https://www.imdb.com/name/nm0833707/"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<img class="h-7" src={IMDB} alt="IMDB" />
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface text-xl"
-					href="https://x.com/JJStraub4real"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<img class="h-7" src={X} alt="X" />
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface text-xl"
-					href="https://www.linkedin.com/in/jj-straub/"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<img class="h-7" src={LinkedIn} alt="LinkedIn" />
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface text-xl"
-					href="https://www.youtube.com/user/JJatUtube"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<img class="h-7" src={YouTube} alt="YouTube" />
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface text-xl"
-					href="https://www.xing.com/profile/Juergen_Straub23"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<img class="h-7" src={XING} alt="XING" />
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface text-xl"
-					href="https://www.filmmakers.eu/de/actors/j-j-straub"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<img class="h-7" src={Filmmakers} alt="Filmmakers" />
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface text-xl flex items-center space-x-2"
-					href="/JJStraub_empireagency-Vita-11-2025.pdf"
-					download="JJStraub_empireagency-Vitae-11-2025.pdf"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-5 w-5"
-						viewBox="0 0 20 20"
-						fill="currentColor"
+				<div class="hidden lg:flex items-center space-x-4">
+					<a
+						class="btn btn-sm variant-ghost-surface text-xl"
+						href="https://www.instagram.com/jjstraub1"
+						target="_blank"
+						rel="noreferrer"
 					>
-						<path
-							fill-rule="evenodd"
-							d="M16.293 9.293a1 1 0 011.414 1.414l-7 7a1 1 0 01-1.414 0l-7-7a1 1 0 011.414-1.414L9 14.586V3a1 1 0 112 0v11.586l5.293-5.293z"
-							clip-rule="evenodd"
-						/>
-					</svg>
-					<span>Vitae</span>
-				</a>
+						<img class="h-7" src={Instagram} alt="Instagram" />
+					</a>
+					<a
+						class="btn btn-sm variant-ghost-surface text-xl"
+						href="https://www.facebook.com/JJStraub/"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img class="h-7" src={Facebook} alt="Facebook" />
+					</a>
+					<a
+						class="btn btn-sm variant-ghost-surface text-xl"
+						href="https://www.imdb.com/name/nm0833707/"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img class="h-7" src={IMDB} alt="IMDB" />
+					</a>
+					<a
+						class="btn btn-sm variant-ghost-surface text-xl"
+						href="https://x.com/JJStraub4real"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img class="h-7" src={X} alt="X" />
+					</a>
+					<a
+						class="btn btn-sm variant-ghost-surface text-xl"
+						href="https://www.linkedin.com/in/jj-straub/"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img class="h-7" src={LinkedIn} alt="LinkedIn" />
+					</a>
+					<a
+						class="btn btn-sm variant-ghost-surface text-xl"
+						href="https://www.youtube.com/user/JJatUtube"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img class="h-7" src={YouTube} alt="YouTube" />
+					</a>
+					<a
+						class="btn btn-sm variant-ghost-surface text-xl"
+						href="https://www.xing.com/profile/Juergen_Straub23"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img class="h-7" src={XING} alt="XING" />
+					</a>
+					<a
+						class="btn btn-sm variant-ghost-surface text-xl"
+						href="https://www.filmmakers.eu/de/actors/j-j-straub"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img class="h-7" src={Filmmakers} alt="Filmmakers" />
+					</a>
+					<a
+						class="btn btn-sm variant-ghost-surface text-xl flex items-center space-x-2"
+						href="/JJStraub_empireagency-Vita-11-2025.pdf"
+						download="JJStraub_empireagency-Vitae-11-2025.pdf"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-5 w-5"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M16.293 9.293a1 1 0 011.414 1.414l-7 7a1 1 0 01-1.414 0l-7-7a1 1 0 011.414-1.414L9 14.586V3a1 1 0 112 0v11.586l5.293-5.293z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+						<span>Vitae</span>
+					</a>
+				</div>
+				<div class="sm:block lg:hidden flex items-center">
+					<button class="lg:hidden btn btn-sm mr-4" on:click={drawerOpen}>
+						<span>
+							<svg viewBox="0 0 100 80" class="fill-token w-4 h-4">
+								<rect width="100" height="20" />
+								<rect y="30" width="100" height="20" />
+								<rect y="60" width="100" height="20" />
+							</svg>
+						</span>
+					</button>
+				</div>
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
 	<slot />
 	{#if showBackToTop}
 		<button
-			class="fixed bottom-12 right-12 p-2 bg-primary-800 text-white rounded-full shadow-lg"
+			class="fixed bottom-12 right-10 p-2 bg-primary-800 text-white rounded-full shadow-lg"
 			on:click={scrollToTop}
 		>
 			↑ Top
