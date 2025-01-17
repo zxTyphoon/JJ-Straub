@@ -7,8 +7,11 @@
 	let isStuck = false;
 
 	function changeLanguage(newLang) {
-		locale.set(newLang);
-	}
+       locale.set(newLang);
+       if (typeof window !== 'undefined') {
+           document.cookie = `locale=${newLang}; path=/; max-age=${60 * 60 * 24 * 7}`;
+       }
+   }
 
 	function handleStuck(e) {
 		isStuck = e.detail.isStuck;

@@ -1,13 +1,16 @@
-import { locale } from 'svelte-i18n'
+import { locale } from 'svelte-i18n';
 
 export const handle = async ({ event, resolve }) => {
-  // Get the language from the request header
-  const lang = event.request.headers.get('accept-language')?.split(',')[0]
-  
-  // Set the locale for SSR
-  if (lang) {
-    locale.set(lang)
+  const cookies = event.request.headers.get('cookie') || '';
+  const localeCookie = cookies.split('; ').find(cookie => cookie.startsWith('locale='));
+
+  if (localeCookie) {
+    const savedLocale = localeCookie.split('=')[1];
+    locale.set(savedLocale);
+  } else {
+    const lang = event.request.headers.get('accept-language')?.split(',')[0];
+    locale.set(lang);
   }
 
-  return resolve(event)
-}
+  return resolve(event);
+};
