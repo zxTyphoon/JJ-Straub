@@ -1,7 +1,14 @@
 <script>
+	import { locale, _ } from 'svelte-i18n';
 	import sticky from './sticky.js';
+	import German from '$lib/img/German.svg';
+	import English from '$lib/img/English.svg';
 
 	let isStuck = false;
+
+	function changeLanguage(newLang) {
+		locale.set(newLang);
+	}
 
 	function handleStuck(e) {
 		isStuck = e.detail.isStuck;
@@ -10,29 +17,43 @@
 
 <section class="grid grid-cols-2 gap-4">
 	<h2 class="sticky" class:isStuck data-position="top" use:sticky={true} on:stuck={handleStuck}>
-		Hello, I'm Juergen Jean (JJ) Straub.
-		<br /><br />
-		As an actor my focus is characters, which I studied with Lee Strasberg, Stella Adler and Uta Hagen
-		in NYC.
-		<br /><br />
-		Represented by 
-		<a href="https://www.empire-agency.com" target="_blank"> Empire-Agency</a>. As a dual citizen, German and American, I live in Berlin
-		now.
-		<br /><br />
-		Feel free to reach out to my agent Linda Bose by <br>
-		<a href="mailto:linda.b@empire-agency.com?bcc=jj@jjstraub.com">E-Mail (linda.b@empire-agency.com)</a> or <br> <a href="tel:+493020059089">Phone (+49 (0) 3020059089)</a>
-		to discuss potential collaborations or upcoming opportunities.
-		<br /><br />
-		Want to see some of my work? Check out my Showreels: 
+		<div class="flex space-x-2 lg:space-x-4 absolute top-5 right-3 lg:right-5">
+			<button on:click={() => changeLanguage('de')}>
+				<img src={German} class="w-7 cursor-pointer" alt="German Flag" />
+			</button>
+			<button on:click={() => changeLanguage('en')}>
+				<img src={English} class="w-7 cursor-pointer" alt="English Flag" />
+			</button>
+		</div>
+
+		<!-- Use the svelte-i18n translation keys directly -->
+		<p>{$_('intro')} Juergen Jean <br class="xl:hidden" /> (JJ) Straub.</p>
 		<br />
+		<p>{$_('about')}</p>
+		<br />
+		<p>
+			{$_('represented')}
+			<a href="https://www.empire-agency.com" target="_blank"> Empire-Agency</a>.
+		</p>
+		<p>{$_('living')}</p>
+		<br />
+		<p>
+			{$_('contact')} <br />
+			<a href="mailto:linda.b@empire-agency.com?bcc=jj@jjstraub.com">
+				E-Mail (linda.b@empire-agency.com)
+			</a>
+			{$_('or')} <br />
+			<a href="tel:+493020059089">{$_('phone')}</a>.
+		</p>
+		<br />
+		<p>{$_('seeWork')}</p>
 		<a href="https://vimeo.com/1008219719" target="_blank" rel="noreferrer">
-			English Showreel
+			{$_('englishReel')}
 		</a>
 		&nbsp;||&nbsp;
 		<a href="https://vimeo.com/manage/videos/1008017841" target="_blank" rel="noreferrer">
-			German Showreel
+			{$_('germanReel')}
 		</a>
-		<br /><br />
 	</h2>
 	<slot />
 </section>
@@ -74,13 +95,12 @@
 		}
 
 		.sticky {
-			justify-self: stretch; 
+			justify-self: stretch;
 			margin-inline: 0;
-			margin-top: 20px; 
+			margin-top: 20px;
 		}
 
 		.sticky[data-position='top'] {
-			
 			margin-top: 0;
 		}
 

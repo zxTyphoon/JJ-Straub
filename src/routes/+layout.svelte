@@ -71,7 +71,7 @@
 </script>
 
 <Drawer position="right" width="w-1/2" transitions="transition-all duration-300 ease-in-out">
-	<div class="grid grid-cols-2 gap-4 px-2 py-4 items-center">
+	<div class="grid grid-cols-2 gap-5 px-5 py-5 items-center">
 		<a
 			href="https://www.linkedin.com/in/jj-straub/"
 			target="_blank"
@@ -127,7 +127,7 @@
 			target="_blank"
 			rel="noreferrer"
 		>
-			<span>Vitae</span>
+			<strong>Vitae</strong>
 		</a>
 	</div>
 	<a
@@ -150,7 +150,7 @@
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<div class="hidden lg:flex items-center space-x-4">
-					<a
+				<a
 						class="btn btn-sm variant-ghost-surface text-xl"
 						href="https://www.instagram.com/jjstraub1"
 						target="_blank"
@@ -220,7 +220,7 @@
 						target="_blank"
 						rel="noreferrer"
 					>
-						<p class="text-xl">Vitae</p>
+						<strong class="text-xl">Vitae</strong>
 					</a>
 				</div>
 				<div class="sm:block lg:hidden flex items-center">
