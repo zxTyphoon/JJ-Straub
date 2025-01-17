@@ -85,7 +85,7 @@
 		{
 			src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-Farmer.jpg',
 			alt: 'Farmer',
-			caption: '(ADD MOVIE) - Farmer'
+			caption: 'Farmer'
 		},
 		{
 			src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-Life-KinoLoop.jpg',
@@ -189,13 +189,13 @@
 	<div>
 		<StickyContent>
 			<img
-				class="mr-25 w-auto rounded-lg mb-5 transition-all duration-300 filter grayscale hover:grayscale-0"
+				class="mr-25 w-auto rounded-lg transition-all duration-300 filter grayscale hover:grayscale-0"
 				src={'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_Headshot.jpg'}
 				alt="JJ Straub Headshot"
 			/>
 		</StickyContent>
 	</div>
-	<section class="columns-1 lg:columns-2 xl:columns-3 2xl:columns-4 gap-4 relative bottom-0 left-0 w-full">
+	<section class="columns-1 lg:columns-2 xl:columns-3 2xl:columns-4 gap-4 relative bottom-0 left-0 w-full mt-5">
 		<div class="absolute bottom-0 left-0 w-full h-1/6 bg-gradient-to-t from-primary-300"></div>
 		{#each images as { src, alt, caption }}
 			<figure class="relative">

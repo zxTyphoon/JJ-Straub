@@ -62,14 +62,10 @@
 </section>
 
 <style>
-	section {
-		display: grid;
-	}
-
 	.sticky {
 		position: sticky;
 		padding: 1rem;
-		background-color: rgba(150, 150, 150, 0.75);
+		background-color: rgba(131, 131, 131, 0.75);
 		border-radius: 10px;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		transition: all 0.3s ease-in-out;
@@ -77,7 +73,6 @@
 		font-weight: bold;
 		color: white;
 		justify-self: end;
-		margin-bottom: 20px;
 		height: fit-content;
 		margin-left: 10px;
 		margin-right: -10px;
@@ -98,6 +93,7 @@
 		}
 
 		.sticky {
+			font-size: 1rem;
 			justify-self: stretch;
 			margin-inline: 0;
 			margin-top: 20px;
