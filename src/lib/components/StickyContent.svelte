@@ -23,10 +23,14 @@
 		<a href="mailto:linda.b@empire-agency.com?bcc=jj@jjstraub.com">E-Mail (linda.b@empire-agency.com)</a> or <br> <a href="tel:+493020059089">Phone (+49 (0) 3020059089)</a>
 		to discuss potential collaborations or upcoming opportunities.
 		<br /><br />
-		Want to see some of my work?
+		Want to see some of my work? Check out my Showreels: 
 		<br />
 		<a href="https://vimeo.com/1008219719" target="_blank" rel="noreferrer">
-			Check out my Showreel
+			English Showreel
+		</a>
+		&nbsp;||&nbsp;
+		<a href="https://vimeo.com/manage/videos/1008017841" target="_blank" rel="noreferrer">
+			German Showreel
 		</a>
 		<br /><br />
 	</h2>

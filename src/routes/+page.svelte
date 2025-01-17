@@ -1,5 +1,44 @@
 <script>
 	import StickyContent from '$lib/components/StickyContent.svelte';
+
+	let images = [
+		{ src: '/img/JJStraub_empireagency-LA-Kings.jpg', alt: 'LA Kings', caption: 'LA Kings - Commercial - Producer' },
+		{ src: '/img/JJStraub_empireagency-Feeder.jpg', alt: 'Feeder', caption: 'Feeder - The Vet' },
+		{ src: '/img/JJStraub_empireagency-JJ-peace.jpg', alt: 'Make me feel', caption: 'Make me feel - Dr. Buchenwald' },
+		{ src: '/img/JJStraub_empireagency-CuttingSur.jpg', alt: 'Cutting Sur', caption: 'Cutting Surface - Dr. Belial' },
+		{ src: '/img/JJStraub_empireagency-eBay.jpg', alt: 'eBay', caption: 'eBay - Commercial' },
+		{ src: '/img/JJStraub_empireagency-General.jpg', alt: 'General', caption: 'Reparation Day - Columbian General' },
+		{ src: '/img/JJStraub_empireagency-Reinfressen1.jpg', alt: 'Reinfressen 1', caption: 'Reinfressen - Bernd' },
+		{ src: '/img/JJStraub_empireagency-Sylvia.jpg', alt: 'Sylvia', caption: 'Sylvia - upset customer' },
+		{ src: '/img/JJStraub_Smiling.jpg', alt: 'Smiling', caption: '' },
+		{ src: '/img/JJStraub_empireagency-Piano-Bar.jpg', alt: 'Piano Bar', caption: 'Piano Bar - John' },
+		{ src: '/img/JJStraub_empireagency-Kingdom-Come-Deliverance.jpg', alt: 'Kingdom Come Deliverance', caption: 'Kingdom Come Deliverance - Game - Motion Capture' },
+		{ src: '/img/JJStraub_empireagency-TheOffer.jpg', alt: 'The Offer', caption: 'The Offer' },
+		{ src: '/img/JJStraub_Golfing.jpg', alt: 'Golfing', caption: 'Golfing' },
+		{ src: '/img/JJStraub_empireagency-SAT1-Notruf.jpg', alt: 'SAT1 Notruf', caption: 'SAT1 Notruf' },
+		{ src: '/img/JJStraub_Headshot2.jpg', alt: 'JJ Straub', caption: '' },
+		{ src: '/img/JJStraub_empireagency-NYPD.jpg', alt: 'NYPD', caption: 'Long Journey - NYPD Officer' },
+		{ src: '/img/JJStraub_empireagency-Farmer.jpg', alt: 'Farmer', caption: '(ADD MOVIE) - Farmer' },
+		{ src: '/img/JJStraub_empireagency-Life-KinoLoop.jpg', alt: 'L.I.F.E', caption: 'L.I.F.E - Philosophy Teacher' },
+		{ src: '/img/JJStraub_empireagency-Karma.jpg', alt: 'Karma - Father', caption: 'Karma - Father' },
+		{ src: '/img/JJStraub_empireagency-Jawlock-DR-Dentist.jpg', alt: 'Jawlock DR Dentist', caption: 'Jawlock - Dentist' },
+		{ src: '/img/JJStraub_empireagency-L.I.F.E.-KinoLoop.jpg', alt: 'L.I.F.E. KinoLoop', caption: 'L.I.F.E. - Philosophy Teacher' },
+		{ src: '/img/JJStraub_empireagency-Karma-PI.jpg', alt: 'Karma PI', caption: 'Karma - Father' },
+		{ src: '/img/JJStraub_empireagency-RedBloom-CIA.jpg', alt: 'RedBloom CIA', caption: 'RedBloom - CIA' },
+		{ src: '/img/JJStraub_empireagency-DerPate-HeadShot.jpg', alt: 'Der Pate HeadShot', caption: 'Der Pate' },
+		{ src: '/img/JJStraub_empireagency-VonLoewenberg.jpg', alt: 'Von Loewenberg', caption: 'Mask of the Schwarzen-Loewenbergs' },
+		{ src: '/img/JJStraub_empireagency-TheWindow1.jpg', alt: 'The Window', caption: 'The Window - Frederick' },
+		{ src: '/img/JJStraub_empireagency-Diamanten.jpg', alt: 'Diamanten', caption: 'Diamanten - Ali' },
+		{ src: '/img/JJStraub_empireagency-Reinfressen.jpg', alt: 'Reinfressen', caption: 'Reinfressen - Bernd' },
+		{ src: '/img/JJStraub_empireagency-Professor.jpg', alt: 'Professor', caption: 'Professor' },
+		{ src: '/img/JJStraub_empireagency-TJ.jpg', alt: 'TJ', caption: 'TJ' },
+		{ src: '/img/JJStraub_empireagency-TheWald.jpg', alt: 'The Wald', caption: 'The Wald - Injured Soldier begging to be shot' },
+		{ src: '/img/JJStraub_empireagency-Smoking-kills.jpg', alt: 'smoking kills', caption: 'Smoking kills - American Cancer Society'},
+		{ src: '/img/JJStraub_empireagency-RapunzelsFluch2.jpg', alt: 'Rapunzel\'s Curse', caption: 'Rapunzels Fluch 2 - Oberkommisar Schulz' },
+		{ src: '/img/JJStraub_empireagency-100Stories.jpg', alt: '100 Stories', caption: '100 Stories - Kurt' },
+		{ src: '/img/JJStraub_empireagency-Booth-Game.jpg', alt: 'Booth Game', caption: 'The Booth Game' },
+		{ src: '/img/JJStraub_empireagency-Cloud-Lawyer.jpg', alt: 'Cloud Lawyer', caption: 'Cloud - Lawyer'}
+	];
 </script>
 
 <main id="page">
@@ -12,351 +51,17 @@
 			/>
 		</StickyContent>
 	</div>
-
 	<section class="columns-1 lg:columns-2 xl:columns-3 gap-4 relative bottom-0 left-0 w-full">
 		<div class="absolute bottom-0 left-0 w-full h-1/6 bg-gradient-to-t from-primary-300"></div>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-LA-Kings.jpg'}
-				alt="LA Kings"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				LA Kings - Commercial - Producer
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-JJ-peace.jpg'}
-				alt="Make me feel"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Make me feel - Dr. Buchenwald
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-CuttingSur.jpg'}
-				alt="Cutting Sur"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Cutting Surface - Dr. Belial
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_empireagency-eBay.jpg'} alt="EBay" />
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				eBay - Commercial
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-General.jpg'}
-				alt="General"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Reparation Day - Columbian General
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-Reinfressen1.jpg'}
-				alt="Reinfressen 1"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Reinfressen - Bernd
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-Sylvia.jpg'}
-				alt="Sylvia"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Sylvia - upset customer
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-Piano-Bar.jpg'}
-				alt="Piano Bar"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Piano Bar - John
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-Kingdom-Come-Deliverance.jpg'}
-				alt="Kingdom Come Deliverance"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Kingdom Come Deliverance - Game - Motion Capture
-			</figcaption>
-		</figure>
-		<figure class="relative cursor-pointer">
-			<img
-			class="rounded-lg mb-4 w-full"
-			src={'/img/JJStraub_empireagency-TheOffer.jpg'}
-			alt="The Offer"
-			/>
-			<figcaption
-			class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-			The Offer
-		</figcaption>
-	</figure>
-	<figure class="relative">
-		<img
-		class="rounded-lg mb-4 w-full"
-		src={'/img/JJStraub_empireagency-RapunzelsFluch2.jpg'}
-		alt="Rapunzel's Curse"
-		/>
-		<figcaption
-		class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-		>
-		Rapunzels Fluch 2 - Oberkommisar Schulz
-	</figcaption>
-</figure>
-<figure class="relative">
-	<img
-	class="rounded-lg mb-4 w-full"
-	src={'/img/JJStraub_empireagency-TheWindow1.jpg'}
-	alt="The Window"
-	/>
-	<figcaption
-	class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-	>
-	The Window - Frederick
-</figcaption>
-</figure>
-<figure class="relative">
-	<img
-		class="rounded-lg mb-4 w-full"
-		src={'/img/JJStraub_Golfing.jpg'}
-		alt="Golfing"
-	/>
-	<figcaption
-		class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-	>
-		Golfing
-	</figcaption>
-</figure>
-<figure class="relative">
-	<img
-	class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-SAT1-Notruf.jpg'}
-				alt="SAT1 Notruf"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				SAT1 Notruf
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_Headshot2.jpg'} alt="JJ Straub" />
-			<!-- 	<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				JJ Straub
-			</figcaption> -->
-		</figure>
-		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_empireagency-NYPD.jpg'} alt="NYPD" />
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				(ADD MOVIE) - NYPD Officer
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-Farmer.jpg'}
-				alt="Farmer"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				(ADD MOVIE) - Farmer
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-Life-KinoLoop.jpg'}
-				alt="L.I.F.E"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				L.I.F.E - Philosophy Teacher
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-FBI-Karma.jpg'}
-				alt="FBI Karma"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				FBI Karma
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-Jawlock-DR-Dentist.jpg'}
-				alt="Jawlock DR Dentist"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Jawlock DR Dentist
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-Feeder.jpg'}
-				alt="Feeder"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Feeder - The Vet
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-RedBloom-CIA.jpg'}
-				alt="RedBloom CIA"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				RedBloom CIA
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-L.I.F.E.-KinoLoop.jpg'}
-				alt="L.I.F.E. KinoLoop"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				L.I.F.E.
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-Karma-PI.jpg'}
-				alt="Karma PI"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Karma - Father
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-DerPate-HeadShot.jpg'}
-				alt="Der Pate HeadShot"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Der Pate
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-VonLoewenberg.jpg'}
-				alt="Von Loewenberg"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Mask of the Schwarzen-Loewenbergs
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_Smiling.jpg'} alt="Smiling" />
-		</figure>
-		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_empireagency-Diamanten.jpg'} alt="Diamanten" />
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Diamanten - Ali
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-Professor.jpg'}
-				alt="Professor"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				Professor
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img class="rounded-lg mb-4 w-full" src={'/img/JJStraub_empireagency-TJ.jpg'} alt="TJ" />
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				TJ
-			</figcaption>
-		</figure>
-		<figure class="relative">
-			<img
-				class="rounded-lg mb-4 w-full"
-				src={'/img/JJStraub_empireagency-TheWald.jpg'}
-				alt="The Wald"
-			/>
-			<figcaption
-				class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-			>
-				The Wald - Injured Soldier begging to be shot
-			</figcaption>
-		</figure>
+		{#each images as { src, alt, caption }}
+			<figure class="relative">
+				<img class="rounded-lg mb-4 w-full" src={src} alt={alt} />
+				{#if caption}
+					<figcaption class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]">
+						{caption}
+					</figcaption>
+				{/if}
+			</figure>
+		{/each}
 	</section>
 </main>

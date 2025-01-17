@@ -27,7 +27,7 @@
 	storeHighlightJs.set(hljs);
 
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
-	import { injectAnalytics } from '@vercel/analytics/sveltekit'
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 
 	injectAnalytics();
 	injectSpeedInsights();
@@ -134,18 +134,18 @@
 					href="/JJStraub_empireagency-Vita-11-2025.pdf"
 					download="JJStraub_empireagency-Vitae-11-2025.pdf"
 				>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5"
-					viewBox="0 0 20 20"
-					fill="currentColor"
-				>
-					<path
-						fill-rule="evenodd"
-						d="M16.293 9.293a1 1 0 011.414 1.414l-7 7a1 1 0 01-1.414 0l-7-7a1 1 0 011.414-1.414L9 14.586V3a1 1 0 112 0v11.586l5.293-5.293z"
-						clip-rule="evenodd"
-					/>
-				</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-5 w-5"
+						viewBox="0 0 20 20"
+						fill="currentColor"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M16.293 9.293a1 1 0 011.414 1.414l-7 7a1 1 0 01-1.414 0l-7-7a1 1 0 011.414-1.414L9 14.586V3a1 1 0 112 0v11.586l5.293-5.293z"
+							clip-rule="evenodd"
+						/>
+					</svg>
 					<span>Vitae</span>
 				</a>
 			</svelte:fragment>
