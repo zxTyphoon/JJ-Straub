@@ -32,7 +32,7 @@
 		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-Reinfressen.jpg', alt: 'Reinfressen', caption: 'Reinfressen - Bernd' },
 		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-Professor.jpg', alt: 'Professor', caption: 'Professor' },
 		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-TJ.jpg', alt: 'TJ', caption: 'TJ' },
-		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-TheWald.jpg', alt: 'The Wald', caption: 'The Wald - Injured Soldier begging to be shot' },
+		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-TheWald.jpg', alt: 'The Wald', caption: 'The Wald - Injured Soldier' },
 		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-Smoking-kills.jpg', alt: 'smoking kills', caption: 'Smoking kills - American Cancer Society'},
 		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-RapunzelsFluch2.jpg', alt: 'Rapunzel\'s Curse', caption: 'Rapunzels Fluch 2 - Oberkommisar Schulz' },
 		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-100Stories.jpg', alt: '100 Stories', caption: '100 Stories - Kurt' },
