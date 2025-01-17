@@ -26,7 +26,7 @@
 		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-Karma-PI.jpg', alt: 'Karma PI', caption: 'Karma - Father' },
 		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-RedBloom-CIA.jpg', alt: 'RedBloom CIA', caption: 'RedBloom - CIA' },
 		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-DerPate-HeadShot.jpg', alt: 'Der Pate HeadShot', caption: 'Der Pate' },
-		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-VonLoewenberg.jpg', alt: 'Von Loewenberg', caption: 'Mask of the Schwarzen-Loewenbergs' },
+		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-VonLoewenberg.jpg', alt: 'Von Loewenberg', caption: 'Mask of the Schwarzen-Loewenbergs - Hans von Schwarzen-Loewenberg' },
 		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-TheWindow1.jpg', alt: 'The Window', caption: 'The Window - Frederick' },
 		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-Diamanten.jpg', alt: 'Diamanten', caption: 'Diamanten - Ali' },
 		{ src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-Reinfressen.jpg', alt: 'Reinfressen', caption: 'Reinfressen - Bernd' },
