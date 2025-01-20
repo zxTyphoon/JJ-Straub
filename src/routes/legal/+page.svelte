@@ -1,3 +1,8 @@
+<svelte:head>
+  <title>Legal Information - JJ Straub Portfolio</title>
+  <meta name="description" content="Legal and privacy information for Juergen Straub's website." />
+</svelte:head>
+
 <div class="container mx-auto p-4">
 	<h1 class="text-3xl font-bold mb-4">Legal Notice / Imprint</h1>
 	

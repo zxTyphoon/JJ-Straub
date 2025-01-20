@@ -1,5 +1,6 @@
 <script>
 	import StickyContent from '$lib/components/StickyContent.svelte';
+	import { locale } from 'svelte-i18n';
 
 	let images = [
 		{
@@ -185,7 +186,49 @@
 	];
 </script>
 
-<main id="page">
+<svelte:head>
+	<title>Juergen Straub - Actor Portfolio</title>
+	<meta
+		name="description"
+		content="Explore the acting portfolio of Juergen Straub, featuring his career highlights, roles, and achievements in the entertainment industry."
+	/>
+	<meta name="robots" content="index, follow" />
+	<link rel="canonical" href="https://www.jjstraub.com" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://kafo1tfijyjcs03n.public.blob.vercel-storage.com" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Juergen Straub - Actor Portfolio" />
+	<meta
+		name="twitter:description"
+		content="Explore Juergen Straub's acting portfolio, featuring his career highlights and achievements in the entertainment industry."
+	/>
+	<meta
+		name="twitter:image"
+		content="https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_Headshot.jpg"
+	/>
+
+	<meta property="og:title" content="Juergen Straub - Actor Portfolio" />
+	<meta property="og:type" content="profile" />
+	<meta property="og:url" content="https://www.jjstraub.com" />
+	<meta
+		property="og:image"
+		content="https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_Headshot.jpg"
+	/>
+	<meta property="og:image:alt" content="Juergen Straub, professional actor" />
+	<meta
+		property="og:description"
+		content="Explore the acting portfolio of Juergen Straub, featuring his career highlights, roles, and achievements in the entertainment industry."
+	/>
+	<meta property="og:site_name" content="JJ Straub Portfolio" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="de_DE" />
+
+	<link rel="icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+</svelte:head>
+
+<main id="page" lang={$locale}>
 	<div>
 		<StickyContent>
 			<img
