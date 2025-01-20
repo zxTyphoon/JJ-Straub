@@ -1,4 +1,5 @@
 <script>
+	export const prerender = true; 
 	import '../app.postcss';
 	import {
 		AppShell,
@@ -47,6 +48,7 @@
 			elemPage.scrollTop = 0;
 		}
 	});
+
 
 	let showBackToTop = false;
 
