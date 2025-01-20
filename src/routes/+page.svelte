@@ -2,6 +2,9 @@
 	import StickyContent from '$lib/components/StickyContent.svelte';
 	import { locale, _ } from 'svelte-i18n';
 
+	const title = `Juergen Straub - ${$_('actor')} Portfolio`;
+	const description = `${$_('description')}`;
+
 	let images = [
 		{
 			src: 'https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_empireagency-LA-Kings.jpg',
@@ -187,10 +190,10 @@
 </script>
 
 <svelte:head>
-	<title>Juergen Straub - {$_('actor')} Portfolio</title>
+	<title>{title}</title>
 	<meta
 		name="description"
-		content={$_('description')}
+		content={description}
 	/>
 	<meta name="robots" content="index, follow" />
 	<link rel="canonical" href="https://www.jjstraub.com" />
@@ -198,17 +201,17 @@
 	<link rel="preconnect" href="https://kafo1tfijyjcs03n.public.blob.vercel-storage.com" />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Juergen Straub - {$_('actor')} Portfolio" />
+	<meta name="twitter:title" content="{title}" />
 	<meta
 		name="twitter:description"
-		content={$_('description')}
+		content={description}
 	/>
 	<meta
 		name="twitter:image"
 		content="https://kafo1tfijyjcs03n.public.blob.vercel-storage.com/img/JJStraub_Headshot.jpg"
 	/>
 
-	<meta property="og:title" content="Juergen Straub - {$_('actor')} Portfolio" />
+	<meta property="og:title" content={title} />
 	<meta property="og:type" content="profile" />
 	<meta property="og:url" content="https://www.jjstraub.com" />
 	<meta
@@ -218,7 +221,7 @@
 	<meta property="og:image:alt" content="Juergen Straub, professional actor" />
 	<meta
 		property="og:description"
-		content={$_('description')}
+		content={description}
 	/>
 	<meta property="og:site_name" content="JJ Straub Portfolio" />
 	<meta property="og:locale" content="en_US" />
