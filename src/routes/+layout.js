@@ -10,7 +10,7 @@ export const load = async () => {
     if (localeCookie) {
       const savedLocale = localeCookie.split('=')[1];
       locale.set(savedLocale);
-    } else {
+    } else if(window.navigator.language.length == 2) {
       locale.set(window.navigator.language);
     }
   }
