@@ -1,6 +1,7 @@
 <svelte:head>
   <title>Legal Information - JJ Straub Portfolio</title>
   <meta name="description" content="Legal and privacy information for Juergen Straub's website." />
+  <link rel="canonical" href="https://www.jjstraub.com/legal" />
 </svelte:head>
 
 <div class="container mx-auto p-4">
