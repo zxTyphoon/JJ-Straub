@@ -9,8 +9,10 @@ export const handle = async ({ event, resolve }) => {
 		locale.set(savedLocale);
 	} else {
 		const lang = event.request.headers.get('accept-language')?.split(',')[0];
-		if (lang.length == 2) {
+		try{if (lang.length == 2) {
 			locale.set(lang);
+		}}catch(e){
+			console.log(e);
 		}
 	}
 
