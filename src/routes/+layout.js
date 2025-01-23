@@ -2,6 +2,8 @@ import { browser } from '$app/environment';
 import '$lib/i18n'; // Import to initialize i18n
 import { locale, waitLocale } from 'svelte-i18n';
 
+export const prerender = true; 
+
 export const load = async () => {
   if (browser) {
     const cookies = document.cookie.split('; ');

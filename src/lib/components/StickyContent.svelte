@@ -19,7 +19,7 @@
 </script>
 
 <section class="grid grid-cols-2 gap-4">
-	<h2 class="sticky" class:isStuck data-position="top" use:sticky={true} on:stuck={handleStuck}>
+	<h1 class="sticky" class:isStuck data-position="top" use:sticky={true} on:stuck={handleStuck}>
 		<div class="flex space-x-2 lg:space-x-4 absolute top-5 right-3 lg:right-5">
 			<button on:click={() => changeLanguage('de')}>
 				<img src={German} class="w-7 cursor-pointer" alt="German Flag" />
@@ -57,7 +57,7 @@
 		<a href="https://vimeo.com/manage/videos/1008017841" target="_blank" rel="noreferrer">
 			{$_('germanReel')}
 		</a>
-	</h2>
+	</h1>
 	<slot />
 </section>
 
