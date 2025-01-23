@@ -35,10 +35,9 @@
 		<p>{$_('about')}</p>
 		<br />
 		<p>
-			{$_('represented')}
-			<a href="https://www.empire-agency.com" target="_blank"> Empire-Agency</a>.
+			{$_('living')}
+			<a href="https://www.empire-agency.com/male-talents" target="_blank"> Empire-Agency</a>.
 		</p>
-		<p>{$_('living')}</p>
 		<br />
 		<p>
 			{$_('contact')}
@@ -51,11 +50,11 @@
 		<br />
 		<p>{$_('seeWork')}</p>
 		<a href="https://vimeo.com/1008219719" target="_blank" rel="noreferrer">
-			{$_('englishReel')}
+			{$_('Showreel US')}
 		</a>
 		&nbsp;||&nbsp;
 		<a href="https://vimeo.com/manage/videos/1008017841" target="_blank" rel="noreferrer">
-			{$_('germanReel')}
+			{$_('Showreel DE')}
 		</a>
 	</h1>
 	<slot />
