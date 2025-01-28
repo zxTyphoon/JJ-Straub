@@ -30,7 +30,7 @@ export default function sticky(node) {
 
 	const mutationCallback = function (mutations) {
 		// If something changes and the sentinel nodes are no longer first and last child, put them back in position
-		mutations.forEach(function (mutation) {
+		mutations.forEach(function () {
 			const { parentNode: topParent } = stickySentinelTop;
 			const { parentNode: bottomParent } = stickySentinelBottom;
 

@@ -217,7 +217,7 @@
 					</a>
 					<a
 						class="btn btn-sm variant-ghost-surface h-10 flex items-center"
-						href="/JJStraub_empireagency-Vita-11-2025.pdf"
+						href="/JJStraub_empireagency-Vita-2025.pdf"
 						target="_blank"
 						rel="noreferrer"
 					>
@@ -225,7 +225,7 @@
 					</a>
 				</div>
 				<div class="sm:block lg:hidden flex items-center">
-					<button class="lg:hidden btn btn-sm mr-4" on:click={drawerOpen}>
+					<button aria-label="Open Drawer button" class="lg:hidden btn btn-sm mr-4" on:click={drawerOpen}>
 						<span>
 							<svg viewBox="0 0 100 80" class="fill-token w-4 h-4">
 								<rect width="100" height="20" />

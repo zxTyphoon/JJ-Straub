@@ -1,25 +1,31 @@
 <script>
-	import { locale, _ } from 'svelte-i18n';
-	import sticky from './sticky.js';
 	import German from '$lib/img/German.svg';
 	import English from '$lib/img/English.svg';
+	import sticky from './sticky.js';
+	import { _ , locale } from 'svelte-i18n';
 
 	let isStuck = false;
 
 	function changeLanguage(newLang) {
-       locale.set(newLang);
-       if (typeof window !== 'undefined') {
-           document.cookie = `locale=${newLang}; path=/; max-age=${60 * 60 * 24 * 7}`;
-       }
-   }
+		locale.set(newLang);
+		if (typeof window !== 'undefined') {
+			document.cookie = `locale=${newLang}; path=/; max-age=${60 * 60 * 24 * 7}`;
+		}
+	}
 
 	function handleStuck(e) {
 		isStuck = e.detail.isStuck;
 	}
 </script>
 
-<section class="grid grid-cols-2 gap-4">
-	<h1 class="sticky" class:isStuck data-position="top" use:sticky={true} on:stuck={handleStuck}>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+	<h1
+		class="sticky left-2 top-1 z-20 right-3 lg:right-5 p-4 bg-gray-500 bg-opacity-85 rounded-lg shadow-lg text-md lg:text-xl xl:text-2xl font-semibold md:font-extrabold text-white justify-self-end h-fit mx-2 lg:mx-0 transition-all ease-in-out"
+		class:isStuck
+		data-position="top"
+		use:sticky={true}
+		on:stuck={handleStuck}
+	>
 		<div class="flex space-x-2 lg:space-x-4 absolute top-5 right-3 lg:right-5">
 			<button on:click={() => changeLanguage('de')}>
 				<img src={German} class="w-7 cursor-pointer" alt="German Flag" />
@@ -29,81 +35,48 @@
 			</button>
 		</div>
 
-		<!-- Use the svelte-i18n translation keys directly -->
 		<p>{$_('intro')} Juergen Jean <br class="xl:hidden" /> (JJ) Straub.</p>
 		<br />
 		<p>{$_('about')}</p>
 		<br />
 		<p>
 			{$_('living')}
-			<a href="https://www.empire-agency.com/male-talents" target="_blank"> Empire-Agency</a>.
+			<a
+				href="https://www.empire-agency.com/male-talents"
+				target="_blank"
+				class="underline text-sky-400"
+			>
+				Empire-Agency</a
+			>.
 		</p>
 		<br />
 		<p>
 			{$_('contact')}
-			<a href="mailto:linda.b@empire-agency.com?bcc=jj@jjstraub.com">
+			<a href="mailto:linda.b@empire-agency.com?bcc=jj@jjstraub.com" class="underline text-sky-400">
 				E-Mail (linda.b@empire-agency.com)
 			</a>
 			{$_('or')} <br />
-			<a href="tel:+493020059089">{$_('phone')}</a>.
+			<a href="tel:+493020059089" class="underline text-sky-400">{$_('phone')}</a>.
 		</p>
 		<br />
 		<p>{$_('seeWork')}</p>
-		<a href="https://vimeo.com/1008219719" target="_blank" rel="noreferrer">
+		<a
+			href="https://vimeo.com/1008219719"
+			target="_blank"
+			rel="noreferrer"
+			class="underline text-sky-400"
+		>
 			{$_('Showreel US')}
 		</a>
 		&nbsp;||&nbsp;
-		<a href="https://vimeo.com/manage/videos/1008017841" target="_blank" rel="noreferrer">
+		<a
+			href="https://vimeo.com/manage/videos/1008017841"
+			target="_blank"
+			rel="noreferrer"
+			class="underline text-sky-400"
+		>
 			{$_('Showreel DE')}
 		</a>
 	</h1>
 	<slot />
 </section>
-
-<style>
-	.sticky {
-		position: sticky;
-		padding: 1rem;
-		background-color: rgba(131, 131, 131, 0.75);
-		border-radius: 10px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		transition: all 0.3s ease-in-out;
-		font-size: 1.5rem;
-		font-weight: bold;
-		color: white;
-		justify-self: end;
-		height: fit-content;
-		margin-left: 10px;
-		margin-right: -10px;
-	}
-
-	.sticky[data-position='top'] {
-		top: 5px;
-	}
-
-	a {
-		text-decoration: underline;
-		color: lightskyblue;
-	}
-
-	@media (max-width: 768px) {
-		section {
-			grid-template-columns: 1fr;
-		}
-
-		.sticky {
-			font-size: 1rem;
-			justify-self: stretch;
-			margin-inline: 0;
-			margin-top: 20px;
-		}
-
-		.sticky[data-position='top'] {
-			margin-top: 0;
-		}
-
-		::slotted(*) {
-			width: 100%;
-		}
-	}
-</style>
