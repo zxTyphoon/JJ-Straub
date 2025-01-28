@@ -20,7 +20,7 @@
 
 <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
 	<h1
-		class="sticky left-2 top-1 z-20 right-3 lg:right-5 p-4 bg-gray-500 bg-opacity-85 rounded-lg shadow-lg text-md lg:text-xl xl:text-2xl font-semibold md:font-extrabold text-white justify-self-end h-fit mx-2 lg:mx-0 transition-all ease-in-out"
+		class="sticky left-2 top-1 z-20 right-3 lg:right-5 p-4 bg-gray-500 bg-opacity-70 rounded-lg shadow-lg text-md lg:text-xl font-semibold md:font-extrabold text-white justify-self-end h-fit mx-2 lg:mx-0 transition-all ease-in-out"
 		class:isStuck
 		data-position="top"
 		use:sticky={true}
