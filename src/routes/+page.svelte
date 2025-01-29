@@ -100,7 +100,7 @@
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-eBay.webp',
 			alt: 'eBay',
 			caption: 'eBay - Commercial',
-			video: '/JJStraub_empireagency-eBay3.MP4'
+			video: '/JJStraub_empireagency-eBay3.mp4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheOffer.webp',
