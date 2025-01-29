@@ -30,7 +30,7 @@
 				controlslist="nodownload"
 				on:ended={onClose}
 			>
-				<track kind="captions" />
+			<track kind="captions" src="" srclang="en" label="No Captions"/>
 			</video>
 		</div>
 	</div>
