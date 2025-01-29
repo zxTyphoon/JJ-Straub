@@ -261,12 +261,12 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content="/JJStraub_Headshot-og.webp" />
+	<meta name="twitter:image" content="https://www.jjstraub.com/JJStraub_Headshot-og.webp" />
 
 	<meta property="og:title" content={title} />
 	<meta property="og:type" content="profile" />
 	<meta property="og:url" content="https://www.jjstraub.com" />
-	<meta property="og:image" content="/JJStraub_Headshot-og.webp" />
+	<meta property="og:image" content="https://www.jjstraub.com/JJStraub_Headshot-og.webp" />
 	<meta property="og:image:alt" content="Juergen Straub, professional actor" />
 	<meta property="og:description" content={description} />
 	<meta property="og:site_name" content="JJ Straub Portfolio" />
