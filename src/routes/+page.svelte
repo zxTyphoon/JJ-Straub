@@ -260,7 +260,7 @@
 	<meta name="twitter:description" content={description} />
 	<meta
 		name="twitter:image"
-		content="https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Headshot.webp"
+		content="https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Headshot-og.webp"
 	/>
 
 	<meta property="og:title" content={title} />
@@ -268,7 +268,7 @@
 	<meta property="og:url" content="https://www.jjstraub.com" />
 	<meta
 		property="og:image"
-		content="https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Headshot.webp"
+		content="https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Headshot-og.webp"
 	/>
 	<meta property="og:image:alt" content="Juergen Straub, professional actor" />
 	<meta property="og:description" content={description} />
