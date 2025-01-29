@@ -17,10 +17,10 @@
 		aria-hidden="true"
 		on:click={handleClick}
 	>
-		<div class="relative max-w-[90vw] md:max-w-3xl w-full max-h-[90vh] flex justify-center">
+		<div class="relative max-w-[90vw] md:max-w-3xl w-full max-h-[80vh] flex justify-center">
 			<video
 				bind:this={container}
-				class="max-w-[90vw] max-h-[90vh] w-auto h-auto rounded-lg"
+				class="max-w-[90vw] max-h-[80vh] w-auto h-auto rounded-lg"
 				src={videoUrl}
 				controls
 				autoplay
