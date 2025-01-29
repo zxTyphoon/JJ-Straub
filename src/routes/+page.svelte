@@ -284,7 +284,7 @@
 	<div>
 		<StickyContent>
 			<img
-				class="w-auto rounded-lg transition-all duration-300 filter grayscale hover:grayscale-0"
+				class="w-auto rounded-lg transition-all duration-300 filter md:grayscale hover:grayscale-0"
 				src={'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Headshot.webp'}
 				alt="JJ Straub Headshot"
 				on:contextmenu|preventDefault
