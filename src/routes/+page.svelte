@@ -22,7 +22,8 @@
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-LA-Kings.webp',
 			alt: 'LA Kings',
-			caption: 'LA Kings - Commercial - Producer'
+			caption: 'LA Kings - Commercial',
+			video: '/JJStraub_empireagency-LAKings.mp4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Feeder.webp',
@@ -30,9 +31,14 @@
 			caption: 'Feeder - The Vet'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-JJ-peace.webp',
-			alt: 'Make me feel',
-			caption: 'Make me feel - Dr. Buchenwald'
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Sennheiser-Cowboy1.webp',
+			alt: 'Sennheiser Cowboy',
+			caption: 'Sennheiser - Commercial',
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kommissar.webp',
+			alt: 'Kommissar',
+			caption: 'Rapunzels Fluch 2 - Oberkommisar Schulz'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-CuttingSur.webp',
@@ -40,20 +46,25 @@
 			caption: 'Cutting Surface - Dr. Belial'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-eBay.webp',
-			alt: 'eBay',
-			caption: 'eBay - Commercial',
-			video: '/JJStraub_EmpireAgency-eBay3.MP4'
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-ebay-social-media.webp',
+			alt: 'Ebay Social Media Commercial',
+			caption: 'Ebay - Social Media Commercial',
+			video: '/JJStraub_empireagency-eBay-social-media.mp4'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-JJ-peace.webp',
+			alt: 'Make me feel',
+			caption: 'Make me feel - Dr. Buchenwald'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-From Russia with Love-BND-Agent.webp',
+			alt: 'From Russia with Love',
+			caption: 'From Russia with Love - BND Agent'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-General.webp',
 			alt: 'General',
 			caption: 'Reparation Day - Columbian General'
-		},
-		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Reinfressen1-2.webp',
-			alt: 'Reinfressen 1',
-			caption: 'Reinfressen - Bernd'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Sylvia.webp',
@@ -66,19 +77,19 @@
 			caption: ''
 		},
 		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Boss-ChrisBoston.webp',
+			alt: 'Boss Chris Boston',
+			caption: 'Chris Boston'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Coinstar.webp',
+			alt: 'Coinstar',
+			caption: 'Coinstar'
+		},
+		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Piano-Bar.webp',
 			alt: 'Piano Bar',
 			caption: 'Piano Bar - John'
-		},
-		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kingdom-Come-Deliverance.webp',
-			alt: 'Kingdom Come Deliverance',
-			caption: 'Kingdom Come Deliverance - Game - Motion Capture'
-		},
-		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheOffer.webp',
-			alt: 'The Offer',
-			caption: 'The Offer'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Golfing.webp',
@@ -86,14 +97,35 @@
 			caption: 'Golfing'
 		},
 		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-eBay.webp',
+			alt: 'eBay',
+			caption: 'eBay - Commercial',
+			video: '/JJStraub_empireagency-eBay3.MP4'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheOffer.webp',
+			alt: 'The Offer',
+			caption: 'The Offer'
+		},
+		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-SAT1-Notruf.webp',
 			alt: 'SAT1 Notruf',
 			caption: 'SAT1 Notruf'
 		},
 		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kingdom-Come-Deliverance.webp',
+			alt: 'Kingdom Come Deliverance',
+			caption: 'Kingdom Come Deliverance - Game - Motion Capture'
+		},
+		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Headshot2.webp',
 			alt: 'JJ Straub',
 			caption: ''
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Karma.webp',
+			alt: 'Karma - Father',
+			caption: 'Karma - Father'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-NYPD.webp',
@@ -111,14 +143,14 @@
 			caption: 'L.I.F.E - Philosophy Teacher'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Karma.webp',
-			alt: 'Karma - Father',
-			caption: 'Karma - Father'
-		},
-		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Jawlock-DR-Dentist.webp',
 			alt: 'Jawlock DR Dentist',
 			caption: 'Jawlock - Dentist'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-RapunzelsFluch2.webp',
+			alt: "Rapunzel's Curse",
+			caption: 'Rapunzels Fluch 2 - Oberkommisar Schulz'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Cloud-Lawyer.webp',
@@ -126,14 +158,25 @@
 			caption: 'Cloud - Lawyer'
 		},
 		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-RedBloom-CIA.webp',
+			alt: 'RedBloom CIA',
+			caption: 'RedBloom - CIA'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheWald.webp',
+			alt: 'The Wald',
+			caption: 'The Wald - Injured Soldier',
+			video: '/JJStraub_empireagency-the-Wald.mp4'
+		},
+		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Karma-PI.webp',
 			alt: 'Karma PI',
 			caption: 'Karma - Father'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-RedBloom-CIA.webp',
-			alt: 'RedBloom CIA',
-			caption: 'RedBloom - CIA'
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Reinfressen1-2.webp',
+			alt: 'Reinfressen 1',
+			caption: 'Reinfressen - Bernd'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-DerPate-HeadShot.webp',
@@ -143,12 +186,18 @@
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-VonLoewenberg.webp',
 			alt: 'Von Loewenberg',
-			caption: 'Mask of the Schwarzen-Loewenbergs - Hans von Schwarzen-Loewenberg'
+			caption: 'Mask of the Schwarzen-Loewenbergs - Hans'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheWindow1.webp',
 			alt: 'The Window',
 			caption: 'The Window - Frederick'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Booth-Game.webp',
+			alt: 'Booth Game',
+			caption: 'The Booth Game',
+			video: '/JJStraub_empireagency-Booth-Game.mp4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Diamanten.webp',
@@ -171,9 +220,9 @@
 			caption: 'TJ'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheWald.webp',
-			alt: 'The Wald',
-			caption: 'The Wald - Injured Soldier'
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-LastCustomer-Walter.webp',
+			alt: 'Last Customer',
+			caption: 'Last Customer - Walter'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Smoking-kills.webp',
@@ -181,19 +230,14 @@
 			caption: 'Smoking kills - American Cancer Society'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-RapunzelsFluch2.webp',
-			alt: "Rapunzel's Curse",
-			caption: 'Rapunzels Fluch 2 - Oberkommisar Schulz'
-		},
-		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-100Stories.webp',
 			alt: '100 Stories',
 			caption: '100 Stories - Kurt'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Booth-Game.webp',
-			alt: 'Booth Game',
-			caption: 'The Booth Game'
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Time.webp',
+			alt: 'Time',
+			caption: 'Time'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-L.I.F.E.-KinoLoop.webp',
@@ -270,7 +314,7 @@
 						{alt}
 					/>
 					{#if video}
-						<div class="w-16 absolute bg-slate-200 rounded-full top-1/2 left-1/2 group-hover:left-auto group-hover:top-4 group-hover:right-4 transform -translate-x-1/2 group-hover:-translate-x-0 -translate-y-1/2 group-hover:-translate-y-0 transition-all duration-300">
+						<div class="w-16 absolute bg-slate-200 rounded-full top-1/2 left-1/2 group-hover:opacity-15 -translate-x-1/2 -translate-y-1/2 transition-all duration-300">
 							<img
 								class="w-16"
 								src={Playbutton}

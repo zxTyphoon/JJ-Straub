@@ -1,10 +1,7 @@
 <script>
 	import German from '$lib/img/German.svg';
 	import English from '$lib/img/English.svg';
-	import sticky from './sticky.js';
-	import { _ , locale } from 'svelte-i18n';
-
-	let isStuck = false;
+	import { _, locale } from 'svelte-i18n';
 
 	function changeLanguage(newLang) {
 		locale.set(newLang);
@@ -12,19 +9,11 @@
 			document.cookie = `locale=${newLang}; path=/; max-age=${60 * 60 * 24 * 7}`;
 		}
 	}
-
-	function handleStuck(e) {
-		isStuck = e.detail.isStuck;
-	}
 </script>
 
 <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
 	<h1
 		class="sticky left-2 top-1 z-20 right-3 lg:right-5 p-4 bg-gray-500 bg-opacity-70 rounded-lg shadow-lg text-md lg:text-xl font-semibold md:font-extrabold text-white justify-self-end h-fit mx-2 lg:mx-0 transition-all ease-in-out"
-		class:isStuck
-		data-position="top"
-		use:sticky={true}
-		on:stuck={handleStuck}
 	>
 		<div class="flex space-x-2 lg:space-x-4 absolute top-5 right-3 lg:right-5">
 			<button on:click={() => changeLanguage('de')}>
