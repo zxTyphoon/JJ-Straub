@@ -241,7 +241,7 @@
 	<slot />
 	{#if showBackToTop}
 		<button
-			class="fixed bottom-12 right-10 p-2 bg-primary-800 text-white rounded-full shadow-lg"
+			class="fixed bottom-12 right-10 2xl:left-10 2xl:right-auto 2xl:text-xl p-2 bg-primary-800 text-white rounded-full shadow-lg"
 			on:click={scrollToTop}
 		>
 			↑ Top
