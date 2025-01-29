@@ -110,12 +110,12 @@
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-eBay.webp',
 			alt: 'eBay',
 			caption: 'eBay - Commercial',
-			video: '/JJStraub_empireagency-eBay3.mp4'
+			video: '/JJStraub_EmpireAgency-eBay3.MP4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Coinstar.webp',
 			alt: 'Coinstar',
-			caption: 'Coinstar'
+			caption: 'Coinstar - Commercial'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheOffer.webp',
@@ -171,7 +171,7 @@
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheWald.webp',
 			alt: 'The Wald',
 			caption: 'The Wald - Injured Soldier',
-			video: '/JJStraub_empireagency-the-Wald.mp4'
+			video: '/JJStraub_empireagency-THE-WALD.mp4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Karma-PI.webp',
@@ -229,7 +229,8 @@
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Cloud-Lawyer.webp',
 			alt: 'Cloud Lawyer',
-			caption: 'Cloud - Lawyer'
+			caption: 'Cloud Lawyer - Larry H. Schitt',
+			video: '/JJStraub_empireagency-Cloud-Lawyer.mp4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Smoking-kills.webp',
