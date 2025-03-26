@@ -258,6 +258,9 @@
 <svelte:head>
 	<title>{title}</title>
 	<meta name="description" content={description} />
+	<meta name="keywords" content="actor, portfolio, Juergen Straub, JJ, JJ Straub" />
+	<meta name="author" content="Juergen Straub" />
+	<meta name="image" content="https://www.jjstraub.com/JJStraub_Headshot-og.webp" />
 	<meta name="robots" content="index, follow" />
 	<link rel="canonical" href="https://www.jjstraub.com" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
