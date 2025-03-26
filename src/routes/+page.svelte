@@ -133,9 +133,14 @@
 			caption: 'SAT1 Notruf'
 		},
 		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kingdom-Come-Deliverance-char.webp',
+			alt: 'Kingdom Come Deliverance',
+			caption: 'Kingdom Come Deliverance 2 - Martin Oderin'
+		},
+		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kingdom-Come-Deliverance.webp',
 			alt: 'Kingdom Come Deliverance',
-			caption: 'Kingdom Come Deliverance - Game - Motion Capture'
+			caption: 'Kingdom Come Deliverance 2 - Motion Capture'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Headshot2.webp',
@@ -281,7 +286,7 @@
 	<div>
 		<StickyContent>
 			<img
-				class="w-auto rounded-lg transition-all duration-300 filter md:grayscale hover:grayscale-0"
+				class="transition-all duration-300 rounded-bl-lg filter md:grayscale hover:grayscale-0"
 				src={'/JJStraub_Headshot.webp'}
 				alt="JJ Straub Headshot"
 				on:contextmenu|preventDefault

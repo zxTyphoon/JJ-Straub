@@ -13,7 +13,7 @@
 
 <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
 	<h1
-		class="sticky left-2 top-1 z-20 right-3 lg:right-5 p-4 bg-gray-500 bg-opacity-40 md:bg-opacity-100 rounded-lg shadow-lg text-md lg:text-xl font-semibold md:font-extrabold text-white justify-self-end h-fit mx-2 lg:mx-0 transition-all ease-in-out"
+		class="sticky left-4 top-4 z-20 right-3 lg:right-4 p-4 bg-gray-500 bg-opacity-40 md:bg-opacity-100 rounded-lg shadow-lg text-md lg:text-xl font-semibold md:font-extrabold text-white justify-self-end h-fit mx-2 transition-all ease-in-out"
 	>
 		<div class="flex space-x-2 lg:space-x-4 absolute top-5 right-3 lg:right-5">
 			<button on:click={() => changeLanguage('de')}>
