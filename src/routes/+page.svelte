@@ -168,6 +168,11 @@
 			caption: 'L.I.F.E - Philosophy Teacher'
 		},
 		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Diamanten.webp',
+			alt: 'Diamanten',
+			caption: 'Diamanten - Ali'
+		},
+		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Jawlock-DR-Dentist.webp',
 			alt: 'Jawlock DR Dentist',
 			caption: 'Jawlock - Dentist'
@@ -246,11 +251,6 @@
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Time.webp',
 			alt: 'Time',
 			caption: 'Time'
-		},
-		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Diamanten.webp',
-			alt: 'Diamanten',
-			caption: 'Diamanten - Ali'
 		}
 	];
 </script>
