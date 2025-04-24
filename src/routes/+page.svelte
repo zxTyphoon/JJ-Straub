@@ -5,7 +5,7 @@
 
 	import Playbutton from '$lib/img/play-button.svg';
 
-	const title = `Juergen Straub - ${$_('actor')} Portfolio`;
+	const title = `JJ Straub - ${$_('actor')} Portfolio`;
 	const description = `${$_('description')}`;
 
 	let selectedVideo = null;
@@ -21,49 +21,49 @@
 	let images = [
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-LA-Kings.webp',
-			alt: 'LA Kings',
+			alt: 'JJ Straub: LA Kings',
 			caption: 'LA Kings - Commercial',
 			video: '/JJStraub_empireagency-LAKings.mp4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Feeder.webp',
-			alt: 'Feeder',
+			alt: 'JJ Straub: Feeder',
 			caption: 'Feeder - The Vet'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Sennheiser-Cowboy1.webp',
-			alt: 'Sennheiser Cowboy',
+			alt: 'JJ Straub: Sennheiser Cowboy',
 			caption: 'Sennheiser - Commercial'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kommissar.webp',
-			alt: 'Kommissar',
+			alt: 'JJ Straub: Kommissar',
 			caption: 'Rapunzels Fluch 2 - Oberkommisar Schulz'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-CuttingSur.webp',
-			alt: 'Cutting Sur',
+			alt: 'JJ Straub: Cutting Sur',
 			caption: 'Cutting Surface - Dr. Belial'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-ebay-social-media.webp',
-			alt: 'Ebay Social Media Commercial',
+			alt: 'JJ Straub: Ebay Social Media Commercial',
 			caption: 'Ebay - Social Media Commercial',
 			video: '/JJStraub_empireagency-eBay-social-media.mp4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-JJ-peace.webp',
-			alt: 'Make me feel',
+			alt: 'JJ Straub: Make me feel',
 			caption: 'Make me feel - Dr. Buchenwald'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Professor.webp',
-			alt: 'Professor',
+			alt: 'JJ Straub: Professor',
 			caption: 'Professor'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-From Russia with Love-BND-Agent.webp',
-			alt: 'From Russia with Love',
+			alt: 'JJ Straub: From Russia with Love',
 			caption: 'From Russia with Love - BND Agent'
 		},
 		{
@@ -73,73 +73,73 @@
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-General.webp',
-			alt: 'General',
+			alt: 'JJ Straub: General',
 			caption: 'Reparation Day - Columbian General'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Sylvia.webp',
-			alt: 'Sylvia',
+			alt: 'JJ Straub: Sylvia',
 			caption: 'Sylvia - upset customer'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Smiling.webp',
-			alt: 'Smiling',
+			alt: 'JJ Straub: Smiling',
 			caption: ''
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Karma.webp',
-			alt: 'Karma - Father',
+			alt: 'JJ Straub: Karma - Father',
 			caption: 'Karma - Father'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Boss-ChrisBoston.webp',
-			alt: 'Boss Chris Boston',
+			alt: 'JJ Straub: Boss Chris Boston',
 			caption: 'Chris Boston'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-L.I.F.E.-KinoLoop.webp',
-			alt: 'L.I.F.E. KinoLoop',
+			alt: 'JJ Straub: L.I.F.E. KinoLoop',
 			caption: 'L.I.F.E. - Philosophy Teacher'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Golfing.webp',
-			alt: 'Golfing',
+			alt: 'JJ Straub: Golfing',
 			caption: 'Golfing'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-eBay.webp',
-			alt: 'eBay',
+			alt: 'JJ Straub: eBay',
 			caption: 'eBay - Commercial',
 			video: '/JJStraub_EmpireAgency-eBay3.MP4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Coinstar.webp',
-			alt: 'Coinstar',
+			alt: 'JJ Straub: Coinstar',
 			caption: 'Coinstar - Commercial'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheOffer.webp',
-			alt: 'The Offer',
+			alt: 'JJ Straub: The Offer',
 			caption: 'The Offer'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Piano-Bar.webp',
-			alt: 'Piano Bar',
+			alt: 'JJ Straub: Piano Bar',
 			caption: 'Piano Bar - John'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-SAT1-Notruf.webp',
-			alt: 'SAT1 Notruf',
+			alt: 'JJ Straub: SAT1 Notruf',
 			caption: 'SAT1 Notruf'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kingdom-Come-Deliverance-char.webp',
-			alt: 'Kingdom Come Deliverance',
+			alt: 'JJ Straub: Kingdom Come Deliverance',
 			caption: 'Kingdom Come Deliverance 2 - Martin Oderin'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kingdom-Come-Deliverance.webp',
-			alt: 'Kingdom Come Deliverance',
+			alt: 'JJ Straub: Kingdom Come Deliverance',
 			caption: 'Kingdom Come Deliverance 2 - Motion Capture'
 		},
 		{
@@ -149,107 +149,107 @@
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-NYPD.webp',
-			alt: 'NYPD',
+			alt: 'JJ Straub: NYPD',
 			caption: 'Long Journey - NYPD Officer'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheWindow1.webp',
-			alt: 'The Window',
+			alt: 'JJ Straub: The Window',
 			caption: 'The Window - Frederick'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Farmer.webp',
-			alt: 'Farmer',
+			alt: 'JJ Straub: Farmer',
 			caption: 'Farmer'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Life-KinoLoop.webp',
-			alt: 'L.I.F.E',
+			alt: 'JJ Straub: L.I.F.E',
 			caption: 'L.I.F.E - Philosophy Teacher'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Diamanten.webp',
-			alt: 'Diamanten',
+			alt: 'JJ Straub: Diamanten',
 			caption: 'Diamanten - Ali'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Jawlock-DR-Dentist.webp',
-			alt: 'Jawlock DR Dentist',
+			alt: 'JJ Straub: Jawlock DR Dentist',
 			caption: 'Jawlock - Dentist'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheWald.webp',
-			alt: 'The Wald',
+			alt: 'JJ Straub: The Wald',
 			caption: 'The Wald - Injured Soldier',
 			video: '/JJStraub_empireagency-THE-WALD.mp4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Karma-PI.webp',
-			alt: 'Karma PI',
+			alt: 'JJ Straub: Karma PI',
 			caption: 'Karma - Father'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Reinfressen1-2.webp',
-			alt: 'Reinfressen 1',
+			alt: 'JJ Straub: Reinfressen 1',
 			caption: 'Reinfressen - Bernd'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-RedBloom-CIA.webp',
-			alt: 'RedBloom CIA',
+			alt: 'JJ Straub: RedBloom CIA',
 			caption: 'RedBloom - CIA'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-DerPate-HeadShot.webp',
-			alt: 'Der Pate HeadShot',
+			alt: 'JJ Straub: Der Pate HeadShot',
 			caption: 'Der Pate'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-VonLoewenberg.webp',
-			alt: 'Von Loewenberg',
+			alt: 'JJ Straub: Von Loewenberg',
 			caption: 'Mask of the Schwarzen-Loewenbergs - Hans'
 		},
 
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Booth-Game.webp',
-			alt: 'Booth Game',
+			alt: 'JJ Straub: Booth Game',
 			caption: 'The Booth Game',
 			video: '/JJStraub_empireagency-Booth-Game.mp4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Reinfressen.webp',
-			alt: 'Reinfressen',
+			alt: 'JJ Straub: Reinfressen',
 			caption: 'Reinfressen - Bernd'
 		},
 
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TJ.webp',
-			alt: 'TJ',
+			alt: 'JJ Straub: TJ',
 			caption: 'TJ'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-LastCustomer-Walter.webp',
-			alt: 'Last Customer',
+			alt: 'JJ Straub: Last Customer',
 			caption: 'Last Customer - Walter'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-100Stories.webp',
-			alt: '100 Stories',
+			alt: 'JJ Straub: 100 Stories',
 			caption: '100 Stories - Kurt'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Cloud-Lawyer.webp',
-			alt: 'Cloud Lawyer',
+			alt: 'JJ Straub: Cloud Lawyer',
 			caption: 'Cloud Lawyer - Larry H. Schitt',
 			video: '/JJStraub_empireagency-Cloud-Lawyer.mp4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Smoking-kills.webp',
-			alt: 'smoking kills',
+			alt: 'JJ Straub: smoking kills',
 			caption: 'Smoking kills - American Cancer Society'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Time.webp',
-			alt: 'Time',
+			alt: 'JJ Straub: Time',
 			caption: 'Time'
 		}
 	];
@@ -258,7 +258,10 @@
 <svelte:head>
 	<title>{title}</title>
 	<meta name="description" content={description} />
-	<meta name="keywords" content="actor, portfolio, Juergen Straub, JJ, JJ Straub" />
+	<meta
+		name="keywords"
+		content="actor, portfolio, Juergen Straub, JJ, JJ Straub, jj, jj straub, juergen"
+	/>
 	<meta name="author" content="Juergen Straub" />
 	<meta name="image" content="https://www.jjstraub.com/JJStraub_Headshot-og.webp" />
 	<meta name="robots" content="index, follow" />
@@ -283,6 +286,25 @@
 
 	<link rel="icon" href="/favicon.ico" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+	<script type="application/ld+json">
+		{`
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "JJ Straub",
+			"alternateName": "Juergen Straub",
+			"url": "https://www.jjstraub.com",
+			"image": "https://www.jjstraub.com/JJStraub_Headshot-og.webp",
+			"jobTitle": "Actor",
+			"description": "JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights.",
+			"sameAs": [
+				"https://www.instagram.com/jjstraub1",
+				"https://www.imdb.com/de/name/nm0833707/"
+			]
+		}
+		`}
+	</script>
 </svelte:head>
 
 <main id="page" lang={$locale}>

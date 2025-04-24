@@ -16,6 +16,7 @@
 	import css from 'highlight.js/lib/languages/css';
 	import javascript from 'highlight.js/lib/languages/javascript';
 	import typescript from 'highlight.js/lib/languages/typescript';
+	import { locale, _ } from 'svelte-i18n';
 
 	import Instagram from '$lib/img/Instagram.svg';
 	import Facebook from '$lib/img/Facebook.svg';
@@ -249,7 +250,8 @@
 	{/if}
 	<svelte:fragment slot="pageFooter">
 		<AppBar gridColumns="grid-cols-1" slotDefault="place-self-center" padding="p-0">
-			<a class="variant-ghost-surface btn-icon-sm px-1" href="./legal/"> legal </a>
+			© 2025 JJ Straub – {$_('actor')} & Performer |   
+			<a class= "px-1" href="./legal/"> legal notice</a>
 		</AppBar>
 	</svelte:fragment>
 </AppShell>
