@@ -6,7 +6,7 @@
 	import Playbutton from '$lib/img/play-button.svg';
 
 	const title = `JJ Straub - ${$_('actor')} Portfolio`;
-	const description = `${$_('description')}`;
+	//	const description = `${$_('description')}`;
 
 	let selectedVideo = null;
 
@@ -257,7 +257,10 @@
 
 <svelte:head>
 	<title>{title}</title>
-	<meta name="description" content={description} />
+	<meta
+		name="description"
+		content="JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights."
+	/>
 	<meta
 		name="keywords"
 		content="actor, portfolio, Juergen Straub, JJ, JJ Straub, jj, jj straub, juergen"
@@ -271,7 +274,10 @@
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={description} />
+	<meta
+		name="twitter:description"
+		content="JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights."
+	/>
 	<meta name="twitter:image" content="https://www.jjstraub.com/JJStraub_Headshot-og.webp" />
 
 	<meta property="og:title" content={title} />
@@ -279,16 +285,17 @@
 	<meta property="og:url" content="https://www.jjstraub.com" />
 	<meta property="og:image" content="https://www.jjstraub.com/JJStraub_Headshot-og.webp" />
 	<meta property="og:image:alt" content="Juergen Straub, professional actor" />
-	<meta property="og:description" content={description} />
+	<meta
+		property="og:description"
+		content="JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights."
+	/>
 	<meta property="og:site_name" content="JJ Straub Portfolio" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:locale:alternate" content="de_DE" />
 
 	<link rel="icon" href="/favicon.ico" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-	<script type="application/ld+json">
-		{`
+	{@html `<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
 			"@type": "Person",
@@ -298,13 +305,9 @@
 			"image": "https://www.jjstraub.com/JJStraub_Headshot-og.webp",
 			"jobTitle": "Actor",
 			"description": "JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights.",
-			"sameAs": [
-				"https://www.instagram.com/jjstraub1",
-				"https://www.imdb.com/de/name/nm0833707/"
-			]
+			"sameAs": ["https://www.instagram.com/jjstraub1", "https://www.imdb.com/de/name/nm0833707/"]
 		}
-		`}
-	</script>
+	</script>`}
 </svelte:head>
 
 <main id="page" lang={$locale}>
