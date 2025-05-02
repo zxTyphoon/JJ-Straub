@@ -300,14 +300,32 @@
 			"@context": "https://schema.org",
 			"@type": "Person",
 			"name": "JJ Straub",
-			"alternateName": "Juergen Straub",
+			"alternateName": "Juergen J. Straub",
 			"url": "https://www.jjstraub.com",
 			"image": "https://www.jjstraub.com/JJStraub_Headshot-og.webp",
 			"jobTitle": "Actor",
 			"description": "JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights.",
-			"sameAs": ["https://www.instagram.com/jjstraub1", "https://www.imdb.com/de/name/nm0833707/"]
+			"birthDate": "1952-02-08",
+			"gender": "Male",
+			"knowsLanguage": ["German", "English"],
+			"sameAs": [
+				"https://www.imdb.com/name/nm0833707/",
+				"https://www.instagram.com/jjstraub1",
+				"https://www.facebook.com/JJStraub/",
+				"https://x.com/JJStraub4real",
+				"https://www.linkedin.com/in/jj-straub/",
+				"https://www.youtube.com/user/JJatUtube",
+				"https://www.xing.com/profile/Juergen_Straub23",
+				"https://www.filmmakers.eu/de/actors/j-j-straub",
+				"https://www.crew-united.com/en/J-J-Straub.html"
+			],
+			"occupation": {
+				"@type": "Occupation",
+				"name": "Actor"
+			}
 		}
-	</script>`}
+	</script>
+`}
 </svelte:head>
 
 <main id="page" lang={$locale}>
