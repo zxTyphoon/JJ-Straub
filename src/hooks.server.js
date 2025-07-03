@@ -8,10 +8,10 @@ export const handle = async ({ event, resolve }) => {
 		const savedLocale = localeCookie.split('=')[1];
 		locale.set(savedLocale);
 	} else {
-		const lang = event.request.headers.get('accept-language')?.split(',')[0];
-		if (lang && lang.length == 2) {
-			locale.set(lang);
-		}
+               const lang = event.request.headers.get('accept-language')?.split(',')[0]?.slice(0,2);
+               if (lang) {
+                       locale.set(lang);
+               }
 	}
 
 	return resolve(event);
