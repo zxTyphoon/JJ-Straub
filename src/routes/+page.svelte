@@ -38,7 +38,7 @@
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kommissar.webp',
 			alt: 'JJ Straub: Kommissar',
-			caption: 'Rapunzels Fluch 2 - Oberkommisar Schulz'
+			caption: 'Rapunzels Fluch 2 - Oberkommissar Schulz'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-CuttingSur.webp',
@@ -69,7 +69,7 @@
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-RapunzelsFluch2.webp',
 			alt: "Rapunzel's Curse",
-			caption: 'Rapunzels Fluch 2 - Oberkommisar Schulz'
+			caption: 'Rapunzels Fluch 2 - Oberkommissar Schulz'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-General.webp',
