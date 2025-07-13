@@ -128,6 +128,11 @@
 			caption: 'Piano Bar - John'
 		},
 		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Reinfressen1-2.webp',
+			alt: 'JJ Straub: Reinfressen 1',
+			caption: 'Reinfressen - Bernd'
+		},
+		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-SAT1-Notruf.webp',
 			alt: 'JJ Straub: SAT1 Notruf',
 			caption: 'SAT1 Notruf'
@@ -187,11 +192,6 @@
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Karma-PI.webp',
 			alt: 'JJ Straub: Karma PI',
 			caption: 'Karma - Father'
-		},
-		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Reinfressen1-2.webp',
-			alt: 'JJ Straub: Reinfressen 1',
-			caption: 'Reinfressen - Bernd'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-RedBloom-CIA.webp',

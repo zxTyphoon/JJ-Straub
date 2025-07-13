@@ -5,22 +5,22 @@ import { get } from 'svelte/store';
 
 // reset locale before each test
 beforeEach(() => {
-  locale.set(null);
+	locale.set(null);
 });
 
 describe('handle hook', () => {
-  it('sets locale from accept-language header', async () => {
-    const request = new Request('http://localhost', {
-      headers: {
-        'accept-language': 'de-DE,de;q=0.9'
-      }
-    });
+	it('sets locale from accept-language header', async () => {
+		const request = new Request('http://localhost', {
+			headers: {
+				'accept-language': 'de-DE,de;q=0.9'
+			}
+		});
 
-    const event = { request };
-    const resolve = vi.fn(async () => new Response('ok'));
+		const event = { request };
+		const resolve = vi.fn(async () => new Response('ok'));
 
-    await handle({ event, resolve });
+		await handle({ event, resolve });
 
-    expect(get(locale)).toBe('de');
-  });
+		expect(get(locale)).toBe('de');
+	});
 });

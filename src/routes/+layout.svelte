@@ -49,7 +49,6 @@
 		}
 	});
 
-
 	let showBackToTop = false;
 
 	function scrollHandler(event) {
@@ -74,53 +73,25 @@
 
 <Drawer position="right" width="w-1/2" transitions="transition-all duration-300 ease-in-out">
 	<div class="grid grid-cols-2 gap-5 px-5 py-5 items-center">
-		<a
-			href="https://www.linkedin.com/in/jj-straub/"
-			target="_blank"
-			rel="noreferrer"
-		>
+		<a href="https://www.linkedin.com/in/jj-straub/" target="_blank" rel="noreferrer">
 			<img class="w-auto" src={LinkedIn} alt="LinkedIn" /></a
 		>
-		<a
-			href="https://www.facebook.com/JJStraub/"
-			target="_blank"
-			rel="noreferrer"
-		>
+		<a href="https://www.facebook.com/JJStraub/" target="_blank" rel="noreferrer">
 			<img class="w-auto" src={Facebook} alt="Facebook" />
 		</a>
-		<a
-			href="https://www.imdb.com/name/nm0833707/"
-			target="_blank"
-			rel="noreferrer"
-		>
+		<a href="https://www.imdb.com/name/nm0833707/" target="_blank" rel="noreferrer">
 			<img class="w-auto" src={IMDB} alt="IMDB" />
 		</a>
-		<a
-			href="https://x.com/JJStraub4real"
-			target="_blank"
-			rel="noreferrer"
-		>
+		<a href="https://x.com/JJStraub4real" target="_blank" rel="noreferrer">
 			<img class="w-auto" src={X} alt="X" />
 		</a>
-		<a
-			href="https://www.instagram.com/jjstraub1"
-			target="_blank"
-			rel="noreferrer"
-		>
+		<a href="https://www.instagram.com/jjstraub1" target="_blank" rel="noreferrer">
 			<img class="w-auto" src={Instagram} alt="Instagram" />
 		</a>
-		<a
-			href="https://www.youtube.com/user/JJatUtube"
-			target="_blank"
-			rel="noreferrer"
-		>
+		<a href="https://www.youtube.com/user/JJatUtube" target="_blank" rel="noreferrer">
 			<img class="w-auto" src={YouTube} alt="YouTube" />
 		</a>
-		<a
-			href="https://www.xing.com/profile/Juergen_Straub23"
-			target="_blank"
-			rel="noreferrer"
-		>
+		<a href="https://www.xing.com/profile/Juergen_Straub23" target="_blank" rel="noreferrer">
 			<img class="w-auto" src={XING} alt="XING" />
 		</a>
 		<a
@@ -133,7 +104,7 @@
 		</a>
 	</div>
 	<a
-		class="btn btn-sm  text-2xl mx-2"
+		class="btn btn-sm text-2xl mx-2"
 		href="https://www.filmmakers.eu/de/actors/j-j-straub"
 		target="_blank"
 		rel="noreferrer"
@@ -152,7 +123,7 @@
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<div class="hidden lg:flex items-center space-x-4">
-				<a
+					<a
 						class="btn btn-sm variant-ghost-surface text-xl"
 						href="https://www.instagram.com/jjstraub1"
 						target="_blank"
@@ -226,7 +197,11 @@
 					</a>
 				</div>
 				<div class="sm:block lg:hidden flex items-center">
-					<button aria-label="Open Drawer button" class="lg:hidden btn btn-sm mr-4" on:click={drawerOpen}>
+					<button
+						aria-label="Open Drawer button"
+						class="lg:hidden btn btn-sm mr-4"
+						on:click={drawerOpen}
+					>
 						<span>
 							<svg viewBox="0 0 100 80" class="fill-token w-4 h-4">
 								<rect width="100" height="20" />
@@ -250,8 +225,8 @@
 	{/if}
 	<svelte:fragment slot="pageFooter">
 		<AppBar gridColumns="grid-cols-1" slotDefault="place-self-center" padding="p-0">
-			© 2025 JJ Straub – {$_('actor')} & Performer |   
-			<a class= "px-1" href="./legal/"> legal notice</a>
+			© 2025 JJ Straub – {$_('actor')} & Performer |
+			<a class="px-1" href="./legal/"> legal notice</a>
 		</AppBar>
 	</svelte:fragment>
 </AppShell>
