@@ -40,25 +40,6 @@
 			{$_('or')} <br />
 			<a href="tel:+493049500829" class="underline text-sky-400">{$_('phone')}</a>.
 		</p>
-		<br />
-		<p>{$_('seeWork')}</p>
-		<a
-			href="https://vimeo.com/1008219719"
-			target="_blank"
-			rel="noreferrer"
-			class="underline text-sky-400"
-		>
-			{$_('Showreel US')}
-		</a>
-		&nbsp;||&nbsp;
-		<a
-			href="https://vimeo.com/manage/videos/1008017841"
-			target="_blank"
-			rel="noreferrer"
-			class="underline text-sky-400"
-		>
-			{$_('Showreel DE')}
-		</a>
 	</h1>
 	<slot />
 </section>
