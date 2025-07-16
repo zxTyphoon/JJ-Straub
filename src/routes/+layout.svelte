@@ -94,14 +94,6 @@
 		<a href="https://www.xing.com/profile/Juergen_Straub23" target="_blank" rel="noreferrer">
 			<img class="w-auto" src={XING} alt="XING" />
 		</a>
-		<a
-			class="btn btn-sm text-2xl flex items-center justify-center w-auto"
-			href="/JJStraub_empireagency-Vita-11-2025.pdf"
-			target="_blank"
-			rel="noreferrer"
-		>
-			<strong>Vitae</strong>
-		</a>
 	</div>
 	<a
 		class="btn btn-sm text-2xl mx-2"
@@ -186,14 +178,6 @@
 						rel="noreferrer"
 					>
 						<img class="h-7" src={Filmmakers} alt="Filmmakers" />
-					</a>
-					<a
-						class="btn btn-sm variant-ghost-surface h-10 flex items-center"
-						href="/JJStraub_empireagency-Vita-2025.pdf"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<strong class="text-xl">Vitae</strong>
 					</a>
 				</div>
 				<div class="sm:block lg:hidden flex items-center">
