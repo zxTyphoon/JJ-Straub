@@ -62,11 +62,6 @@
 			caption: 'Professor'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-From Russia with Love-BND-Agent.webp',
-			alt: 'JJ Straub: From Russia with Love',
-			caption: 'From Russia with Love - BND Agent'
-		},
-		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-RapunzelsFluch2.webp',
 			alt: "Rapunzel's Curse",
 			caption: 'Rapunzels Fluch 2 - Oberkommissar Schulz'
@@ -92,11 +87,6 @@
 			caption: 'Karma - Father'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Boss-ChrisBoston.webp',
-			alt: 'JJ Straub: Boss Chris Boston',
-			caption: 'Chris Boston'
-		},
-		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-L.I.F.E.-KinoLoop.webp',
 			alt: 'JJ Straub: L.I.F.E. KinoLoop',
 			caption: 'L.I.F.E. - Philosophy Teacher'
@@ -105,6 +95,16 @@
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Golfing.webp',
 			alt: 'JJ Straub: Golfing',
 			caption: 'Golfing'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Diamanten.webp',
+			alt: 'JJ Straub: Diamanten',
+			caption: 'Diamanten - Ali'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheOffer.webp',
+			alt: 'JJ Straub: The Offer',
+			caption: 'The Offer'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-eBay.webp',
@@ -116,11 +116,6 @@
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Coinstar.webp',
 			alt: 'JJ Straub: Coinstar',
 			caption: 'Coinstar - Commercial'
-		},
-		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheOffer.webp',
-			alt: 'JJ Straub: The Offer',
-			caption: 'The Offer'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Piano-Bar.webp',
@@ -173,11 +168,6 @@
 			caption: 'L.I.F.E - Philosophy Teacher'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Diamanten.webp',
-			alt: 'JJ Straub: Diamanten',
-			caption: 'Diamanten - Ali'
-		},
-		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Jawlock-DR-Dentist.webp',
 			alt: 'JJ Straub: Jawlock DR Dentist',
 			caption: 'Jawlock - Dentist'
@@ -187,6 +177,11 @@
 			alt: 'JJ Straub: The Wald',
 			caption: 'The Wald - Injured Soldier',
 			video: '/JJStraub_empireagency-THE-WALD.mp4'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-From Russia with Love-BND-Agent.webp',
+			alt: 'JJ Straub: From Russia with Love',
+			caption: 'From Russia with Love - BND Agent'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Karma-PI.webp',
