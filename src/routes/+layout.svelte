@@ -109,7 +109,7 @@
 	<svelte:fragment slot="header">
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<a href="/">
+				<a href="/" on:click={scrollToTop}>
 					<strong class="text-4xl ml-2 uppercase">JJ  Straub</strong>
 				</a>
 			</svelte:fragment>
@@ -209,7 +209,7 @@
 	{/if}
 	<svelte:fragment slot="pageFooter">
 		<AppBar gridColumns="grid-cols-1" slotDefault="place-self-center" padding="p-0">
-			© 2025 JJ Straub – {$_('actor')} & Performer |
+			© 2025 JJ Straub - {$_('actor')} |
 			<a class="px-1" href="./legal/"> legal notice</a>
 		</AppBar>
 	</svelte:fragment>

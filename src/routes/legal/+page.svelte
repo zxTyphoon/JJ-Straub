@@ -19,7 +19,7 @@
 		<h2 class="text-2xl font-semibold mb-2">Responsible for Website</h2>
 		<p><strong>Name:</strong> Sean Tyler Straub</p>
 		<p>
-			<strong>Address:</strong> Edith-Stein-Straße 66, 68766 Hockenheim, Baden-Württemberg, Deutschland
+			<strong>Address:</strong> Edith-Stein-Straße 66, 68766 Hockenheim, Germany
 		</p>
 	</section>
 
@@ -65,9 +65,9 @@
 	<section class="mb-8">
 		<h2 class="text-2xl font-semibold mb-2">Representation</h2>
 		<p>
-			Juergen Straub is represented by Empire-Agency, which handles all professional inquiries and
-			bookings. For further information, please contact his Agent Linda Bose at
-			linda.b@empire-agency.com.
+			Juergen Straub is represented by ZAV-Berlin, which handles all professional inquiries and
+			bookings. For further information, please contact his Agent Sonja Sommer at
+			sonja.sommer@arbeitsagentur.de.
 		</p>
 	</section>
 </div>
