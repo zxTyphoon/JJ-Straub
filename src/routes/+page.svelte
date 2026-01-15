@@ -341,7 +341,9 @@
 		<div class="absolute bottom-0 left-0 w-full h-1/6 bg-gradient-to-t from-primary-300"></div>
 		{#each images as { src, alt, caption, video }}
 			<button
-				class="relative w-full block break-inside-avoid {video ? 'cursor-pointer' : 'cursor-default'}"
+				class="relative w-full block break-inside-avoid {video
+					? 'cursor-pointer'
+					: 'cursor-default'}"
 				on:click={() => {
 					if (video) {
 						openVideo(video);
@@ -349,13 +351,7 @@
 				}}
 			>
 				<figure class="relative group overflow-hidden">
-					<img
-						class="w-full block"
-						on:contextmenu|preventDefault
-						draggable="false"
-						{src}
-						{alt}
-					/>
+					<img class="w-full block" on:contextmenu|preventDefault draggable="false" {src} {alt} />
 					{#if video}
 						<div
 							class="w-16 absolute bg-slate-200 rounded-full top-1/2 left-1/2 group-hover:opacity-15 -translate-x-1/2 -translate-y-1/2 transition-all duration-300"
@@ -365,7 +361,7 @@
 					{/if}
 					{#if caption}
 						<figcaption
-							class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+							class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 py-2 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300"
 						>
 							{caption}
 						</figcaption>
