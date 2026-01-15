@@ -354,7 +354,7 @@
 						</div>
 						{#if caption}
 							<figcaption
-								class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+								class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 py-2 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300"
 							>
 								{caption}
 							</figcaption>
