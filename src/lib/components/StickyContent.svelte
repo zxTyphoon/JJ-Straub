@@ -24,9 +24,15 @@
 			</button>
 		</div>
 
-		<p>{$_('intro')} Juergen Jean <br class="hidden md:block xl:hidden" /> (JJ) Straub.
-		<br />
-		{$_('agentur')}: ZAV-Berlin, Sonja Sommer. {$_('phone')}: <a href="tel:+49228502088025" class="underline text-sky-400">+49 (0) 228 50208-8025</a> {$_('or')} E-Mail: <a href="mailto:sonja.sommer@arbeitsagentur.de" class="underline text-sky-400">sonja.sommer@arbeitsagentur.de</a>
+		<p>
+			{$_('intro')} Juergen Jean <br class="hidden md:block xl:hidden" /> (JJ) Straub.
+			<br />
+			{$_('agentur')}: ZAV-Berlin, Sonja Sommer. {$_('phone')}:
+			<a href="tel:+49228502088025" class="underline text-sky-400">+49 (0) 228 50208-8025</a>
+			{$_('or')} E-Mail:
+			<a href="mailto:sonja.sommer@arbeitsagentur.de" class="underline text-sky-400"
+				>sonja.sommer@arbeitsagentur.de</a
+			>
 		</p>
 		<br />
 		<p>{$_('about')}</p>
@@ -37,11 +43,11 @@
 		<br />
 		<p>
 			{$_('contact')}
-			<a href="mailto:jj@jjstraub.com" class="underline text-sky-400">
-				E-Mail (jj@jjstraub.com)
-			</a>
+			<a href="mailto:jj@jjstraub.com" class="underline text-sky-400"> E-Mail (jj@jjstraub.com) </a>
 			{$_('or')} <br />
-			<a href="tel:+493049500829" class="underline text-sky-400">{$_('phone')}  (+49 (0) 3049500829)</a>.
+			<a href="tel:+493049500829" class="underline text-sky-400"
+				>{$_('phone')} (+49 (0) 3049500829)</a
+			>.
 		</p>
 	</h1>
 	<slot />

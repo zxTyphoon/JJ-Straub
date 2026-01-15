@@ -324,7 +324,7 @@
 </svelte:head>
 
 <main id="page" lang={$locale}>
-	<div>
+	<div class="mb-4">
 		<StickyContent>
 			<img
 				class="transition-all duration-300 rounded-bl-lg filter md:grayscale hover:grayscale-0"
@@ -336,42 +336,45 @@
 		</StickyContent>
 	</div>
 	<section
-		class="columns-1 lg:columns-2 xl:columns-3 2xl:columns-4 gap-4 relative bottom-0 left-0 w-full mt-5"
+		class="columns-1 lg:columns-2 xl:columns-3 2xl:columns-4 gap-0 relative bottom-0 left-0 w-full"
 	>
 		<div class="absolute bottom-0 left-0 w-full h-1/6 bg-gradient-to-t from-primary-300"></div>
 		{#each images as { src, alt, caption, video }}
-			<button
-				class="relative rounded-lg w-full mb-4 {video ? 'cursor-pointer' : 'cursor-default'}"
-				on:click={() => {
-					if (video) {
-						openVideo(video);
-					}
-				}}
-			>
-				<figure class="relative group">
-					<img
-						class="rounded-lg w-full"
-						on:contextmenu|preventDefault
-						draggable="false"
-						{src}
-						{alt}
-					/>
-					{#if video}
+			{#if video}
+				<button
+					class="relative w-full block break-inside-avoid cursor-pointer"
+					on:click={() => openVideo(video)}
+				>
+					<figure class="relative group overflow-hidden">
+						<img class="w-full block" on:contextmenu|preventDefault draggable="false" {src} {alt} />
 						<div
 							class="w-16 absolute bg-slate-200 rounded-full top-1/2 left-1/2 group-hover:opacity-15 -translate-x-1/2 -translate-y-1/2 transition-all duration-300"
 						>
 							<img class="w-16" src={Playbutton} alt="Play Button" />
 						</div>
-					{/if}
-					{#if caption}
-						<figcaption
-							class="rounded-lg absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 mt-[-10px]"
-						>
-							{caption}
-						</figcaption>
-					{/if}
-				</figure>
-			</button>
+						{#if caption}
+							<figcaption
+								class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 py-2 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300"
+							>
+								{caption}
+							</figcaption>
+						{/if}
+					</figure>
+				</button>
+			{:else}
+				<div class="relative w-full block break-inside-avoid">
+					<figure class="relative group overflow-hidden">
+						<img class="w-full block" on:contextmenu|preventDefault draggable="false" {src} {alt} />
+						{#if caption}
+							<figcaption
+								class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+							>
+								{caption}
+							</figcaption>
+						{/if}
+					</figure>
+				</div>
+			{/if}
 		{/each}
 	</section>
 	{#if selectedVideo}
