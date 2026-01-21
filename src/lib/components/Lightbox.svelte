@@ -49,7 +49,7 @@
 	role="dialog"
 	aria-modal="true"
 	aria-label="Image lightbox"
-	tabindex="-1"
+	tabindex="0"
 >
 	<!-- Background blur -->
 	<div class="absolute inset-0 bg-black/95 backdrop-blur-xl"></div>
