@@ -1,40 +1,23 @@
 <script>
-	import StickyContent from '$lib/components/StickyContent.svelte';
-	import VideoModal from '$lib/components/VideoModal.svelte';
+	import Hero from '$lib/components/Hero.svelte';
+	import Gallery from '$lib/components/Gallery.svelte';
 	import { locale, _ } from 'svelte-i18n';
 
-	import Playbutton from '$lib/img/play-button.svg';
-
 	const title = `JJ Straub - ${$_('actor')} Portfolio`;
-	//	const description = `${$_('description')}`;
-
-	let selectedVideo = null;
-
-	function openVideo(videoUrl) {
-		selectedVideo = videoUrl;
-	}
-
-	function closeVideo() {
-		selectedVideo = null;
-	}
 
 	let images = [
-		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-LA-Kings.webp',
-			alt: 'JJ Straub: LA Kings',
-			caption: 'LA Kings - Commercial',
-			video: '/JJStraub_empireagency-LAKings.mp4'
-		},
-		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Feeder.webp',
-			alt: 'JJ Straub: Feeder',
-			caption: 'Feeder - The Vet'
-		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Sennheiser-Cowboy1.webp',
 			alt: 'JJ Straub: Sennheiser Cowboy',
 			caption: 'Sennheiser - Commercial'
 		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheWald.webp',
+			alt: 'JJ Straub: The Wald',
+			caption: 'The Wald - Injured Soldier',
+			video: '/JJStraub_empireagency-THE-WALD.mp4'
+		},
+
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kommissar.webp',
 			alt: 'JJ Straub: Kommissar',
@@ -57,9 +40,14 @@
 			caption: 'Make me feel - Dr. Buchenwald'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Professor.webp',
-			alt: 'JJ Straub: Professor',
-			caption: 'Professor'
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Reinfressen1-2.webp',
+			alt: 'JJ Straub: Reinfressen 1',
+			caption: 'Reinfressen - Bernd'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-SAT1-Notruf.webp',
+			alt: 'JJ Straub: SAT1 Notruf',
+			caption: 'SAT1 Notruf'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-RapunzelsFluch2.webp',
@@ -77,14 +65,15 @@
 			caption: 'Sylvia - upset customer'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Smiling.webp',
-			alt: 'JJ Straub: Smiling',
-			caption: ''
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-LastCustomer-Walter.webp',
+			alt: 'JJ Straub: Last Customer',
+			caption: 'Last Customer - Walter'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Karma.webp',
-			alt: 'JJ Straub: Karma - Father',
-			caption: 'Karma - Father'
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-LA-Kings.webp',
+			alt: 'JJ Straub: LA Kings',
+			caption: 'LA Kings - Commercial',
+			video: '/JJStraub_empireagency-LAKings.mp4'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-L.I.F.E.-KinoLoop.webp',
@@ -122,20 +111,27 @@
 			alt: 'JJ Straub: Piano Bar',
 			caption: 'Piano Bar - John'
 		},
+
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Reinfressen1-2.webp',
-			alt: 'JJ Straub: Reinfressen 1',
-			caption: 'Reinfressen - Bernd'
-		},
-		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-SAT1-Notruf.webp',
-			alt: 'JJ Straub: SAT1 Notruf',
-			caption: 'SAT1 Notruf'
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Professor.webp',
+			alt: 'JJ Straub: Professor',
+			caption: 'Professor'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kingdom-Come-Deliverance-char.webp',
 			alt: 'JJ Straub: Kingdom Come Deliverance',
 			caption: 'Kingdom Come Deliverance 2 - Martin Oderin'
+		},
+
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Smiling.webp',
+			alt: 'JJ Straub: Smiling',
+			caption: ''
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Jawlock-DR-Dentist.webp',
+			alt: 'JJ Straub: Jawlock DR Dentist',
+			caption: 'Jawlock - Dentist'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kingdom-Come-Deliverance.webp',
@@ -143,7 +139,7 @@
 			caption: 'Kingdom Come Deliverance 2 - Motion Capture'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Headshot2.webp',
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Headshot_Smile-old.webp',
 			alt: 'JJ Straub',
 			caption: ''
 		},
@@ -168,30 +164,24 @@
 			caption: 'L.I.F.E - Philosophy Teacher'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Jawlock-DR-Dentist.webp',
-			alt: 'JJ Straub: Jawlock DR Dentist',
-			caption: 'Jawlock - Dentist'
-		},
-		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheWald.webp',
-			alt: 'JJ Straub: The Wald',
-			caption: 'The Wald - Injured Soldier',
-			video: '/JJStraub_empireagency-THE-WALD.mp4'
-		},
-		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-From Russia with Love-BND-Agent.webp',
 			alt: 'JJ Straub: From Russia with Love',
 			caption: 'From Russia with Love - BND Agent'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Karma-PI.webp',
-			alt: 'JJ Straub: Karma PI',
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Karma.webp',
+			alt: 'JJ Straub: Karma - Father',
 			caption: 'Karma - Father'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-RedBloom-CIA.webp',
 			alt: 'JJ Straub: RedBloom CIA',
 			caption: 'RedBloom - CIA'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Feeder.webp',
+			alt: 'JJ Straub: Feeder',
+			caption: 'Feeder - The Vet'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-DerPate-HeadShot.webp',
@@ -203,7 +193,6 @@
 			alt: 'JJ Straub: Von Loewenberg',
 			caption: 'Mask of the Schwarzen-Loewenbergs - Hans'
 		},
-
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Booth-Game.webp',
 			alt: 'JJ Straub: Booth Game',
@@ -215,16 +204,10 @@
 			alt: 'JJ Straub: Reinfressen',
 			caption: 'Reinfressen - Bernd'
 		},
-
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TJ.webp',
 			alt: 'JJ Straub: TJ',
 			caption: 'TJ'
-		},
-		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-LastCustomer-Walter.webp',
-			alt: 'JJ Straub: Last Customer',
-			caption: 'Last Customer - Walter'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-100Stories.webp',
@@ -245,7 +228,7 @@
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Time.webp',
 			alt: 'JJ Straub: Time',
-			caption: 'Time'
+			caption: 'Kalt graut der Morgen - Grandpa'
 		}
 	];
 </script>
@@ -323,61 +306,7 @@
 `}
 </svelte:head>
 
-<main id="page" lang={$locale}>
-	<div class="mb-4">
-		<StickyContent>
-			<img
-				class="transition-all duration-300 rounded-bl-lg filter md:grayscale hover:grayscale-0"
-				src={'/JJStraub_Headshot.webp'}
-				alt="JJ Straub Headshot"
-				on:contextmenu|preventDefault
-				draggable="false"
-			/>
-		</StickyContent>
-	</div>
-	<section
-		class="columns-1 lg:columns-2 xl:columns-3 2xl:columns-4 gap-0 relative bottom-0 left-0 w-full"
-	>
-		<div class="absolute bottom-0 left-0 w-full h-1/6 bg-gradient-to-t from-primary-300"></div>
-		{#each images as { src, alt, caption, video }}
-			{#if video}
-				<button
-					class="relative w-full block break-inside-avoid cursor-pointer"
-					on:click={() => openVideo(video)}
-				>
-					<figure class="relative group overflow-hidden">
-						<img class="w-full block" on:contextmenu|preventDefault draggable="false" {src} {alt} />
-						<div
-							class="w-16 absolute bg-slate-200 rounded-full top-1/2 left-1/2 group-hover:opacity-15 -translate-x-1/2 -translate-y-1/2 transition-all duration-300"
-						>
-							<img class="w-16" src={Playbutton} alt="Play Button" />
-						</div>
-						{#if caption}
-							<figcaption
-								class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 py-2 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300"
-							>
-								{caption}
-							</figcaption>
-						{/if}
-					</figure>
-				</button>
-			{:else}
-				<div class="relative w-full block break-inside-avoid">
-					<figure class="relative group overflow-hidden">
-						<img class="w-full block" on:contextmenu|preventDefault draggable="false" {src} {alt} />
-						{#if caption}
-							<figcaption
-								class="absolute bottom-0 left-0 w-full text-center text-white bg-black bg-opacity-50 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-							>
-								{caption}
-							</figcaption>
-						{/if}
-					</figure>
-				</div>
-			{/if}
-		{/each}
-	</section>
-	{#if selectedVideo}
-		<VideoModal videoUrl={selectedVideo} onClose={closeVideo} />
-	{/if}
+<main lang={$locale} class="bg-surface-900">
+	<Hero />
+	<Gallery {images} />
 </main>
