@@ -146,7 +146,7 @@
 		{#each Array(totalImages) as _, i}
 			<button
 				class="h-1 rounded-full transition-all duration-300 {i === currentIndex ? 'bg-primary-400 w-12 md:w-16' : 'w-8 md:w-12 bg-white/30 hover:bg-white/50'}"
-				on:click|stopPropagation={() => dispatch(i < currentIndex ? 'prev' : 'next')}
+				on:click|stopPropagation={() => dispatch('goTo', { index: i })}
 				aria-label="Go to image {i + 1}"
 				style="display: {Math.abs(i - currentIndex) < 5 ? 'block' : 'none'}"
 			></button>
