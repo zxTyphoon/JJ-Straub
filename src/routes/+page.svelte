@@ -139,7 +139,7 @@
 			caption: 'Kingdom Come Deliverance 2 - Motion Capture'
 		},
 		{
-			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Headshot2.webp',
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Headshot_Smile-old.webp',
 			alt: 'JJ Straub',
 			caption: ''
 		},
@@ -228,7 +228,7 @@
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Time.webp',
 			alt: 'JJ Straub: Time',
-			caption: 'Time - Grandfather'
+			caption: 'Kalt graut der Morgen - Grandpa'
 		}
 	];
 </script>

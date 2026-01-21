@@ -22,11 +22,11 @@
 
 <section class="relative min-h-[100vh] md:min-h-[90vh] flex items-end overflow-hidden">
 	<!-- Background Image with Parallax Effect -->
-	<div class="absolute inset-0 z-0 flex items-center justify-center pt-16 md:pt-20">
+	<div class="absolute inset-0 z-0 flex items-center justify-center md:justify-end pt-16 md:pt-20">
 		<img
 			src="/JJStraub_Headshot.webp"
 			alt="JJ Straub"
-			class="h-full w-auto max-w-none md:w-full md:h-auto md:max-h-[120%] object-contain transition-transform duration-[2000ms]"
+			class="h-full w-auto max-w-none md:w-full md:h-auto md:max-h-[120%] object-contain transition-transform duration-[2000ms] md:translate-x-[10%] lg:translate-x-[15%]"
 			class:scale-100={isVisible}
 			on:contextmenu|preventDefault
 			draggable="false"
@@ -147,9 +147,9 @@
 			</div>
 		</div>
 
-		<!-- Scroll indicator -->
+		<!-- Scroll indicator - hidden on mobile to avoid overlap -->
 		<div
-			class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-1000 delay-500"
+			class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 transition-all duration-1000 delay-500"
 			class:opacity-100={isVisible}
 			class:opacity-0={!isVisible}
 		>

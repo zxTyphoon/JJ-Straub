@@ -21,11 +21,11 @@
 		{ href: 'https://www.linkedin.com/in/jj-straub/', icon: LinkedIn, label: 'LinkedIn' },
 		{ href: 'https://www.facebook.com/JJStraub/', icon: Facebook, label: 'Facebook' },
 		{ href: 'https://x.com/JJStraub4real', icon: X, label: 'X' },
-		{ href: 'https://www.xing.com/profile/Juergen_Straub23', icon: XING, label: 'XING' },
+		{ href: 'https://www.xing.com/profile/Juergen_Straub23', icon: XING, label: '' },
 		{
 			href: 'https://www.filmmakers.eu/de/actors/j-j-straub',
 			icon: Filmmakers,
-			label: 'Filmmakers'
+			label: ''
 		}
 	];
 
