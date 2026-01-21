@@ -38,9 +38,48 @@
 		return () => window.removeEventListener('scroll', handleScroll);
 	});
 
+	function lockScroll() {
+		if (typeof document === 'undefined') return;
+
+		const w = window;
+		if (typeof w.__scrollLockCount !== 'number') {
+			w.__scrollLockCount = 0;
+		}
+
+		if (w.__scrollLockCount === 0) {
+			w.__originalBodyOverflow = document.body.style.overflow;
+			document.body.style.overflow = 'hidden';
+		}
+
+		w.__scrollLockCount += 1;
+	}
+
+	function unlockScroll() {
+		if (typeof document === 'undefined') return;
+
+		const w = window;
+		if (typeof w.__scrollLockCount !== 'number') {
+			w.__scrollLockCount = 0;
+		}
+
+		if (w.__scrollLockCount > 0) {
+			w.__scrollLockCount -= 1;
+		}
+
+		if (w.__scrollLockCount === 0) {
+			document.body.style.overflow = w.__originalBodyOverflow || '';
+			delete w.__originalBodyOverflow;
+		}
+	}
+
 	function toggleMobileMenu() {
 		mobileMenuOpen = !mobileMenuOpen;
-		document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+
+		if (mobileMenuOpen) {
+			lockScroll();
+		} else {
+			unlockScroll();
+		}
 	}
 
 	function scrollToTop() {
