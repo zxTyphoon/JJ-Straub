@@ -107,18 +107,3 @@
 		></div>
 	</figure>
 </button>
-
-<style>
-	@keyframes shimmer {
-		0% {
-			transform: translateX(-100%);
-		}
-		100% {
-			transform: translateX(100%);
-		}
-	}
-
-	.animate-shimmer {
-		animation: shimmer 1.5s infinite;
-	}
-</style>
