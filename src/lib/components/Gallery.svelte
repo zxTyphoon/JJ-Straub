@@ -14,12 +14,20 @@
 
 	onMount(() => {
 		mounted = true;
+		const timeouts = [];
 		// Stagger the appearance of gallery items
 		images.forEach((_, index) => {
-			setTimeout(() => {
+			const id = setTimeout(() => {
+				if (!mounted) return;
 				visibleItems = [...visibleItems, index];
 			}, index * 50);
+			timeouts.push(id);
 		});
+
+		return () => {
+			mounted = false;
+			timeouts.forEach((id) => clearTimeout(id));
+		};
 	});
 
 	function openLightbox(index) {
