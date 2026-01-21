@@ -8,5 +8,11 @@
 	"or": "or",
 	"description": "JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights.",
 	"actor": "Actor",
-	"agentur": "Agency"
+	"agentur": "Agency",
+	"scroll": "Scroll",
+	"portfolio": "Portfolio",
+	"featuredWork": "Characters - 2024-2026",
+	"connect": "Connect",
+	"backToPortfolio": "Back to Portfolio",
+	"legalNotice": "Legal Notice"
 }

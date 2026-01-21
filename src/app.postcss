@@ -5,5 +5,49 @@
 
 html,
 body {
-	@apply h-full overflow-hidden bg-primary-50-900-token;
+	@apply h-full overflow-x-hidden bg-surface-900;
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgb(var(--color-surface-900));
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(var(--color-primary-500) / 0.5);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(var(--color-primary-400) / 0.7);
+}
+
+/* Selection styling */
+::selection {
+	background: rgb(var(--color-primary-500) / 0.3);
+	color: white;
+}
+
+/* Smooth transitions for theme */
+* {
+	transition-property: background-color, border-color;
+	transition-duration: 150ms;
+	transition-timing-function: ease-out;
+}
+
+/* Focus styles */
+*:focus-visible {
+	outline: 2px solid rgb(var(--color-primary-400));
+	outline-offset: 2px;
+}
+
+/* Image protection */
+img {
+	-webkit-user-drag: none;
+	user-select: none;
+}
+
