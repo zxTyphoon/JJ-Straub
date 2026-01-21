@@ -13,7 +13,7 @@
 	let showContent = false;
 
 	onMount(() => {
-		setTimeout(() => showContent = true, 50);
+		setTimeout(() => (showContent = true), 50);
 	});
 
 	function close() {
@@ -60,8 +60,18 @@
 		on:click={close}
 		aria-label="Close lightbox"
 	>
-		<svg class="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+		<svg
+			class="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300"
+			fill="none"
+			stroke="currentColor"
+			viewBox="0 0 24 24"
+		>
+			<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M6 18L18 6M6 6l12 12"
+			/>
 		</svg>
 	</button>
 
@@ -71,8 +81,13 @@
 		on:click|stopPropagation={() => dispatch('prev')}
 		aria-label="Previous image"
 	>
-		<svg class="w-6 h-6 text-white group-hover:-translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+		<svg
+			class="w-6 h-6 text-white group-hover:-translate-x-1 transition-transform duration-300"
+			fill="none"
+			stroke="currentColor"
+			viewBox="0 0 24 24"
+		>
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 		</svg>
 	</button>
 
@@ -81,8 +96,13 @@
 		on:click|stopPropagation={() => dispatch('next')}
 		aria-label="Next image"
 	>
-		<svg class="w-6 h-6 text-white group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+		<svg
+			class="w-6 h-6 text-white group-hover:translate-x-1 transition-transform duration-300"
+			fill="none"
+			stroke="currentColor"
+			viewBox="0 0 24 24"
+		>
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 		</svg>
 	</button>
 
@@ -101,10 +121,7 @@
 	{#if showContent}
 		<div
 			class="relative max-w-[92vw] md:max-w-[85vw] max-h-[85vh] flex flex-col items-center justify-center transition-all duration-300"
-			in:scale={{ duration: 300, start: 0.95 }}
-			in:fade={{ duration: 300 }}
-			out:scale={{ duration: 200, start: 1 }}
-			out:fade={{ duration: 200 }}
+			transition:scale={{ duration: 300, start: 0.95 }}
 		>
 			{#if image.video}
 				<!-- Video player -->
@@ -147,7 +164,9 @@
 	<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-1.5">
 		{#each Array(totalImages) as _, i}
 			<button
-				class="h-1 rounded-full transition-all duration-300 {i === currentIndex ? 'bg-primary-400 w-12 md:w-16' : 'w-8 md:w-12 bg-white/30 hover:bg-white/50'}"
+				class="h-1 rounded-full transition-all duration-300 {i === currentIndex
+					? 'bg-primary-400 w-12 md:w-16'
+					: 'w-8 md:w-12 bg-white/30 hover:bg-white/50'}"
 				on:click|stopPropagation={() => dispatch('goTo', { index: i })}
 				aria-label="Go to image {i + 1}"
 				style="display: {Math.abs(i - currentIndex) < 5 ? 'block' : 'none'}"

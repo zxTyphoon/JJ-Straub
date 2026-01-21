@@ -1,8 +1,6 @@
 import { join } from 'path';
 import { fileURLToPath } from 'url';
 
-import forms from '@tailwindcss/forms';
-import typography from '@tailwindcss/typography';
 import { skeleton } from '@skeletonlabs/tw-plugin';
 
 // Resolve __dirname in an ES Module context
@@ -46,8 +44,6 @@ export default {
 		}
 	},
 	plugins: [
-		forms,
-		typography,
 		skeleton({
 			themes: {
 				preset: [
