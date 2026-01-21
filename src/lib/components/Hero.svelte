@@ -33,10 +33,10 @@
 		/>
 		<!-- Sophisticated gradient overlays -->
 		<div
-			class="absolute inset-0 bg-gradient-to-t from-surface-900 via-surface-900/60 to-transparent"
+			class="absolute inset-0 bg-gradient-to-t from-surface-900 via-surface-900/40 to-transparent"
 		></div>
 		<div
-			class="absolute inset-0 bg-gradient-to-r from-surface-900/80 via-transparent to-transparent"
+			class="absolute inset-0 bg-gradient-to-r from-surface-900/60 via-transparent to-transparent"
 		></div>
 	</div>
 
@@ -68,7 +68,9 @@
 			class:opacity-0={!isVisible}
 		>
 			<!-- Name with dramatic typography -->
-			<h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6">
+			<h1
+				class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-white mb-6"
+			>
 				<span class="block">Juergen J.</span>
 				<span class="block text-primary-400">Straub</span>
 			</h1>

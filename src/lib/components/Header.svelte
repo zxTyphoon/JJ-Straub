@@ -161,10 +161,12 @@
 {#if mobileMenuOpen}
 	<div class="fixed inset-0 z-50 lg:hidden">
 		<!-- Backdrop -->
-		<div
-			class="absolute inset-0 bg-black/90 backdrop-blur-xl"
+		<button
+			type="button"
+			class="absolute inset-0 bg-black/90 backdrop-blur-xl w-full h-full border-none cursor-default"
 			on:click={toggleMobileMenu}
-		></div>
+			aria-label="Close menu"
+		></button>
 
 		<!-- Menu Content -->
 		<div class="absolute top-0 right-0 w-80 max-w-[85vw] h-full bg-surface-900 shadow-2xl">
