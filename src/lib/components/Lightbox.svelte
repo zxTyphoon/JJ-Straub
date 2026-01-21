@@ -98,48 +98,50 @@
 	</div>
 
 	<!-- Content container -->
-	<div
-		class="relative max-w-[92vw] md:max-w-[85vw] max-h-[85vh] flex flex-col items-center justify-center transition-all duration-300"
-		class:scale-100={showContent}
-		class:opacity-100={showContent}
-		class:scale-95={!showContent}
-		class:opacity-0={!showContent}
-	>
-		{#if image.video}
-			<!-- Video player -->
-			<video
-				bind:this={videoElement}
-				class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl"
-				src={image.video}
-				controls
-				autoplay
-				playsinline
-				disablepictureinpicture
-				preload="metadata"
-				controlslist="nodownload"
-				on:ended={handleVideoEnded}
-			>
-				<track kind="captions" src="" srclang="en" label="No Captions" />
-			</video>
-		{:else}
-			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-			<!-- Image -->
-			<img
-				class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl object-contain"
-				src={image.src}
-				alt={image.alt}
-				on:contextmenu|preventDefault
-				draggable="false"
-			/>
-		{/if}
+	{#if showContent}
+		<div
+			class="relative max-w-[92vw] md:max-w-[85vw] max-h-[85vh] flex flex-col items-center justify-center transition-all duration-300"
+			in:scale={{ duration: 300, start: 0.95 }}
+			in:fade={{ duration: 300 }}
+			out:scale={{ duration: 200, start: 1 }}
+			out:fade={{ duration: 200 }}
+		>
+			{#if image.video}
+				<!-- Video player -->
+				<video
+					bind:this={videoElement}
+					class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl"
+					src={image.video}
+					controls
+					autoplay
+					playsinline
+					disablepictureinpicture
+					preload="metadata"
+					controlslist="nodownload"
+					on:ended={handleVideoEnded}
+				>
+					<track kind="captions" src="" srclang="en" label="No Captions" />
+				</video>
+			{:else}
+				<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+				<!-- Image -->
+				<img
+					class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl object-contain"
+					src={image.src}
+					alt={image.alt}
+					on:contextmenu|preventDefault
+					draggable="false"
+				/>
+			{/if}
 
-		<!-- Caption -->
-		{#if image.caption}
-			<div class="mt-6 px-4 text-center">
-				<p class="text-white/90 text-lg md:text-xl font-medium">{image.caption}</p>
-			</div>
-		{/if}
-	</div>
+			<!-- Caption -->
+			{#if image.caption}
+				<div class="mt-6 px-4 text-center">
+					<p class="text-white/90 text-lg md:text-xl font-medium">{image.caption}</p>
+				</div>
+			{/if}
+		</div>
+	{/if}
 
 	<!-- Progress bar -->
 	<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-1.5">
