@@ -1,229 +1,170 @@
 <script>
 	import { onMount } from 'svelte';
 	import { _ } from 'svelte-i18n';
+	import LanguageToggle from './LanguageToggle.svelte';
+	import AccentSwitcher from './AccentSwitcher.svelte';
 
 	import Instagram from '$lib/img/Instagram.svg';
-	import Facebook from '$lib/img/Facebook.svg';
-	import Filmmakers from '$lib/img/Filmmakers.svg';
 	import IMDB from '$lib/img/imdb.svg';
-	import XING from '$lib/img/XING.svg';
 	import YouTube from '$lib/img/YouTube.svg';
-	import X from '$lib/img/X.svg';
 	import LinkedIn from '$lib/img/linkedin.svg';
+	import Facebook from '$lib/img/Facebook.svg';
+	import X from '$lib/img/X.svg';
 
-	let scrolled = false;
-	let mobileMenuOpen = false;
+	const nav = [
+		{ href: '/#about', key: 'navAbout' },
+		{ href: '/#reel', key: 'navReel' },
+		{ href: '/#work', key: 'navWork' },
+		{ href: '/#contact', key: 'navContact' }
+	];
 
-	const socialLinks = [
+	const socials = [
+		{ href: 'https://www.imdb.com/name/nm0833707/', icon: IMDB, label: 'IMDb' },
 		{ href: 'https://www.instagram.com/jjstraub1', icon: Instagram, label: 'Instagram' },
-		{ href: 'https://www.imdb.com/name/nm0833707/', icon: IMDB, label: 'IMDB' },
 		{ href: 'https://www.youtube.com/user/JJatUtube', icon: YouTube, label: 'YouTube' },
 		{ href: 'https://www.linkedin.com/in/jj-straub/', icon: LinkedIn, label: 'LinkedIn' },
 		{ href: 'https://www.facebook.com/JJStraub/', icon: Facebook, label: 'Facebook' },
-		{ href: 'https://x.com/JJStraub4real', icon: X, label: 'X' },
-		{ href: 'https://www.xing.com/profile/Juergen_Straub23', icon: XING, label: '' },
-		{
-			href: 'https://www.filmmakers.eu/de/actors/j-j-straub',
-			icon: Filmmakers,
-			label: ''
-		}
+		{ href: 'https://x.com/JJStraub4real', icon: X, label: 'X' }
 	];
 
-	onMount(() => {
-		const handleScroll = () => {
-			scrolled = window.scrollY > 50;
-		};
+	let scrolled = $state(false);
+	let menuOpen = $state(false);
 
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
+	onMount(() => {
+		const onScroll = () => (scrolled = window.scrollY > 40);
+		onScroll();
+		window.addEventListener('scroll', onScroll, { passive: true });
+		return () => window.removeEventListener('scroll', onScroll);
 	});
 
-	function lockScroll() {
-		if (typeof document === 'undefined') return;
-
-		const w = window;
-		if (typeof w.__scrollLockCount !== 'number') {
-			w.__scrollLockCount = 0;
+	$effect(() => {
+		if (typeof document !== 'undefined') {
+			document.body.style.overflow = menuOpen ? 'hidden' : '';
 		}
+	});
 
-		if (w.__scrollLockCount === 0) {
-			w.__originalBodyOverflow = document.body.style.overflow;
-			document.body.style.overflow = 'hidden';
-		}
-
-		w.__scrollLockCount += 1;
-	}
-
-	function unlockScroll() {
-		if (typeof document === 'undefined') return;
-
-		const w = window;
-		if (typeof w.__scrollLockCount !== 'number') {
-			w.__scrollLockCount = 0;
-		}
-
-		if (w.__scrollLockCount > 0) {
-			w.__scrollLockCount -= 1;
-		}
-
-		if (w.__scrollLockCount === 0) {
-			document.body.style.overflow = w.__originalBodyOverflow || '';
-			delete w.__originalBodyOverflow;
-		}
-	}
-
-	function toggleMobileMenu() {
-		mobileMenuOpen = !mobileMenuOpen;
-
-		if (mobileMenuOpen) {
-			lockScroll();
-		} else {
-			unlockScroll();
-		}
-	}
-
-	function scrollToTop() {
+	function toTop() {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
 </script>
 
 <header
-	class="fixed top-0 left-0 right-0 z-40 transition-all duration-500 {scrolled
-		? 'bg-surface-900/95 backdrop-blur-xl shadow-2xl py-3'
-		: 'py-4'}"
+	class="fixed inset-x-0 top-0 z-40 transition-all duration-500 {scrolled
+		? 'border-b border-bone/5 bg-ink-900/85 py-3 backdrop-blur-xl'
+		: 'border-b border-transparent py-5'}"
 >
-	<div class="px-6 md:px-12 lg:px-20">
-		<nav class="flex items-center justify-between">
-			<!-- Logo -->
-			<button on:click={scrollToTop} class="relative group">
-				<span
-					class="text-2xl md:text-3xl font-bold tracking-tight text-white transition-all duration-300"
-				>
-					JJ
-					<span
-						class="text-primary-400 transition-all duration-300"
-						class:text-primary-300={scrolled}
-					>
-						Straub
-					</span>
-				</span>
-				<span
-					class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-300"
-				></span>
-			</button>
+	<div class="mx-auto flex max-w-container items-center justify-between px-5 md:px-10 lg:px-16">
+		<!-- Monogram -->
+		<button onclick={toTop} class="group flex items-baseline gap-2" aria-label="JJ Straub — home">
+			<span
+				class="font-display text-2xl font-semibold tracking-tight text-bone"
+				style="font-variation-settings:'opsz' 140"
+			>
+				JJ<span class="text-accent">.</span>Straub
+			</span>
+		</button>
 
-			<!-- Desktop Social Links -->
-			<div class="hidden lg:flex items-center gap-2">
-				{#each socialLinks as { href, icon, label }}
+		<!-- Desktop nav -->
+		<nav class="hidden items-center gap-8 lg:flex">
+			{#each nav as item}
+				<a
+					href={item.href}
+					class="group relative text-[0.8rem] uppercase tracking-[0.2em] text-bone-muted transition-colors duration-300 hover:text-bone"
+				>
+					{$_(item.key)}
+					<span
+						class="absolute -bottom-1.5 left-0 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full"
+					></span>
+				</a>
+			{/each}
+		</nav>
+
+		<!-- Right cluster -->
+		<div class="flex items-center gap-3">
+			<div class="hidden items-center gap-1 xl:flex">
+				{#each socials.slice(0, 4) as { href, icon, label }}
 					<a
 						{href}
 						target="_blank"
 						rel="noreferrer"
-						class="p-2 rounded-lg flex items-center justify-center transition-all duration-300 hover:bg-white/10 hover:scale-110"
+						class="flex h-8 w-8 items-center justify-center rounded-full opacity-70 transition-all duration-300 hover:bg-bone/10 hover:opacity-100"
 						aria-label={label}
 					>
-						<img class="h-7 w-auto" src={icon} alt={label} />
+						<img class="h-[18px] w-[18px]" src={icon} alt={label} />
 					</a>
 				{/each}
 			</div>
+			<div class="hidden sm:block"><LanguageToggle /></div>
+			<AccentSwitcher />
 
-			<!-- Mobile Menu Button -->
+			<!-- Mobile menu button -->
 			<button
-				class="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-white/10"
-				on:click={toggleMobileMenu}
-				aria-label="Toggle menu"
+				class="flex h-9 w-9 items-center justify-center rounded-full border border-bone/15 lg:hidden"
+				onclick={() => (menuOpen = true)}
+				aria-label="Open menu"
 			>
-				<div class="relative w-6 h-5">
-					<span
-						class="absolute left-0 w-full h-0.5 bg-white rounded transition-all duration-300"
-						class:top-0={!mobileMenuOpen}
-						class:top-2={mobileMenuOpen}
-						class:rotate-45={mobileMenuOpen}
-					></span>
-					<span
-						class="absolute left-0 top-2 w-full h-0.5 bg-white rounded transition-all duration-300"
-						class:opacity-100={!mobileMenuOpen}
-						class:opacity-0={mobileMenuOpen}
-					></span>
-					<span
-						class="absolute left-0 w-full h-0.5 bg-white rounded transition-all duration-300"
-						class:top-4={!mobileMenuOpen}
-						class:top-2={mobileMenuOpen}
-						class:-rotate-45={mobileMenuOpen}
-					></span>
-				</div>
+				<svg class="h-5 w-5 text-bone" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+					<path stroke-width="1.6" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+				</svg>
 			</button>
-		</nav>
+		</div>
 	</div>
 </header>
 
-<!-- Mobile Menu -->
-{#if mobileMenuOpen}
+<!-- Mobile overlay -->
+{#if menuOpen}
 	<div class="fixed inset-0 z-50 lg:hidden">
-		<!-- Backdrop -->
 		<button
-			type="button"
-			class="absolute inset-0 bg-black/90 backdrop-blur-xl w-full h-full border-none cursor-default"
-			on:click={toggleMobileMenu}
+			class="absolute inset-0 h-full w-full bg-ink-950/95 backdrop-blur-xl"
+			onclick={() => (menuOpen = false)}
 			aria-label="Close menu"
+			tabindex="-1"
 		></button>
 
-		<!-- Menu Content -->
-		<div class="absolute top-0 right-0 w-80 max-w-[85vw] h-full bg-surface-900 shadow-2xl">
-			<!-- Close button -->
-			<div class="flex justify-end p-6">
+		<div class="relative flex h-full flex-col px-8 py-7">
+			<div class="flex items-center justify-between">
+				<span class="font-display text-xl text-bone"
+					>JJ<span class="text-accent">.</span>Straub</span
+				>
 				<button
-					class="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-white/10"
-					on:click={toggleMobileMenu}
+					class="flex h-9 w-9 items-center justify-center rounded-full border border-bone/15"
+					onclick={() => (menuOpen = false)}
 					aria-label="Close menu"
 				>
-					<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M6 18L18 6M6 6l12 12"
-						/>
+					<svg class="h-5 w-5 text-bone" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+						<path stroke-width="1.6" stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
 					</svg>
 				</button>
 			</div>
 
-			<!-- Social Links Grid -->
-			<div class="px-6">
-				<p class="text-xs uppercase tracking-widest text-white/40 mb-4">{$_('connect')}</p>
-				<div class="grid grid-cols-2 gap-3">
-					{#each socialLinks as { href, icon, label }}
+			<nav class="mt-16 flex flex-col gap-7">
+				{#each nav as item, i}
+					<a
+						href={item.href}
+						onclick={() => (menuOpen = false)}
+						class="font-display text-4xl font-light text-bone transition-colors hover:text-accent"
+						style="font-variation-settings:'opsz' 100"
+					>
+						<span class="mr-4 align-middle text-sm text-bone-dim">0{i + 1}</span>{$_(item.key)}
+					</a>
+				{/each}
+			</nav>
+
+			<div class="mt-auto space-y-6">
+				<LanguageToggle />
+				<div class="flex flex-wrap gap-2">
+					{#each socials as { href, icon, label }}
 						<a
 							{href}
 							target="_blank"
 							rel="noreferrer"
-							class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300"
-							on:click={toggleMobileMenu}
+							class="flex h-11 w-11 items-center justify-center rounded-full bg-bone/5 transition-colors hover:bg-bone/10"
+							aria-label={label}
 						>
-							<img class="h-6 w-auto" src={icon} alt={label} />
-							<span class="text-white/80 text-sm font-medium">{label}</span>
+							<img class="h-5 w-5" src={icon} alt={label} />
 						</a>
 					{/each}
 				</div>
-			</div>
-
-			<!-- Contact Info -->
-			<div class="absolute bottom-0 left-0 right-0 p-6 border-t border-white/10">
-				<p class="text-xs uppercase tracking-widest text-white/40 mb-3">Contact</p>
-				<a
-					href="mailto:jj@jjstraub.com"
-					class="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors duration-300"
-				>
-					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-						/>
-					</svg>
-					jj@jjstraub.com
-				</a>
 			</div>
 		</div>
 	</div>

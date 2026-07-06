@@ -1,176 +1,164 @@
 <script>
-	import { createEventDispatcher, onMount } from 'svelte';
 	import { fade, scale } from 'svelte/transition';
+	import { untrack } from 'svelte';
 
-	export let image;
-	export let currentIndex;
-	export let totalImages;
+	// Self-contained lightbox. Navigates within `items` starting at `start`.
+	// A fresh instance is mounted on each open, so `start` is only the initial index.
+	let { items = [], start = 0, onClose } = $props();
 
-	const dispatch = createEventDispatcher();
+	let i = $state(untrack(() => start));
+	let dialog = $state(null);
 
-	let videoElement;
-	let isClosing = false;
-	let showContent = false;
+	const current = $derived(items[i]);
 
-	onMount(() => {
-		setTimeout(() => (showContent = true), 50);
+	function next() {
+		i = (i + 1) % items.length;
+	}
+	function prev() {
+		i = (i - 1 + items.length) % items.length;
+	}
+
+	function onKeydown(e) {
+		if (e.key === 'Escape') onClose?.();
+		else if (e.key === 'ArrowRight') next();
+		else if (e.key === 'ArrowLeft') prev();
+	}
+
+	// Lock page scroll while open, focus the dialog for keyboard nav.
+	$effect(() => {
+		const prevOverflow = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+		dialog?.focus();
+		return () => {
+			document.body.style.overflow = prevOverflow;
+		};
 	});
-
-	function close() {
-		isClosing = true;
-		showContent = false;
-		setTimeout(() => dispatch('close'), 200);
-	}
-
-	function handleBackdropClick(event) {
-		if (event.target === event.currentTarget) {
-			close();
-		}
-	}
-
-	function handleVideoEnded() {
-		close();
-	}
-
-	function handleKeydown(event) {
-		if (event.key === 'Enter' || event.key === ' ') {
-			handleBackdropClick(event);
-		}
-	}
 </script>
 
-<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-<!-- Backdrop -->
+<svelte:window onkeydown={onKeydown} />
+
 <div
-	class="fixed inset-0 z-50 flex items-center justify-center"
+	bind:this={dialog}
+	class="fixed inset-0 z-[70] flex items-center justify-center p-4"
 	transition:fade={{ duration: 200 }}
-	on:click={handleBackdropClick}
-	on:keydown={handleKeydown}
 	role="dialog"
 	aria-modal="true"
-	aria-label="Image lightbox"
-	tabindex="0"
+	aria-label="Media viewer"
+	tabindex="-1"
 >
-	<!-- Background blur -->
-	<div class="absolute inset-0 bg-black/95 backdrop-blur-xl"></div>
-
-	<!-- Close button -->
+	<!-- Backdrop: click to close (keyboard users use Esc or the close button) -->
 	<button
-		class="absolute top-4 right-4 md:top-8 md:right-8 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 group"
-		on:click={close}
-		aria-label="Close lightbox"
-	>
-		<svg
-			class="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300"
-			fill="none"
-			stroke="currentColor"
-			viewBox="0 0 24 24"
-		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M6 18L18 6M6 6l12 12"
-			/>
-		</svg>
-	</button>
-
-	<!-- Navigation arrows -->
-	<button
-		class="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 group"
-		on:click|stopPropagation={() => dispatch('prev')}
-		aria-label="Previous image"
-	>
-		<svg
-			class="w-6 h-6 text-white group-hover:-translate-x-1 transition-transform duration-300"
-			fill="none"
-			stroke="currentColor"
-			viewBox="0 0 24 24"
-		>
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-		</svg>
-	</button>
-
-	<button
-		class="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 group"
-		on:click|stopPropagation={() => dispatch('next')}
-		aria-label="Next image"
-	>
-		<svg
-			class="w-6 h-6 text-white group-hover:translate-x-1 transition-transform duration-300"
-			fill="none"
-			stroke="currentColor"
-			viewBox="0 0 24 24"
-		>
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-		</svg>
-	</button>
+		class="absolute inset-0 h-full w-full cursor-default bg-ink-950/95 backdrop-blur-xl"
+		onclick={() => onClose?.()}
+		aria-label="Close viewer"
+		tabindex="-1"
+	></button>
 
 	<!-- Counter -->
-	<div class="absolute top-4 left-4 md:top-8 md:left-8 z-10">
-		<div class="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm">
-			<span class="text-white/80 text-sm font-medium">
-				<span class="text-white">{currentIndex + 1}</span>
-				<span class="text-white/40 mx-1">/</span>
-				<span class="text-white/60">{totalImages}</span>
-			</span>
-		</div>
+	<div
+		class="absolute left-4 top-4 z-10 rounded-full border border-bone/10 bg-ink-900/60 px-4 py-1.5 text-sm backdrop-blur md:left-8 md:top-8"
+	>
+		<span class="text-bone">{String(i + 1).padStart(2, '0')}</span>
+		<span class="mx-1.5 text-bone-dim">/</span>
+		<span class="text-bone-muted">{String(items.length).padStart(2, '0')}</span>
 	</div>
 
-	<!-- Content container -->
-	{#if showContent}
-		<div
-			class="relative max-w-[92vw] md:max-w-[85vw] max-h-[85vh] flex flex-col items-center justify-center transition-all duration-300"
-			transition:scale={{ duration: 300, start: 0.95 }}
+	<!-- Close -->
+	<button
+		onclick={() => onClose?.()}
+		class="group absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-bone/10 bg-ink-900/60 backdrop-blur transition-colors hover:border-accent md:right-8 md:top-8"
+		aria-label="Close"
+	>
+		<svg
+			class="h-5 w-5 text-bone transition-transform duration-300 group-hover:rotate-90"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			><path stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6L6 18" /></svg
 		>
-			{#if image.video}
-				<!-- Video player -->
+	</button>
+
+	{#if items.length > 1}
+		<button
+			onclick={(e) => {
+				e.stopPropagation();
+				prev();
+			}}
+			class="group absolute left-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-bone/10 bg-ink-900/60 backdrop-blur transition-colors hover:border-accent md:left-8 md:h-14 md:w-14"
+			aria-label="Previous"
+		>
+			<svg
+				class="h-6 w-6 text-bone transition-transform duration-300 group-hover:-translate-x-0.5"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				><path
+					stroke-width="1.6"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M15 19l-7-7 7-7"
+				/></svg
+			>
+		</button>
+		<button
+			onclick={(e) => {
+				e.stopPropagation();
+				next();
+			}}
+			class="group absolute right-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-bone/10 bg-ink-900/60 backdrop-blur transition-colors hover:border-accent md:right-8 md:h-14 md:w-14"
+			aria-label="Next"
+		>
+			<svg
+				class="h-6 w-6 text-bone transition-transform duration-300 group-hover:translate-x-0.5"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				><path
+					stroke-width="1.6"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M9 5l7 7-7 7"
+				/></svg
+			>
+		</button>
+	{/if}
+
+	<!-- Media -->
+	{#key i}
+		<figure
+			class="relative z-[5] flex max-h-[86vh] max-w-[92vw] flex-col items-center md:max-w-[80vw]"
+			transition:scale={{ duration: 260, start: 0.96 }}
+		>
+			{#if current.video}
+				<!-- svelte-ignore a11y_media_has_caption -->
 				<video
-					bind:this={videoElement}
-					class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl"
-					src={image.video}
+					class="max-h-[74vh] max-w-full rounded-xl shadow-cinema"
+					src={current.video}
+					poster={current.src}
 					controls
 					autoplay
 					playsinline
-					disablepictureinpicture
 					preload="metadata"
 					controlslist="nodownload"
-					on:ended={handleVideoEnded}
-				>
-					<track kind="captions" src="" srclang="en" label="No Captions" />
-				</video>
+					onended={() => onClose?.()}
+				></video>
 			{:else}
-				<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-				<!-- Image -->
 				<img
-					class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl object-contain"
-					src={image.src}
-					alt={image.alt}
-					on:contextmenu|preventDefault
+					class="max-h-[78vh] max-w-full rounded-xl object-contain shadow-cinema"
+					src={current.src}
+					alt={current.alt}
+					oncontextmenu={(e) => e.preventDefault()}
 					draggable="false"
 				/>
 			{/if}
-
-			<!-- Caption -->
-			{#if image.caption}
-				<div class="mt-6 px-4 text-center">
-					<p class="text-white/90 text-lg md:text-xl font-medium">{image.caption}</p>
-				</div>
+			{#if current.caption}
+				<figcaption
+					class="mt-5 max-w-xl text-center font-display text-lg text-bone md:text-xl"
+					style="font-variation-settings:'opsz' 60"
+				>
+					{current.caption}
+				</figcaption>
 			{/if}
-		</div>
-	{/if}
-
-	<!-- Progress bar -->
-	<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-1.5">
-		{#each Array(totalImages) as _, i}
-			<button
-				class="h-1 rounded-full transition-all duration-300 {i === currentIndex
-					? 'bg-primary-400 w-12 md:w-16'
-					: 'w-8 md:w-12 bg-white/30 hover:bg-white/50'}"
-				on:click|stopPropagation={() => dispatch('goTo', { index: i })}
-				aria-label="Go to image {i + 1}"
-				style="display: {Math.abs(i - currentIndex) < 5 ? 'block' : 'none'}"
-			></button>
-		{/each}
-	</div>
+		</figure>
+	{/key}
 </div>

@@ -1,30 +1,34 @@
 <script>
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
-	let visible = false;
+	let visible = $state(false);
 
 	onMount(() => {
-		const handleScroll = () => {
-			visible = window.scrollY > 500;
-		};
-
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
+		const onScroll = () => (visible = window.scrollY > 600);
+		window.addEventListener('scroll', onScroll, { passive: true });
+		return () => window.removeEventListener('scroll', onScroll);
 	});
-
-	function scrollToTop() {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	}
 </script>
 
 {#if visible}
 	<button
-		on:click={scrollToTop}
-		class="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-primary-500 hover:bg-primary-400 text-white shadow-lg shadow-primary-500/25 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1 animate-fade-in"
+		onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+		transition:fade={{ duration: 200 }}
+		class="group fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full border border-bone/15 bg-ink-850/80 text-bone backdrop-blur transition-all duration-300 hover:border-accent hover:text-accent"
 		aria-label="Scroll to top"
 	>
-		<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
-		</svg>
+		<svg
+			class="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			><path
+				stroke-width="1.8"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				d="M5 15l7-7 7 7"
+			/></svg
+		>
 	</button>
 {/if}
