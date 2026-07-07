@@ -7,6 +7,8 @@
 
 	let activeFilter = 'all';
 	let selectedIndex = null;
+	let hasFiltered = false;
+	let innerWidth = 0;
 
 	$: filtered =
 		activeFilter === 'all'
@@ -15,11 +17,25 @@
 				? works.filter((work) => work.video)
 				: works.filter((work) => work.category === activeFilter);
 
+	// Mirrors the grid's responsive column count (columns-1 sm:2 lg:3 xl:4)
+	$: cols = innerWidth >= 1280 ? 4 : innerWidth >= 1024 ? 3 : innerWidth >= 640 ? 2 : 1;
+	$: rowsPerCol = Math.max(1, Math.ceil(filtered.length / cols));
+
+	// CSS columns lay items out down each column, so an index-based stagger
+	// would sweep column by column. Convert to the item's visual row/column so
+	// the cascade sweeps row by row instead.
+	function cascadeDelay(index, rowsPerCol, cols) {
+		const col = Math.floor(index / rowsPerCol);
+		const row = index % rowsPerCol;
+		return Math.min(row * 90 + col * 30, 600);
+	}
+
 	$: selected = selectedIndex !== null ? filtered[selectedIndex] : null;
 
 	function setFilter(filter) {
 		activeFilter = filter;
 		selectedIndex = null;
+		hasFiltered = true;
 	}
 
 	function openLightbox(index) {
@@ -48,7 +64,7 @@
 	}
 </script>
 
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window on:keydown={handleKeydown} bind:innerWidth />
 
 <section id="work" class="relative scroll-mt-20 px-6 md:px-10 lg:px-16 py-24 md:py-36">
 	<!-- Section header -->
@@ -95,12 +111,21 @@
 		{/each}
 	</div>
 
-	<!-- Masonry grid -->
-	<div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-5">
-		{#each filtered as work, index (work.src)}
-			<WorkItem {work} {index} on:select={() => openLightbox(index)} />
-		{/each}
-	</div>
+	<!-- Masonry grid. Re-keyed per filter so every card re-enters with the
+	     staggered rise-in, echoing the scroll-reveal language. -->
+	{#key activeFilter}
+		<div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-5">
+			{#each filtered as work, index (work.src)}
+				<WorkItem
+					{work}
+					{index}
+					flyDelay={cascadeDelay(index, rowsPerCol, cols)}
+					animate={!hasFiltered}
+					on:select={() => openLightbox(index)}
+				/>
+			{/each}
+		</div>
+	{/key}
 </section>
 
 {#if selected}

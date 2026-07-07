@@ -1,7 +1,10 @@
 // Svelte action: fades/raises an element in when it enters the viewport.
 // Pairs with the [data-reveal] styles in app.postcss.
 // Usage: <div use:reveal> or <div use:reveal={{ delay: 150 }}>
-export function reveal(node, { delay = 0, threshold = 0.15 } = {}) {
+// Pass `enabled: false` to render the element immediately (no reveal).
+export function reveal(node, { delay = 0, threshold = 0.15, enabled = true } = {}) {
+	if (!enabled) return {};
+
 	node.dataset.reveal = '';
 	node.style.setProperty('--reveal-delay', `${delay}ms`);
 

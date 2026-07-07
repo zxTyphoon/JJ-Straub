@@ -1,17 +1,30 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
-	import { fade } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
 	import { reveal } from '$lib/actions/reveal.js';
 
 	export let work;
 	export let index = 0;
+	// Row-major stagger for the filter-switch cascade, computed by Work.svelte
+	export let flyDelay = 0;
+	// false after the user starts filtering: items must appear in place immediately
+	// instead of re-running the staggered scroll reveal
+	export let animate = true;
 
 	const dispatch = createEventDispatcher();
 
 	let isLoaded = false;
 </script>
 
-<div in:fade={{ duration: 400 }} use:reveal={{ delay: (index % 4) * 80 }} class="mb-5">
+<!-- The rise-in plays when the grid is re-keyed on a filter switch (intros are
+     skipped on initial mount, where the scroll reveal takes over). Transform +
+     opacity only: reserved image dimensions keep the masonry layout stable. -->
+<div
+	in:fly|global={{ y: 24, duration: 450, delay: flyDelay, easing: quintOut }}
+	use:reveal={{ delay: (index % 4) * 80, enabled: animate }}
+	class="mb-5"
+>
 	<button
 		class="group relative w-full block break-inside-avoid text-left border border-white/5 hover:border-brass/40 transition-colors duration-500 overflow-hidden bg-night-850"
 		on:click={() => dispatch('select')}
@@ -24,9 +37,11 @@
 			{/if}
 
 			<img
-				class="w-full block grayscale-[35%] group-hover:grayscale-0 group-hover:scale-[1.04] transition-all duration-700 ease-out-expo"
+				class="w-full h-auto block grayscale-[35%] group-hover:grayscale-0 group-hover:scale-[1.04] transition-all duration-700 ease-out-expo"
 				src={work.src}
 				alt={work.alt}
+				width={work.width}
+				height={work.height}
 				loading="lazy"
 				on:load={() => (isLoaded = true)}
 				on:contextmenu|preventDefault
