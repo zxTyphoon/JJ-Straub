@@ -1,176 +1,152 @@
 <script>
-	import { createEventDispatcher, onMount } from 'svelte';
+	import { createEventDispatcher } from 'svelte';
 	import { fade, scale } from 'svelte/transition';
+	import { _ } from 'svelte-i18n';
 
-	export let image;
+	export let item;
 	export let currentIndex;
-	export let totalImages;
+	export let total;
 
 	const dispatch = createEventDispatcher();
 
-	let videoElement;
-	let isClosing = false;
-	let showContent = false;
-
-	onMount(() => {
-		setTimeout(() => (showContent = true), 50);
-	});
-
-	function close() {
-		isClosing = true;
-		showContent = false;
-		setTimeout(() => dispatch('close'), 200);
-	}
+	let touchStartX = null;
 
 	function handleBackdropClick(event) {
 		if (event.target === event.currentTarget) {
-			close();
+			dispatch('close');
 		}
 	}
 
-	function handleVideoEnded() {
-		close();
+	function handleBackdropKeydown(event) {
+		if ((event.key === 'Enter' || event.key === ' ') && event.target === event.currentTarget) {
+			dispatch('close');
+		}
 	}
 
-	function handleKeydown(event) {
-		if (event.key === 'Enter' || event.key === ' ') {
-			handleBackdropClick(event);
+	function handleTouchStart(event) {
+		touchStartX = event.touches[0].clientX;
+	}
+
+	function handleTouchEnd(event) {
+		if (touchStartX === null) return;
+		const deltaX = event.changedTouches[0].clientX - touchStartX;
+		touchStartX = null;
+		if (Math.abs(deltaX) < 50) return;
+		if (deltaX < 0) {
+			dispatch('next');
+		} else {
+			dispatch('prev');
 		}
 	}
 </script>
 
-<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-<!-- Backdrop -->
 <div
-	class="fixed inset-0 z-50 flex items-center justify-center"
-	transition:fade={{ duration: 200 }}
+	class="fixed inset-0 z-50 flex flex-col bg-night-950/[0.97] backdrop-blur-lg"
+	transition:fade={{ duration: 250 }}
 	on:click={handleBackdropClick}
-	on:keydown={handleKeydown}
+	on:keydown={handleBackdropKeydown}
+	on:touchstart={handleTouchStart}
+	on:touchend={handleTouchEnd}
 	role="dialog"
 	aria-modal="true"
-	aria-label="Image lightbox"
+	aria-label={item.title}
 	tabindex="0"
 >
-	<!-- Background blur -->
-	<div class="absolute inset-0 bg-black/95 backdrop-blur-xl"></div>
-
-	<!-- Close button -->
-	<button
-		class="absolute top-4 right-4 md:top-8 md:right-8 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 group"
-		on:click={close}
-		aria-label="Close lightbox"
-	>
-		<svg
-			class="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300"
-			fill="none"
-			stroke="currentColor"
-			viewBox="0 0 24 24"
+	<!-- Top bar -->
+	<div class="relative z-10 flex items-center justify-between px-6 md:px-10 py-5">
+		<span class="text-xs tracking-[0.25em] text-bone-muted">
+			<span class="text-bone">{String(currentIndex + 1).padStart(2, '0')}</span>
+			<span class="text-bone-faint mx-1">/</span>
+			<span>{String(total).padStart(2, '0')}</span>
+		</span>
+		<button
+			class="group flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.25em] text-bone-muted hover:text-bone transition-colors duration-300"
+			on:click={() => dispatch('close')}
+			aria-label={$_('lightbox.close')}
 		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M6 18L18 6M6 6l12 12"
-			/>
-		</svg>
-	</button>
-
-	<!-- Navigation arrows -->
-	<button
-		class="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 group"
-		on:click|stopPropagation={() => dispatch('prev')}
-		aria-label="Previous image"
-	>
-		<svg
-			class="w-6 h-6 text-white group-hover:-translate-x-1 transition-transform duration-300"
-			fill="none"
-			stroke="currentColor"
-			viewBox="0 0 24 24"
-		>
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-		</svg>
-	</button>
-
-	<button
-		class="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 group"
-		on:click|stopPropagation={() => dispatch('next')}
-		aria-label="Next image"
-	>
-		<svg
-			class="w-6 h-6 text-white group-hover:translate-x-1 transition-transform duration-300"
-			fill="none"
-			stroke="currentColor"
-			viewBox="0 0 24 24"
-		>
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-		</svg>
-	</button>
-
-	<!-- Counter -->
-	<div class="absolute top-4 left-4 md:top-8 md:left-8 z-10">
-		<div class="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm">
-			<span class="text-white/80 text-sm font-medium">
-				<span class="text-white">{currentIndex + 1}</span>
-				<span class="text-white/40 mx-1">/</span>
-				<span class="text-white/60">{totalImages}</span>
+			{$_('lightbox.close')}
+			<span
+				class="w-9 h-9 border border-white/15 group-hover:border-brass flex items-center justify-center transition-colors duration-300"
+			>
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+				</svg>
 			</span>
-		</div>
+		</button>
 	</div>
 
-	<!-- Content container -->
-	{#if showContent}
+	<!-- Media -->
+	{#key item.src}
+		<!-- pointer-events-none lets clicks beside the media fall through to the backdrop -->
 		<div
-			class="relative max-w-[92vw] md:max-w-[85vw] max-h-[85vh] flex flex-col items-center justify-center transition-all duration-300"
-			transition:scale={{ duration: 300, start: 0.95 }}
+			class="flex-1 min-h-0 flex items-center justify-center px-4 md:px-24 pointer-events-none"
+			transition:scale={{ duration: 300, start: 0.97 }}
 		>
-			{#if image.video}
-				<!-- Video player -->
+			{#if item.video}
+				<!-- svelte-ignore a11y_media_has_caption -->
 				<video
-					bind:this={videoElement}
-					class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl"
-					src={image.video}
+					class="max-w-full max-h-full border border-white/10 pointer-events-auto"
+					src={item.video}
 					controls
 					autoplay
 					playsinline
 					disablepictureinpicture
 					preload="metadata"
 					controlslist="nodownload"
-					on:ended={handleVideoEnded}
-				>
-					<track kind="captions" src="" srclang="en" label="No Captions" />
-				</video>
+				></video>
 			{:else}
-				<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-				<!-- Image -->
 				<img
-					class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl object-contain"
-					src={image.src}
-					alt={image.alt}
+					class="max-w-full max-h-full object-contain border border-white/10 pointer-events-auto"
+					src={item.src}
+					alt={item.alt}
 					on:contextmenu|preventDefault
 					draggable="false"
 				/>
 			{/if}
+		</div>
+	{/key}
 
-			<!-- Caption -->
-			{#if image.caption}
-				<div class="mt-6 px-4 text-center">
-					<p class="text-white/90 text-lg md:text-xl font-medium">{image.caption}</p>
-				</div>
+	<!-- Caption + navigation -->
+	<div class="relative z-10 flex items-center justify-between gap-6 px-6 md:px-10 py-6">
+		<button
+			class="group w-11 h-11 shrink-0 border border-white/15 hover:border-brass flex items-center justify-center transition-colors duration-300"
+			on:click|stopPropagation={() => dispatch('prev')}
+			aria-label={$_('lightbox.prev')}
+		>
+			<svg
+				class="w-4 h-4 text-bone group-hover:-translate-x-0.5 transition-transform duration-300"
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+			>
+				<path stroke-linecap="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
+			</svg>
+		</button>
+
+		<div class="text-center min-w-0">
+			<p class="font-display italic text-xl md:text-3xl text-bone leading-tight truncate">
+				{item.title}
+			</p>
+			{#if item.role}
+				<p class="mt-1.5 text-[0.65rem] md:text-xs uppercase tracking-[0.25em] text-brass-light">
+					{item.role}
+				</p>
 			{/if}
 		</div>
-	{/if}
 
-	<!-- Progress bar -->
-	<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-1.5">
-		{#each Array(totalImages) as _, i}
-			<button
-				class="h-1 rounded-full transition-all duration-300 {i === currentIndex
-					? 'bg-primary-400 w-12 md:w-16'
-					: 'w-8 md:w-12 bg-white/30 hover:bg-white/50'}"
-				on:click|stopPropagation={() => dispatch('goTo', { index: i })}
-				aria-label="Go to image {i + 1}"
-				style="display: {Math.abs(i - currentIndex) < 5 ? 'block' : 'none'}"
-			></button>
-		{/each}
+		<button
+			class="group w-11 h-11 shrink-0 border border-white/15 hover:border-brass flex items-center justify-center transition-colors duration-300"
+			on:click|stopPropagation={() => dispatch('next')}
+			aria-label={$_('lightbox.next')}
+		>
+			<svg
+				class="w-4 h-4 text-bone group-hover:translate-x-0.5 transition-transform duration-300"
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+			>
+				<path stroke-linecap="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+			</svg>
+		</button>
 	</div>
 </div>

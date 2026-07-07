@@ -1,14 +1,15 @@
 <script>
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	let visible = false;
 
 	onMount(() => {
 		const handleScroll = () => {
-			visible = window.scrollY > 500;
+			visible = window.scrollY > 600;
 		};
 
-		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('scroll', handleScroll, { passive: true });
 		return () => window.removeEventListener('scroll', handleScroll);
 	});
 
@@ -20,11 +21,12 @@
 {#if visible}
 	<button
 		on:click={scrollToTop}
-		class="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-primary-500 hover:bg-primary-400 text-white shadow-lg shadow-primary-500/25 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1 animate-fade-in"
+		transition:fade={{ duration: 200 }}
+		class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-40 w-11 h-11 bg-night-900/80 backdrop-blur-sm border border-white/15 hover:border-brass text-bone hover:text-brass flex items-center justify-center transition-colors duration-300"
 		aria-label="Scroll to top"
 	>
-		<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+		<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
 		</svg>
 	</button>
 {/if}

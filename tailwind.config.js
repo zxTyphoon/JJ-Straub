@@ -1,40 +1,55 @@
-import { join } from 'path';
-import { fileURLToPath } from 'url';
-
-import { skeleton } from '@skeletonlabs/tw-plugin';
-
-// Resolve __dirname in an ES Module context
-const __dirname = fileURLToPath(new URL('.', import.meta.url));
-
+/** @type {import('tailwindcss').Config} */
 export default {
-	darkMode: 'class',
-	content: [
-		'./src/**/*.{html,js,svelte,ts}',
-		join(__dirname, 'node_modules', '@skeletonlabs', 'skeleton', '**/*.{html,js,svelte,ts}')
-	],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			colors: {
+				night: {
+					950: '#070708',
+					900: '#0c0c0e',
+					850: '#121215',
+					800: '#18181d',
+					700: '#232329'
+				},
+				bone: {
+					DEFAULT: '#e9e4da',
+					muted: '#a39e93',
+					faint: '#6b675f'
+				},
+				brass: {
+					light: '#dcbf85',
+					DEFAULT: '#c6a15b',
+					dark: '#8f7440'
+				}
+			},
+			fontFamily: {
+				sans: ['Space Grotesk Variable', 'system-ui', 'sans-serif'],
+				display: ['Instrument Serif', 'Georgia', 'serif']
+			},
+			letterSpacing: {
+				widest: '0.3em'
+			},
 			animation: {
-				shimmer: 'shimmer 2s infinite linear',
-				'fade-in': 'fadeIn 0.5s ease-out forwards',
-				'slide-up': 'slideUp 0.6s ease-out forwards',
-				'scale-in': 'scaleIn 0.3s ease-out forwards'
+				marquee: 'marquee 40s linear infinite',
+				'fade-in': 'fadeIn 0.6s ease-out forwards',
+				'rise-in': 'riseIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+				'ken-burns': 'kenBurns 3s cubic-bezier(0.16, 1, 0.3, 1) forwards'
 			},
 			keyframes: {
-				shimmer: {
-					'0%': { transform: 'translateX(-100%)' },
-					'100%': { transform: 'translateX(100%)' }
+				marquee: {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
 				},
 				fadeIn: {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' }
 				},
-				slideUp: {
-					'0%': { opacity: '0', transform: 'translateY(20px)' },
+				riseIn: {
+					'0%': { opacity: '0', transform: 'translateY(2.5rem)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
-				scaleIn: {
-					'0%': { opacity: '0', transform: 'scale(0.95)' },
+				kenBurns: {
+					'0%': { opacity: '0', transform: 'scale(1.06)' },
 					'100%': { opacity: '1', transform: 'scale(1)' }
 				}
 			},
@@ -43,16 +58,5 @@ export default {
 			}
 		}
 	},
-	plugins: [
-		skeleton({
-			themes: {
-				preset: [
-					{
-						name: 'hamlindigo',
-						enhancements: true
-					}
-				]
-			}
-		})
-	]
+	plugins: []
 };
