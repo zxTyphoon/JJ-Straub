@@ -24,7 +24,7 @@
 	// CSS columns lay items out down each column, so an index-based stagger
 	// would sweep column by column. Convert to the item's visual row/column so
 	// the cascade sweeps row by row instead.
-	function cascadeDelay(index, rowsPerCol, cols) {
+	function cascadeDelay(index, rowsPerCol) {
 		const col = Math.floor(index / rowsPerCol);
 		const row = index % rowsPerCol;
 		return Math.min(row * 90 + col * 30, 600);
@@ -119,7 +119,7 @@
 				<WorkItem
 					{work}
 					{index}
-					flyDelay={cascadeDelay(index, rowsPerCol, cols)}
+					flyDelay={cascadeDelay(index, rowsPerCol)}
 					animate={!hasFiltered}
 					on:select={() => openLightbox(index)}
 				/>

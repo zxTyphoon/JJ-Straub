@@ -1,5 +1,5 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 	import { fade, scale } from 'svelte/transition';
 	import { _ } from 'svelte-i18n';
 
@@ -10,6 +10,16 @@
 	const dispatch = createEventDispatcher();
 
 	let touchStartX = null;
+	let dialogEl;
+
+	// Move focus into the dialog on open, back to the trigger on close
+	onMount(() => {
+		const trigger = document.activeElement;
+		dialogEl?.focus();
+		return () => {
+			if (trigger instanceof HTMLElement) trigger.focus();
+		};
+	});
 
 	function handleBackdropClick(event) {
 		if (event.target === event.currentTarget) {
@@ -41,6 +51,7 @@
 </script>
 
 <div
+	bind:this={dialogEl}
 	class="fixed inset-0 z-50 flex flex-col bg-night-950/[0.97] backdrop-blur-lg"
 	transition:fade={{ duration: 250 }}
 	on:click={handleBackdropClick}

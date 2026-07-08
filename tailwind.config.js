@@ -14,7 +14,7 @@ export default {
 				bone: {
 					DEFAULT: '#e9e4da',
 					muted: '#a39e93',
-					faint: '#6b675f'
+					faint: '#827d73'
 				},
 				brass: {
 					light: '#dcbf85',

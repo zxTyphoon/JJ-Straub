@@ -28,7 +28,8 @@
 	function setLanguage(lang) {
 		locale.set(lang);
 		if (typeof window !== 'undefined') {
-			document.cookie = `locale=${lang}; path=/; max-age=${60 * 60 * 24 * 7}`;
+			const secure = location.protocol === 'https:' ? '; Secure' : '';
+			document.cookie = `locale=${lang}; path=/; max-age=${60 * 60 * 24 * 7}; SameSite=Lax${secure}`;
 		}
 	}
 

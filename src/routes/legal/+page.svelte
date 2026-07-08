@@ -32,7 +32,7 @@
 				<div class="space-y-2 text-sm md:text-base text-bone-muted leading-relaxed">
 					<p><span class="text-bone-faint">Name:</span> Juergen Straub</p>
 					<p>
-						<span class="text-bone-faint">Address:</span> Ernst-Bumm-Weg 5, 140059 Berlin, Germany
+						<span class="text-bone-faint">Address:</span> Ernst-Bumm-Weg 5, 14059 Berlin, Germany
 					</p>
 					<p><span class="text-bone-faint">Phone:</span> +49 (0) 151 72187675</p>
 					<p>
