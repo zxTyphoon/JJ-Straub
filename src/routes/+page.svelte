@@ -18,7 +18,7 @@
 		image: 'https://www.jjstraub.com/JJStraub_Headshot-og.webp',
 		jobTitle: 'Actor',
 		description:
-			'JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles â€” including career highlights, achievements, and behind-the-scenes insights.',
+			'JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights.',
 		birthDate: '1952-02-08',
 		gender: 'Male',
 		knowsLanguage: ['German', 'English'],
@@ -47,7 +47,7 @@
 	<title>{title}</title>
 	<meta
 		name="description"
-		content="JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles â€” including career highlights, achievements, and behind-the-scenes insights."
+		content="JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights."
 	/>
 	<meta
 		name="keywords"
@@ -63,7 +63,7 @@
 	<meta name="twitter:title" content={title} />
 	<meta
 		name="twitter:description"
-		content="JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles â€” including career highlights, achievements, and behind-the-scenes insights."
+		content="JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights."
 	/>
 	<meta name="twitter:image" content="https://www.jjstraub.com/JJStraub_Headshot-og.webp" />
 
@@ -74,7 +74,7 @@
 	<meta property="og:image:alt" content="Juergen Straub, professional actor" />
 	<meta
 		property="og:description"
-		content="JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles â€” including career highlights, achievements, and behind-the-scenes insights."
+		content="JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights."
 	/>
 	<meta property="og:site_name" content="JJ Straub Portfolio" />
 	<meta property="og:locale" content="en_US" />
