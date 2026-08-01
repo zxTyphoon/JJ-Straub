@@ -17,7 +17,6 @@
 			caption: 'The Wald - Injured Soldier',
 			video: '/JJStraub_empireagency-THE-WALD.mp4'
 		},
-
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Kommissar.webp',
 			alt: 'JJ Straub: Kommissar',
@@ -58,6 +57,11 @@
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-General.webp',
 			alt: 'JJ Straub: General',
 			caption: 'Reparation Day - Columbian General'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub-Oberkommissar-Schulz-RapunzelsFluch2.webp',
+			alt: 'JJ Straub: Kommissar',
+			caption: 'Rapunzels Fluch 2 - Oberkommissar Schulz'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Sylvia.webp',
@@ -111,7 +115,11 @@
 			alt: 'JJ Straub: Piano Bar',
 			caption: 'Piano Bar - John'
 		},
-
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub-Pfarrer.webp',
+			alt: 'JJ Straub: Pfarrer',
+			caption: 'Pfarrer'
+		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Professor.webp',
 			alt: 'JJ Straub: Professor',
@@ -127,6 +135,11 @@
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Smiling.webp',
 			alt: 'JJ Straub: Smiling',
 			caption: ''
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub-ZAV-Rick1A.webp',
+			alt: 'JJ Straub: Rick',
+			caption: 'Rick'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Jawlock-DR-Dentist.webp',
@@ -149,6 +162,11 @@
 			caption: 'Long Journey - NYPD Officer'
 		},
 		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_TJ2.webp',
+			alt: 'JJ Straub: TJ',
+			caption: 'TJ'
+		},
+		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-TheWindow1.webp',
 			alt: 'JJ Straub: The Window',
 			caption: 'The Window - Frederick'
@@ -169,9 +187,19 @@
 			caption: 'From Russia with Love - BND Agent'
 		},
 		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Pavlo1.webp',
+			alt: 'JJ Straub: Pavlo1',
+			caption: 'Pavlo'
+		},
+		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Karma.webp',
 			alt: 'JJ Straub: Karma - Father',
 			caption: 'Karma - Father'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/Black-Kernel.webp',
+			alt: 'JJ Straub: Black Kernel',
+			caption: 'Black Kernel'
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-RedBloom-CIA.webp',
@@ -184,6 +212,11 @@
 			caption: 'Feeder - The Vet'
 		},
 		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub-Pavlo-head1.webp',
+			alt: 'JJ Straub: Pavlo',
+			caption: 'Pavlo'
+		},
+		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-DerPate-HeadShot.webp',
 			alt: 'JJ Straub: Der Pate HeadShot',
 			caption: 'Der Pate'
@@ -194,10 +227,20 @@
 			caption: 'Mask of the Schwarzen-Loewenbergs - Hans'
 		},
 		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJ%20Straub-ZAV-03-26.webp',
+			alt: 'JJ Straub: ZAV',
+			caption: 'ZAV'
+		},
+		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Booth-Game.webp',
 			alt: 'JJ Straub: Booth Game',
 			caption: 'The Booth Game',
 			video: '/JJStraub_empireagency-Booth-Game.mp4'
+		},
+		{
+			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJ_looking_back.webp',
+			alt: 'JJ Straub',
+			caption: ''
 		},
 		{
 			src: 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_empireagency-Reinfressen.webp',
