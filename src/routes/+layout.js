@@ -9,11 +9,9 @@ export const load = async () => {
 		const cookies = document.cookie.split('; ');
 		const localeCookie = cookies.find((cookie) => cookie.startsWith('locale='));
 
+		// No cookie? svelte-i18n's initialLocale already derives one from navigator.language.
 		if (localeCookie) {
-			const savedLocale = localeCookie.split('=')[1];
-			locale.set(savedLocale);
-		} else if (window.navigator.language.length == 2) {
-			locale.set(window.navigator.language);
+			locale.set(localeCookie.split('=')[1]);
 		}
 	}
 	await waitLocale();

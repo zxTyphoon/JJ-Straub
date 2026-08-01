@@ -1,6 +1,6 @@
 <script>
 	import { _ } from 'svelte-i18n';
-	
+
 	import Instagram from '$lib/img/Instagram.svg';
 	import IMDB from '$lib/img/imdb.svg';
 	import YouTube from '$lib/img/YouTube.svg';
@@ -16,8 +16,10 @@
 
 <footer class="relative bg-surface-950 border-t border-white/5">
 	<!-- Gradient accent -->
-	<div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/50 to-transparent"></div>
-	
+	<div
+		class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/50 to-transparent"
+	></div>
+
 	<div class="px-6 md:px-12 lg:px-20 py-12 md:py-16">
 		<div class="flex flex-col md:flex-row items-center justify-between gap-8">
 			<!-- Left side - Logo and tagline -->
@@ -38,11 +40,7 @@
 						class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center transition-all duration-300 hover:bg-primary-500/20 hover:scale-110"
 						aria-label={label}
 					>
-						<img
-							class="h-5 w-auto"
-							src={icon}
-							alt={label}
-						/>
+						<img class="h-5 w-auto" src={icon} alt={label} />
 					</a>
 				{/each}
 			</div>

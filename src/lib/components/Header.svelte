@@ -38,48 +38,9 @@
 		return () => window.removeEventListener('scroll', handleScroll);
 	});
 
-	function lockScroll() {
-		if (typeof document === 'undefined') return;
-
-		const w = window;
-		if (typeof w.__scrollLockCount !== 'number') {
-			w.__scrollLockCount = 0;
-		}
-
-		if (w.__scrollLockCount === 0) {
-			w.__originalBodyOverflow = document.body.style.overflow;
-			document.body.style.overflow = 'hidden';
-		}
-
-		w.__scrollLockCount += 1;
-	}
-
-	function unlockScroll() {
-		if (typeof document === 'undefined') return;
-
-		const w = window;
-		if (typeof w.__scrollLockCount !== 'number') {
-			w.__scrollLockCount = 0;
-		}
-
-		if (w.__scrollLockCount > 0) {
-			w.__scrollLockCount -= 1;
-		}
-
-		if (w.__scrollLockCount === 0) {
-			document.body.style.overflow = w.__originalBodyOverflow || '';
-			delete w.__originalBodyOverflow;
-		}
-	}
-
 	function toggleMobileMenu() {
 		mobileMenuOpen = !mobileMenuOpen;
-
-		if (mobileMenuOpen) {
-			lockScroll();
-		} else {
-			unlockScroll();
-		}
+		document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
 	}
 
 	function scrollToTop() {
@@ -161,10 +122,11 @@
 {#if mobileMenuOpen}
 	<div class="fixed inset-0 z-50 lg:hidden">
 		<!-- Backdrop -->
-		<div
-			class="absolute inset-0 bg-black/90 backdrop-blur-xl"
+		<button
+			class="absolute inset-0 w-full bg-black/90 backdrop-blur-xl"
 			on:click={toggleMobileMenu}
-		></div>
+			aria-label="Close menu"
+		></button>
 
 		<!-- Menu Content -->
 		<div class="absolute top-0 right-0 w-80 max-w-[85vw] h-full bg-surface-900 shadow-2xl">

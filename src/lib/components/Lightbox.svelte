@@ -1,5 +1,5 @@
 <script>
-	import { createEventDispatcher, onMount } from 'svelte';
+	import { createEventDispatcher } from 'svelte';
 	import { fade, scale } from 'svelte/transition';
 
 	export let image;
@@ -8,18 +8,8 @@
 
 	const dispatch = createEventDispatcher();
 
-	let videoElement;
-	let isClosing = false;
-	let showContent = false;
-
-	onMount(() => {
-		setTimeout(() => (showContent = true), 50);
-	});
-
 	function close() {
-		isClosing = true;
-		showContent = false;
-		setTimeout(() => dispatch('close'), 200);
+		dispatch('close');
 	}
 
 	function handleBackdropClick(event) {
@@ -39,7 +29,6 @@
 	}
 </script>
 
-<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <!-- Backdrop -->
 <div
 	class="fixed inset-0 z-50 flex items-center justify-center"
@@ -118,51 +107,47 @@
 	</div>
 
 	<!-- Content container -->
-	{#if showContent}
-		<div
-			class="relative max-w-[92vw] md:max-w-[85vw] max-h-[85vh] flex flex-col items-center justify-center transition-all duration-300"
-			transition:scale={{ duration: 300, start: 0.95 }}
-		>
-			{#if image.video}
-				<!-- Video player -->
-				<video
-					bind:this={videoElement}
-					class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl"
-					src={image.video}
-					controls
-					autoplay
-					playsinline
-					disablepictureinpicture
-					preload="metadata"
-					controlslist="nodownload"
-					on:ended={handleVideoEnded}
-				>
-					<track kind="captions" src="" srclang="en" label="No Captions" />
-				</video>
-			{:else}
-				<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-				<!-- Image -->
-				<img
-					class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl object-contain"
-					src={image.src}
-					alt={image.alt}
-					on:contextmenu|preventDefault
-					draggable="false"
-				/>
-			{/if}
+	<div
+		class="relative max-w-[92vw] md:max-w-[85vw] max-h-[85vh] flex flex-col items-center justify-center transition-all duration-300"
+		transition:scale={{ duration: 300, start: 0.95 }}
+	>
+		{#if image.video}
+			<!-- Video player -->
+			<video
+				class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl"
+				src={image.video}
+				controls
+				autoplay
+				playsinline
+				disablepictureinpicture
+				preload="metadata"
+				controlslist="nodownload"
+				on:ended={handleVideoEnded}
+			>
+				<track kind="captions" src="" srclang="en" label="No Captions" />
+			</video>
+		{:else}
+			<!-- Image -->
+			<img
+				class="max-w-full max-h-[75vh] rounded-2xl shadow-2xl object-contain"
+				src={image.src}
+				alt={image.alt}
+				on:contextmenu|preventDefault
+				draggable="false"
+			/>
+		{/if}
 
-			<!-- Caption -->
-			{#if image.caption}
-				<div class="mt-6 px-4 text-center">
-					<p class="text-white/90 text-lg md:text-xl font-medium">{image.caption}</p>
-				</div>
-			{/if}
-		</div>
-	{/if}
+		<!-- Caption -->
+		{#if image.caption}
+			<div class="mt-6 px-4 text-center">
+				<p class="text-white/90 text-lg md:text-xl font-medium">{image.caption}</p>
+			</div>
+		{/if}
+	</div>
 
 	<!-- Progress bar -->
 	<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-1.5">
-		{#each Array(totalImages) as _, i}
+		{#each Array.from({ length: totalImages }, (_, index) => index) as i}
 			<button
 				class="h-1 rounded-full transition-all duration-300 {i === currentIndex
 					? 'bg-primary-400 w-12 md:w-16'
