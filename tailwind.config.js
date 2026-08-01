@@ -43,50 +43,13 @@ export default {
 				glow: '0 0 60px -12px rgb(var(--accent) / 0.45)'
 			},
 			animation: {
-				shimmer: 'shimmer 2.2s infinite linear',
-				marquee: 'marquee var(--marquee-duration, 40s) linear infinite',
-				'marquee-reverse': 'marquee-reverse var(--marquee-duration, 40s) linear infinite',
-				grain: 'grain 8s steps(10) infinite',
-				'fade-in': 'fadeIn 0.6s ease-out forwards',
-				'pulse-soft': 'pulseSoft 2.4s ease-in-out infinite'
+				marquee: 'marquee var(--marquee-duration, 40s) linear infinite'
 			},
 			keyframes: {
-				shimmer: {
-					'0%': { transform: 'translateX(-100%)' },
-					'100%': { transform: 'translateX(100%)' }
-				},
 				marquee: {
 					'0%': { transform: 'translateX(0)' },
 					'100%': { transform: 'translateX(-50%)' }
-				},
-				'marquee-reverse': {
-					'0%': { transform: 'translateX(-50%)' },
-					'100%': { transform: 'translateX(0)' }
-				},
-				grain: {
-					'0%,100%': { transform: 'translate(0,0)' },
-					'10%': { transform: 'translate(-5%,-10%)' },
-					'20%': { transform: 'translate(-15%,5%)' },
-					'30%': { transform: 'translate(7%,-25%)' },
-					'40%': { transform: 'translate(-5%,25%)' },
-					'50%': { transform: 'translate(-15%,10%)' },
-					'60%': { transform: 'translate(15%,0)' },
-					'70%': { transform: 'translate(0,15%)' },
-					'80%': { transform: 'translate(3%,35%)' },
-					'90%': { transform: 'translate(-10%,10%)' }
-				},
-				fadeIn: {
-					'0%': { opacity: '0' },
-					'100%': { opacity: '1' }
-				},
-				pulseSoft: {
-					'0%,100%': { opacity: '1' },
-					'50%': { opacity: '0.4' }
 				}
-			},
-			transitionTimingFunction: {
-				'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
-				cinema: 'cubic-bezier(0.65, 0, 0.35, 1)'
 			}
 		}
 	},
