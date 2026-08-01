@@ -1,164 +1,154 @@
 <script>
-	import { locale, _ } from 'svelte-i18n';
 	import { onMount } from 'svelte';
-	import German from '$lib/img/German.svg';
-	import English from '$lib/img/English.svg';
+	import { _ } from 'svelte-i18n';
+	import Marquee from './Marquee.svelte';
 
-	let isVisible = false;
+	const productions = [
+		'Kingdom Come: Deliverance 2',
+		'The Wald',
+		'Rapunzels Fluch 2',
+		'Cutting Surface',
+		'From Russia with Love',
+		'eBay',
+		'Sennheiser',
+		'LA Kings',
+		'100 Stories',
+		'Coinstar'
+	];
+
+	let mounted = $state(false);
+	let scrollY = $state(0);
 
 	onMount(() => {
-		setTimeout(() => {
-			isVisible = true;
-		}, 100);
+		requestAnimationFrame(() => (mounted = true));
+		const onScroll = () => (scrollY = window.scrollY);
+		window.addEventListener('scroll', onScroll, { passive: true });
+		return () => window.removeEventListener('scroll', onScroll);
 	});
-
-	function changeLanguage(newLang) {
-		locale.set(newLang);
-		if (typeof window !== 'undefined') {
-			document.cookie = `locale=${newLang}; path=/; max-age=${60 * 60 * 24 * 7}`;
-		}
-	}
 </script>
 
-<section class="relative min-h-[100vh] md:min-h-[90vh] flex items-end overflow-hidden">
-	<!-- Background Image with Parallax Effect -->
-	<div class="absolute inset-0 z-0 flex items-center justify-center md:justify-end pt-16 md:pt-20">
+<section class="relative flex min-h-svh flex-col justify-end overflow-hidden">
+	<!-- Headshot, B&W, with gentle parallax -->
+	<div class="absolute inset-0 z-0">
 		<img
 			src="/JJStraub_Headshot.webp"
 			alt="JJ Straub"
-			class="h-full w-auto max-w-none md:w-full md:h-auto md:max-h-[120%] object-contain transition-transform duration-[2000ms] md:translate-x-[10%] lg:translate-x-[15%]"
-			class:scale-100={isVisible}
-			on:contextmenu|preventDefault
+			fetchpriority="high"
+			class="absolute right-0 top-0 h-full w-full object-cover object-[70%_15%] opacity-90 grayscale contrast-[1.05] transition-transform duration-700 md:w-[68%] md:object-[center_18%] lg:w-[58%]"
+			style="transform: translate3d(0, {scrollY * 0.18}px, 0) scale({mounted
+				? 1.02
+				: 1.12}); transition: transform 1.6s cubic-bezier(0.16,1,0.3,1)"
+			oncontextmenu={(e) => e.preventDefault()}
 			draggable="false"
 		/>
-		<!-- Sophisticated gradient overlays -->
+		<!-- Cinematic legibility gradients -->
+		<div class="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/30 to-ink-900/40"></div>
 		<div
-			class="absolute inset-0 bg-gradient-to-t from-surface-900 via-surface-900/40 to-transparent"
+			class="absolute inset-0 bg-gradient-to-r from-ink-900 via-ink-900/55 to-transparent md:via-ink-900/30"
 		></div>
+		<!-- Subtle accent wash -->
 		<div
-			class="absolute inset-0 bg-gradient-to-r from-surface-900/60 via-transparent to-transparent"
+			class="absolute inset-0 mix-blend-soft-light"
+			style="background: radial-gradient(80% 60% at 20% 80%, rgb(var(--accent) / 0.18), transparent 70%)"
 		></div>
 	</div>
 
-	<!-- Language Switcher -->
-	<div class="absolute top-20 md:top-24 right-6 z-30 flex flex-col gap-2">
-		<button
-			on:click={() => changeLanguage('de')}
-			class="w-10 h-10 rounded-full overflow-hidden ring-2 ring-white/20 hover:ring-white/60 transition-all duration-300 hover:scale-110 bg-black/30 backdrop-blur-sm"
-			aria-label="Switch to German"
-		>
-			<img src={German} class="w-full h-full object-cover" alt="German" />
-		</button>
-		<button
-			on:click={() => changeLanguage('en')}
-			class="w-10 h-10 rounded-full overflow-hidden ring-2 ring-white/20 hover:ring-white/60 transition-all duration-300 hover:scale-110 bg-black/30 backdrop-blur-sm"
-			aria-label="Switch to English"
-		>
-			<img src={English} class="w-full h-full object-cover" alt="English" />
-		</button>
-	</div>
+	<!-- Letterbox bars -->
+	<div
+		class="pointer-events-none absolute inset-x-0 top-0 z-10 h-[7vh] bg-gradient-to-b from-ink-950/80 to-transparent"
+	></div>
 
 	<!-- Content -->
-	<div class="relative z-10 w-full px-6 md:px-12 lg:px-20 pb-16 md:pb-24">
+	<div class="relative z-20 mx-auto w-full max-w-container px-5 pb-10 md:px-10 lg:px-16 lg:pb-16">
 		<div
-			class="max-w-4xl transform transition-all duration-1000 ease-out"
-			class:translate-y-0={isVisible}
-			class:opacity-100={isVisible}
-			class:translate-y-8={!isVisible}
-			class:opacity-0={!isVisible}
+			class="max-w-3xl transition-all duration-1000 ease-out"
+			style="opacity: {mounted ? 1 : 0}; transform: translateY({mounted ? 0 : 24}px)"
 		>
-			<!-- Name with dramatic typography -->
-			<h1
-				class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-white mb-6"
-			>
-				<span class="block">Juergen J.</span>
-				<span class="block text-primary-400">Straub</span>
-			</h1>
-
-			<!-- Role badge -->
-			<div
-				class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8"
-			>
-				<span class="w-2 h-2 rounded-full bg-primary-400 animate-pulse"></span>
-				<span class="text-sm font-medium text-white/90 uppercase tracking-widest"
-					>{$_('actor')}</span
-				>
-			</div>
-
-			<!-- Bio text -->
-			<p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
-				{$_('about')}
+			<p class="kicker mb-6">
+				<span class="h-px w-10 bg-accent"></span>
+				{$_('actor')} · {$_('characterWork')}
 			</p>
 
-			<!-- Contact info card -->
-			<div class="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 max-w-xl">
-				<div class="flex items-start gap-4 mb-4">
-					<div
-						class="w-12 h-12 rounded-xl bg-primary-500/20 flex items-center justify-center flex-shrink-0"
-					>
-						<svg
-							class="w-6 h-6 text-primary-400"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-							/>
-						</svg>
-					</div>
-					<div>
-						<p class="text-xs uppercase tracking-wider text-white/50 mb-1">{$_('agentur')}</p>
-						<p class="text-white font-medium">ZAV-Berlin, Sonja Sommer</p>
-					</div>
-				</div>
+			<h1 class="font-display font-light leading-[0.86] text-bone">
+				<span
+					class="block text-[clamp(3rem,11vw,9rem)] transition-all duration-1000 ease-out"
+					style="font-variation-settings:'opsz' 144; opacity: {mounted
+						? 1
+						: 0}; transform: translateY({mounted ? 0 : 30}px); transition-delay:120ms"
+				>
+					Jürgen J.
+				</span>
+				<span
+					class="block text-[clamp(3.6rem,14vw,11.5rem)] font-normal italic text-accent transition-all duration-1000 ease-out"
+					style="font-variation-settings:'opsz' 144; opacity: {mounted
+						? 1
+						: 0}; transform: translateY({mounted ? 0 : 30}px); transition-delay:260ms"
+				>
+					Straub
+				</span>
+			</h1>
 
-				<div class="flex flex-wrap gap-3">
-					<a
-						href="tel:+49228502088025"
-						class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-sm font-medium transition-all duration-300 hover:scale-[1.02]"
+			<p
+				class="mt-7 max-w-xl text-pretty text-base leading-relaxed text-bone-muted md:text-lg transition-all duration-1000 ease-out"
+				style="opacity: {mounted ? 1 : 0}; transform: translateY({mounted
+					? 0
+					: 20}px); transition-delay:420ms"
+			>
+				{$_('heroTagline')}
+			</p>
+
+			<div
+				class="mt-8 flex flex-wrap items-center gap-4 transition-all duration-1000 ease-out"
+				style="opacity: {mounted ? 1 : 0}; transition-delay:560ms"
+			>
+				<a
+					href="#work"
+					class="group inline-flex items-center gap-2.5 rounded-full bg-accent px-6 py-3 text-sm font-medium text-ink-950 transition-all duration-300 hover:bg-accent-soft hover:shadow-glow"
+				>
+					{$_('viewWork')}
+					<svg
+						class="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
 					>
-						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-							/>
-						</svg>
-						+49 228 50208-8025
-					</a>
-					<a
-						href="mailto:sonja.sommer@arbeitsagentur.de"
-						class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary-500 hover:bg-primary-400 text-white text-sm font-medium transition-all duration-300 hover:scale-[1.02]"
+						<path
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M12 5v14M5 12l7 7 7-7"
+						/>
+					</svg>
+				</a>
+				<a
+					href="#reel"
+					class="inline-flex items-center gap-2.5 rounded-full border border-bone/20 px-6 py-3 text-sm font-medium text-bone transition-colors duration-300 hover:border-accent hover:text-accent"
+				>
+					<svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"
+						><path d="M8 5v14l11-7z" /></svg
 					>
-						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-							/>
-						</svg>
-						sonja.sommer@arbeitsagentur.de
-					</a>
-				</div>
+					{$_('watchReel')}
+				</a>
+				<span class="hidden items-center gap-2 text-sm text-bone-dim sm:inline-flex">
+					<svg class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+						><path stroke-width="1.6" d="M12 21s-7-5.2-7-11a7 7 0 1114 0c0 5.8-7 11-7 11z" /><circle
+							cx="12"
+							cy="10"
+							r="2.4"
+							stroke-width="1.6"
+						/></svg
+					>
+					Berlin · Los Angeles
+				</span>
 			</div>
 		</div>
+	</div>
 
-		<!-- Scroll indicator - hidden on mobile to avoid overlap -->
-		<div
-			class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 transition-all duration-1000 delay-500"
-			class:opacity-100={isVisible}
-			class:opacity-0={!isVisible}
-		>
-			<span class="text-xs uppercase tracking-widest text-white/40">{$_('scroll')}</span>
-			<div class="w-6 h-10 rounded-full border-2 border-white/30 flex justify-center pt-2">
-				<div class="w-1.5 h-3 rounded-full bg-white/60 animate-bounce"></div>
-			</div>
-		</div>
+	<!-- Production marquee -->
+	<div
+		class="relative z-20 border-y border-bone/10 bg-ink-950/40 py-5 backdrop-blur-sm transition-opacity duration-1000"
+		style="opacity: {mounted ? 1 : 0}; transition-delay:700ms"
+	>
+		<Marquee items={productions} duration={48} />
 	</div>
 </section>
