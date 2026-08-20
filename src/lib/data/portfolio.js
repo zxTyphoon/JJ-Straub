@@ -268,6 +268,60 @@ export const portfolio = [
 		alt: 'JJ Straub: Kalt graut der Morgen',
 		caption: 'Kalt graut der Morgen — Grandpa',
 		category: 'film'
+	},
+	{
+		src: `${BLOB}/JJStraub-Oberkommissar-Schulz-RapunzelsFluch2.webp`,
+		alt: 'JJ Straub: Kommissar',
+		caption: 'Rapunzels Fluch 2 — Oberkommissar Schulz',
+		category: 'film'
+	},
+	{
+		src: `${BLOB}/JJStraub-Pfarrer.webp`,
+		alt: 'JJ Straub: Pfarrer',
+		caption: 'Pfarrer',
+		category: 'film'
+	},
+	{
+		src: `${BLOB}/JJStraub-ZAV-Rick1A.webp`,
+		alt: 'JJ Straub: Rick',
+		caption: 'Rick',
+		category: 'film'
+	},
+	{
+		src: `${BLOB}/JJStraub_TJ2.webp`,
+		alt: 'JJ Straub: TJ',
+		caption: 'TJ',
+		category: 'film'
+	},
+	{
+		src: `${BLOB}/JJStraub_Pavlo1.webp`,
+		alt: 'JJ Straub: Pavlo1',
+		caption: 'Pavlo',
+		category: 'film'
+	},
+	{
+		src: `${BLOB}/Black-Kernel.webp`,
+		alt: 'JJ Straub: Black Kernel',
+		caption: 'Black Kernel',
+		category: 'film'
+	},
+	{
+		src: `${BLOB}/JJStraub-Pavlo-head1.webp`,
+		alt: 'JJ Straub: Pavlo',
+		caption: 'Pavlo',
+		category: 'film'
+	},
+	{
+		src: `${BLOB}/JJ%20Straub-ZAV-03-26.webp`,
+		alt: 'JJ Straub: ZAV',
+		caption: 'ZAV',
+		category: 'film'
+	},
+	{
+		src: `${BLOB}/JJ_looking_back.webp`,
+		alt: 'JJ Straub',
+		caption: '',
+		category: 'film'
 	}
 ];
 
