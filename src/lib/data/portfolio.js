@@ -398,5 +398,78 @@ export const works = [
 		title: 'Kalt graut der Morgen',
 		role: 'Grandpa',
 		category: 'film'
+	},
+	{
+		src: `${blob}/JJStraub-Oberkommissar-Schulz-RapunzelsFluch2.webp`,
+		width: 1690,
+		height: 2535,
+		alt: 'JJ Straub: Kommissar',
+		title: 'Rapunzels Fluch 2',
+		role: 'Oberkommissar Schulz',
+		category: 'film'
+	},
+	{
+		src: `${blob}/JJStraub-Pfarrer.webp`,
+		width: 2262,
+		height: 2775,
+		alt: 'JJ Straub: Pfarrer',
+		title: 'Pfarrer',
+		category: 'film'
+	},
+	{
+		src: `${blob}/JJStraub-ZAV-Rick1A.webp`,
+		width: 2667,
+		height: 3333,
+		alt: 'JJ Straub: Rick',
+		title: 'Rick',
+		category: 'film'
+	},
+	{
+		src: `${blob}/JJStraub_TJ2.webp`,
+		width: 341,
+		height: 475,
+		alt: 'JJ Straub: TJ',
+		title: 'TJ',
+		category: 'film'
+	},
+	{
+		src: `${blob}/JJStraub_Pavlo1.webp`,
+		width: 2113,
+		height: 3000,
+		alt: 'JJ Straub: Pavlo1',
+		title: 'Pavlo',
+		category: 'film'
+	},
+	{
+		src: `${blob}/Black-Kernel.webp`,
+		width: 2987,
+		height: 3000,
+		alt: 'JJ Straub: Black Kernel',
+		title: 'Black Kernel',
+		category: 'film'
+	},
+	{
+		src: `${blob}/JJStraub-Pavlo-head1.webp`,
+		width: 2425,
+		height: 3600,
+		alt: 'JJ Straub: Pavlo',
+		title: 'Pavlo',
+		category: 'film'
+	},
+	{
+		src: `${blob}/JJ%20Straub-ZAV-03-26.webp`,
+		width: 2361,
+		height: 3335,
+		alt: 'JJ Straub: ZAV',
+		title: 'ZAV',
+		category: 'film'
+	},
+	{
+		src: `${blob}/JJ_looking_back.webp`,
+		width: 293,
+		height: 436,
+		alt: 'JJ Straub',
+		title: 'JJ Straub',
+		category: 'film'
 	}
 ];
