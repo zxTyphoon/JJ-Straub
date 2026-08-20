@@ -2,7 +2,7 @@
 	import { locale } from 'svelte-i18n';
 
 	// Compact EN / DE segmented toggle. Persists choice in a cookie (read by
-	// hooks.server.js and +layout.js) so the language survives reloads.
+	// +layout.js) so the language survives reloads.
 	const langs = [
 		{ code: 'en', label: 'EN' },
 		{ code: 'de', label: 'DE' }
@@ -11,7 +11,8 @@
 	function setLang(code) {
 		locale.set(code);
 		if (typeof document !== 'undefined') {
-			document.cookie = `locale=${code}; path=/; max-age=${60 * 60 * 24 * 365}`;
+			const secure = location.protocol === 'https:' ? '; Secure' : '';
+			document.cookie = `locale=${code}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax${secure}`;
 		}
 	}
 

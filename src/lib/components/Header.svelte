@@ -37,10 +37,15 @@
 		return () => window.removeEventListener('scroll', onScroll);
 	});
 
+	// Lock scroll only while the menu is open and restore the previous value, so
+	// overlapping overlays (e.g. the Lightbox) don't clobber each other's lock.
 	$effect(() => {
-		if (typeof document !== 'undefined') {
-			document.body.style.overflow = menuOpen ? 'hidden' : '';
-		}
+		if (!menuOpen || typeof document === 'undefined') return;
+		const prevOverflow = document.body.style.overflow;
+		document.body.style.overflow = 'hidden';
+		return () => {
+			document.body.style.overflow = prevOverflow;
+		};
 	});
 
 	function toTop() {
