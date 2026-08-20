@@ -2,3 +2,14 @@
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
+
+# Build output
+.svelte-kit
+.vercel
+build
+
+# GitHub-managed config (CI YAML, generated templates)
+.github
+
+# Local tooling config
+.claude

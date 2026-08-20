@@ -1,62 +1,51 @@
 <script>
 	import { _ } from 'svelte-i18n';
-	
+
 	import Instagram from '$lib/img/Instagram.svg';
 	import IMDB from '$lib/img/imdb.svg';
 	import YouTube from '$lib/img/YouTube.svg';
 	import LinkedIn from '$lib/img/linkedin.svg';
 
-	const socialLinks = [
+	const socials = [
+		{ href: 'https://www.imdb.com/name/nm0833707/', icon: IMDB, label: 'IMDb' },
 		{ href: 'https://www.instagram.com/jjstraub1', icon: Instagram, label: 'Instagram' },
-		{ href: 'https://www.imdb.com/name/nm0833707/', icon: IMDB, label: 'IMDB' },
 		{ href: 'https://www.youtube.com/user/JJatUtube', icon: YouTube, label: 'YouTube' },
 		{ href: 'https://www.linkedin.com/in/jj-straub/', icon: LinkedIn, label: 'LinkedIn' }
 	];
 </script>
 
-<footer class="relative bg-surface-950 border-t border-white/5">
-	<!-- Gradient accent -->
-	<div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-500/50 to-transparent"></div>
-	
-	<div class="px-6 md:px-12 lg:px-20 py-12 md:py-16">
-		<div class="flex flex-col md:flex-row items-center justify-between gap-8">
-			<!-- Left side - Logo and tagline -->
+<footer class="relative border-t border-bone/10 bg-ink-950">
+	<div
+		class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent"
+	></div>
+
+	<div class="mx-auto max-w-container px-5 py-12 md:px-10 md:py-14 lg:px-16">
+		<div class="flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-between">
 			<div class="text-center md:text-left">
-				<h3 class="text-2xl font-bold text-white mb-2">
-					JJ <span class="text-primary-400">Straub</span>
-				</h3>
-				<p class="text-white/50 text-sm">{$_('actor')} • Berlin / Los Angeles</p>
+				<p class="font-display text-2xl text-bone" style="font-variation-settings:'opsz' 100">
+					JJ<span class="text-accent">.</span>Straub
+				</p>
+				<p class="mt-1 text-sm text-bone-dim">{$_('actor')} · Berlin · Los Angeles</p>
 			</div>
 
-			<!-- Center - Social links -->
-			<div class="flex items-center gap-3">
-				{#each socialLinks as { href, icon, label }}
+			<div class="flex items-center gap-2">
+				{#each socials as { href, icon, label }}
 					<a
 						{href}
 						target="_blank"
 						rel="noreferrer"
-						class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center transition-all duration-300 hover:bg-primary-500/20 hover:scale-110"
+						class="flex h-10 w-10 items-center justify-center rounded-full bg-bone/5 transition-all duration-300 hover:bg-accent/15"
 						aria-label={label}
 					>
-						<img
-							class="h-5 w-auto"
-							src={icon}
-							alt={label}
-						/>
+						<img class="h-5 w-5" src={icon} alt={label} />
 					</a>
 				{/each}
 			</div>
 
-			<!-- Right side - Legal -->
-			<div class="flex items-center gap-6 text-sm">
-				<a
-					href="/legal"
-					class="text-white/50 hover:text-primary-400 transition-colors duration-300"
-				>
-					{$_('legalNotice')}
-				</a>
-				<span class="text-white/20">|</span>
-				<span class="text-white/40">© {new Date().getFullYear()} JJ Straub</span>
+			<div class="flex items-center gap-5 text-sm text-bone-dim">
+				<a href="/legal" class="transition-colors hover:text-accent">{$_('legalNotice')}</a>
+				<span class="opacity-30">·</span>
+				<span>© {new Date().getFullYear()} JJ Straub</span>
 			</div>
 		</div>
 	</div>
