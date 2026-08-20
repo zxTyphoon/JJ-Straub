@@ -33,7 +33,7 @@
 					<figcaption
 						class="absolute bottom-5 left-5 text-xs uppercase tracking-kicker text-bone/80"
 					>
-						Jürgen J. Straub
+						Juergen J. Straub
 					</figcaption>
 				</figure>
 			</div>

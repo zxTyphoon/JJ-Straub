@@ -76,7 +76,7 @@
 						? 1
 						: 0}; transform: translateY({mounted ? 0 : 30}px); transition-delay:120ms"
 				>
-					Jürgen J.
+					Juergen J.
 				</span>
 				<span
 					class="block text-[clamp(3.6rem,14vw,11.5rem)] font-normal italic text-accent transition-all duration-1000 ease-out"
