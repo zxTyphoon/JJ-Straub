@@ -40,7 +40,7 @@
 				<div class="relative max-w-md mx-auto lg:mx-0">
 					<div class="absolute -top-4 -left-4 w-full h-full border border-brass/40"></div>
 					<img
-						src="https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJStraub_Smiling.webp"
+						src="https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJ%20Straub-ZAV-03-26.webp"
 						alt="JJ Straub portrait"
 						class="relative w-full grayscale-[20%] contrast-105"
 						loading="lazy"

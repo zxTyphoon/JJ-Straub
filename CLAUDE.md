@@ -25,14 +25,14 @@ There is only one test file today (`tests/hooks.server.test.js`), which exercise
 
 Single-page portfolio (plus a `/legal` route) built on SvelteKit with `adapter-vercel`. `src/routes/+layout.js` sets `prerender = true`, so the whole site is statically prerendered at build time.
 
-**Locale handling (server + client, cookie-driven):** The site is bilingual (English/German) via `svelte-i18n`, registered in `src/lib/i18n/index.js` with locale JSON files in `src/lib/i18n/locales/{en,de}.json` (nested keys, accessed with dot paths like `$_('work.filters.all')`). Locale resolution happens in two places that mirror each other:
+**Locale handling (server + client, cookie-driven):** The site is bilingual (English/German) via `svelte-i18n`, registered in `src/lib/i18n/index.js` with locale JSON files in `src/lib/i18n/locales/{en,de}.json` (nested keys, accessed with dot paths like `$_('work.filters.character')`). Locale resolution happens in two places that mirror each other:
 
 - `src/hooks.server.js` — on each request, reads the `locale` cookie first, falling back to the `Accept-Language` header, and calls `locale.set(...)` before rendering (SSR).
 - `src/routes/+layout.js` `load()` — on the client, reads the same `locale` cookie, falling back to `navigator.language`, and calls `locale.set(...)` then `await waitLocale()`.
 
 The language switcher lives in `Header.svelte` (`setLanguage`), which sets the `locale` store and writes the `locale` cookie (7-day max-age) so both server and client paths pick it up on the next load/navigation. When touching i18n behavior, keep the hook, the layout load, and the switcher's cookie name/format in sync.
 
-**Data modules (`src/lib/data/`):** `portfolio.js` exports `works` (every credit as `{ src, alt, title, role, category, video? }`) and `categories` (the filter list; `clips` is virtual — derived from the presence of `video`). `links.js` exports `socials` (external profile links) and `contact` (direct email + agency details). Content edits happen here, not in components. Cover images are hotlinked from a Vercel Blob store (`https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/...`); video clips are served from `static/` as root-relative paths.
+**Data modules (`src/lib/data/`):** `portfolio.js` exports `works` (every credit as `{ src, alt, title, role, category, video? }`) and `categories` (the filter list: `character`, `portrait`, `clips`; `clips` is virtual — derived from the presence of `video`). `links.js` exports `socials` (external profile links) and `contact` (direct email + agency details). Content edits happen here, not in components. Cover images are hotlinked from a Vercel Blob store (`https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/...`); video clips are served from `static/` as root-relative paths.
 
 **Page composition:** `src/routes/+layout.svelte` loads the self-hosted font (Fontsource: Courier Prime), wraps every page with `Header` / `Footer` / `ScrollToTop`, applies the `.grain` film-grain overlay class, and injects Vercel Analytics + Speed Insights. `src/routes/+page.svelte` holds all page-level SEO/meta tags (OpenGraph, Twitter cards, JSON-LD `Person` schema) and renders the four sections: `Hero` → `Work` → `About` → `Contact`. Sections are anchor targets (`#work`, `#about`, `#contact`) navigated from the header.
 

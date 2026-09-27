@@ -29,10 +29,7 @@
 		"titleB": "Arbeiten",
 		"productions": "Produktionen",
 		"filters": {
-			"all": "Alle",
-			"film": "Film & TV",
-			"commercial": "Werbung",
-			"game": "Videospiel",
+			"character": "Rollen",
 			"portrait": "Porträts",
 			"clips": "Clips"
 		}

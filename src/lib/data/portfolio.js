@@ -1,9 +1,9 @@
 // All portfolio credits. Cover images live in the Vercel Blob store; video
-// clips are served from static/. `category` is one of: film | commercial |
-// game | portrait. The "clips" filter is derived from the `video` field.
+// clips are served from static/. `category` is character | portrait; the
+// "clips" filter is derived from the `video` field.
 const blob = 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com';
 
-export const categories = ['all', 'film', 'commercial', 'game', 'portrait', 'clips'];
+export const categories = ['character', 'portrait', 'clips'];
 
 export const works = [
 	{
@@ -13,7 +13,7 @@ export const works = [
 		alt: 'JJ Straub: Sennheiser Cowboy',
 		title: 'Sennheiser',
 		role: 'Cowboy',
-		category: 'commercial'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-TheWald.webp`,
@@ -22,18 +22,8 @@ export const works = [
 		alt: 'JJ Straub: The Wald',
 		title: 'The Wald',
 		role: 'Injured Soldier',
-		category: 'film',
+		category: 'character',
 		video: '/JJStraub_empireagency-THE-WALD.mp4'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_empireagency-Kommissar.webp`,
-		width: 1154,
-		height: 1280,
-		alt: 'JJ Straub: Kommissar',
-		title: 'Rapunzels Fluch 2',
-		role: 'Oberkommissar Schulz',
-		category: 'film'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-CuttingSur.webp`,
@@ -42,7 +32,7 @@ export const works = [
 		alt: 'JJ Straub: Cutting Surface',
 		title: 'Cutting Surface',
 		role: 'Dr. Belial',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-ebay-social-media.webp`,
@@ -51,18 +41,8 @@ export const works = [
 		alt: 'JJ Straub: eBay Social Media Commercial',
 		title: 'eBay',
 		role: 'Social Media Commercial',
-		category: 'commercial',
+		category: 'character',
 		video: '/JJStraub_empireagency-eBay-social-media.mp4'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_empireagency-JJ-peace.webp`,
-		width: 583,
-		height: 683,
-		alt: 'JJ Straub: Make Me Feel',
-		title: 'Make Me Feel',
-		role: 'Dr. Buchenwald',
-		category: 'film'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-Reinfressen1-2.webp`,
@@ -71,17 +51,7 @@ export const works = [
 		alt: 'JJ Straub: Reinfressen',
 		title: 'Reinfressen',
 		role: 'Bernd',
-		category: 'film'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_empireagency-SAT1-Notruf.webp`,
-		width: 382,
-		height: 346,
-		alt: 'JJ Straub: SAT1 Notruf',
-		title: 'SAT1 Notruf',
-		role: '',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-RapunzelsFluch2.webp`,
@@ -90,7 +60,7 @@ export const works = [
 		alt: "JJ Straub: Rapunzel's Curse",
 		title: 'Rapunzels Fluch 2',
 		role: 'Oberkommissar Schulz',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-General.webp`,
@@ -99,17 +69,7 @@ export const works = [
 		alt: 'JJ Straub: General',
 		title: 'Reparation Day',
 		role: 'Columbian General',
-		category: 'film'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_empireagency-Sylvia.webp`,
-		width: 1495,
-		height: 846,
-		alt: 'JJ Straub: Sylvia',
-		title: 'Sylvia',
-		role: 'Upset Customer',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-LastCustomer-Walter.webp`,
@@ -118,7 +78,7 @@ export const works = [
 		alt: 'JJ Straub: Last Customer',
 		title: 'Last Customer',
 		role: 'Walter',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-LA-Kings.webp`,
@@ -127,7 +87,7 @@ export const works = [
 		alt: 'JJ Straub: LA Kings',
 		title: 'LA Kings',
 		role: 'Commercial',
-		category: 'commercial',
+		category: 'character',
 		video: '/JJStraub_empireagency-LAKings.mp4'
 	},
 	{
@@ -137,7 +97,7 @@ export const works = [
 		alt: 'JJ Straub: L.I.F.E. KinoLoop',
 		title: 'L.I.F.E.',
 		role: 'Philosophy Teacher',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_Golfing.webp`,
@@ -148,32 +108,13 @@ export const works = [
 		category: 'portrait'
 	},
 	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_empireagency-Diamanten.webp`,
-		width: 1554,
-		height: 838,
-		alt: 'JJ Straub: Diamanten',
-		title: 'Diamanten',
-		role: 'Ali',
-		category: 'film'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_empireagency-TheOffer.webp`,
-		width: 699,
-		height: 498,
-		alt: 'JJ Straub: The Offer',
-		title: 'The Offer',
-		category: 'film'
-	},
-	{
 		src: `${blob}/JJStraub_empireagency-eBay.webp`,
 		width: 1277,
 		height: 807,
 		alt: 'JJ Straub: eBay',
 		title: 'eBay',
 		role: 'Commercial',
-		category: 'commercial',
+		category: 'character',
 		video: '/JJStraub_EmpireAgency-eBay3.MP4'
 	},
 	{
@@ -183,7 +124,7 @@ export const works = [
 		alt: 'JJ Straub: Coinstar',
 		title: 'Coinstar',
 		role: 'Commercial',
-		category: 'commercial'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-Piano-Bar.webp`,
@@ -192,17 +133,7 @@ export const works = [
 		alt: 'JJ Straub: Piano Bar',
 		title: 'Piano Bar',
 		role: 'John',
-		category: 'film'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_empireagency-Professor.webp`,
-		width: 926,
-		height: 677,
-		alt: 'JJ Straub: Professor',
-		title: 'Professor',
-		role: '',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-Kingdom-Come-Deliverance-char.webp`,
@@ -211,17 +142,7 @@ export const works = [
 		alt: 'JJ Straub: Kingdom Come Deliverance',
 		title: 'Kingdom Come Deliverance 2',
 		role: 'Martin Oderin',
-		category: 'game'
-	},
-	{
-		//TODO: Delete
-		src: `${blob}/JJStraub_Smiling.webp`,
-		width: 1263,
-		height: 1595,
-		alt: 'JJ Straub: Smiling',
-		title: 'Portrait',
-		role: '',
-		category: 'portrait'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-Jawlock-DR-Dentist.webp`,
@@ -230,7 +151,7 @@ export const works = [
 		alt: 'JJ Straub: Jawlock DR Dentist',
 		title: 'Jawlock',
 		role: 'Dentist',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-Kingdom-Come-Deliverance.webp`,
@@ -239,17 +160,7 @@ export const works = [
 		alt: 'JJ Straub: Kingdom Come Deliverance',
 		title: 'Kingdom Come Deliverance 2',
 		role: 'Motion Capture',
-		category: 'game'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_Headshot_Smile-old.webp`,
-		width: 1856,
-		height: 2000,
-		alt: 'JJ Straub',
-		title: 'Portrait',
-		role: '',
-		category: 'portrait'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-NYPD.webp`,
@@ -258,7 +169,7 @@ export const works = [
 		alt: 'JJ Straub: NYPD',
 		title: 'Long Journey',
 		role: 'NYPD Officer',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-TheWindow1.webp`,
@@ -267,27 +178,7 @@ export const works = [
 		alt: 'JJ Straub: The Window',
 		title: 'The Window',
 		role: 'Frederick',
-		category: 'film'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_empireagency-Farmer.webp`,
-		width: 590,
-		height: 797,
-		alt: 'JJ Straub: Farmer',
-		title: 'Farmer',
-		role: '',
-		category: 'film'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_empireagency-Life-KinoLoop.webp`,
-		width: 1119,
-		height: 803,
-		alt: 'JJ Straub: L.I.F.E',
-		title: 'L.I.F.E.',
-		role: 'Philosophy Teacher',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-From Russia with Love-BND-Agent.webp`,
@@ -296,7 +187,7 @@ export const works = [
 		alt: 'JJ Straub: From Russia with Love',
 		title: 'From Russia with Love',
 		role: 'BND Agent',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-Karma.webp`,
@@ -305,17 +196,7 @@ export const works = [
 		alt: 'JJ Straub: Karma',
 		title: 'Karma',
 		role: 'Father',
-		category: 'film'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_empireagency-RedBloom-CIA.webp`,
-		width: 1933,
-		height: 1137,
-		alt: 'JJ Straub: RedBloom CIA',
-		title: 'RedBloom',
-		role: 'CIA',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-Feeder.webp`,
@@ -324,17 +205,7 @@ export const works = [
 		alt: 'JJ Straub: Feeder',
 		title: 'Feeder',
 		role: 'The Vet',
-		category: 'film'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_empireagency-DerPate-HeadShot.webp`,
-		width: 303,
-		height: 361,
-		alt: 'JJ Straub: Der Pate',
-		title: 'Der Pate',
-		role: '',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-VonLoewenberg.webp`,
@@ -343,18 +214,7 @@ export const works = [
 		alt: 'JJ Straub: Von Loewenberg',
 		title: 'Mask of the Schwarzen-Loewenbergs',
 		role: 'Hans',
-		category: 'film'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_empireagency-Booth-Game.webp`,
-		width: 399,
-		height: 545,
-		alt: 'JJ Straub: Booth Game',
-		title: 'The Booth Game',
-		role: '',
-		category: 'film',
-		video: '/JJStraub_empireagency-Booth-Game.mp4'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-Reinfressen.webp`,
@@ -363,16 +223,15 @@ export const works = [
 		alt: 'JJ Straub: Reinfressen',
 		title: 'Reinfressen',
 		role: 'Bernd',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-TJ.webp`,
 		width: 480,
 		height: 639,
-		alt: 'JJ Straub: TJ',
-		title: 'TJ',
-		role: '',
-		category: 'film'
+		alt: 'JJ Straub: Portrait',
+		title: 'Portrait',
+		category: 'portrait'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-100Stories.webp`,
@@ -381,7 +240,7 @@ export const works = [
 		alt: 'JJ Straub: 100 Stories',
 		title: '100 Stories',
 		role: 'Kurt',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-Cloud-Lawyer.webp`,
@@ -390,7 +249,7 @@ export const works = [
 		alt: 'JJ Straub: Cloud Lawyer',
 		title: 'Cloud Lawyer',
 		role: 'Larry H. Schitt',
-		category: 'film',
+		category: 'character',
 		video: '/JJStraub_empireagency-Cloud-Lawyer.mp4'
 	},
 	{
@@ -400,7 +259,7 @@ export const works = [
 		alt: 'JJ Straub: Smoking Kills',
 		title: 'Smoking Kills',
 		role: 'American Cancer Society',
-		category: 'commercial'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-Time.webp`,
@@ -409,7 +268,7 @@ export const works = [
 		alt: 'JJ Straub: Kalt graut der Morgen',
 		title: 'Kalt graut der Morgen',
 		role: 'Grandpa',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub-Oberkommissar-Schulz-RapunzelsFluch2.webp`,
@@ -418,7 +277,7 @@ export const works = [
 		alt: 'JJ Straub: Kommissar',
 		title: 'Rapunzels Fluch 2',
 		role: 'Oberkommissar Schulz',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub-Pfarrer.webp`,
@@ -426,7 +285,7 @@ export const works = [
 		height: 2775,
 		alt: 'JJ Straub: Pfarrer',
 		title: 'Pfarrer',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub-ZAV-Rick1A.webp`,
@@ -434,21 +293,12 @@ export const works = [
 		height: 3333,
 		alt: 'JJ Straub: Rick',
 		title: 'Rick',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub_TJ2.webp`,
 		width: 341,
 		height: 475,
-		alt: 'JJ Straub: TJ',
-		title: 'TJ',
-		category: 'film'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJStraub_Pavlo1.webp`,
-		width: 2113,
-		height: 3000,
 		alt: 'JJ Straub: Portrait',
 		title: 'Portrait',
 		category: 'portrait'
@@ -460,7 +310,7 @@ export const works = [
 		alt: 'JJ Straub: Black 9',
 		title: 'Black 9',
 		role: 'Kernel',
-		category: 'film'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub-Pavlo-head1.webp`,
@@ -468,24 +318,6 @@ export const works = [
 		height: 3600,
 		alt: 'JJ Straub: Pavlo',
 		title: 'Pavlo',
-		category: 'film'
-	},
-	{
-		//TODO: remove from gallery, use for About section
-		src: `${blob}/JJ%20Straub-ZAV-03-26.webp`,
-		width: 2361,
-		height: 3335,
-		alt: 'JJ Straub: Portrait',
-		title: 'Portrait',
-		category: 'portrait'
-	},
-	{
-		//TODO: Delete	
-		src: `${blob}/JJ_looking_back.webp`,
-		width: 293,
-		height: 436,
-		alt: 'JJ Straub',
-		title: 'JJ Straub',
-		category: 'film'
+		category: 'character'
 	}
 ];

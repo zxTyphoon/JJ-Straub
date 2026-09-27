@@ -5,17 +5,17 @@
 	import WorkItem from './WorkItem.svelte';
 	import Lightbox from './Lightbox.svelte';
 
-	let activeFilter = 'all';
+	let activeFilter = categories[0];
 	let selectedIndex = null;
 	let hasFiltered = false;
 	let innerWidth = 0;
 
+	const productionCount = works.filter((work) => work.category === 'character').length;
+
 	$: filtered =
-		activeFilter === 'all'
-			? works
-			: activeFilter === 'clips'
-				? works.filter((work) => work.video)
-				: works.filter((work) => work.category === activeFilter);
+		activeFilter === 'clips'
+			? works.filter((work) => work.video)
+			: works.filter((work) => work.category === activeFilter);
 
 	// Mirrors the grid's responsive column count (columns-1 sm:2 lg:3 xl:4)
 	$: cols = innerWidth >= 1280 ? 4 : innerWidth >= 1024 ? 3 : innerWidth >= 640 ? 2 : 1;
@@ -89,7 +89,7 @@
 				class="text-xs uppercase tracking-[0.25em] text-bone-faint pb-2"
 				use:reveal={{ delay: 200 }}
 			>
-				{works.length}
+				{productionCount}
 				{$_('work.productions')}
 			</p>
 		</div>

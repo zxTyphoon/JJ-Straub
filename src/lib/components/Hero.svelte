@@ -17,7 +17,7 @@
 			<img
 				src="/JJStraub_Headshot.webp"
 				alt="JJ Straub"
-				class="w-full h-full object-cover object-top opacity-90 grayscale-[15%] contrast-105 animate-ken-burns"
+				class="w-full h-full object-cover object-top grayscale-[15%] contrast-105 animate-ken-burns"
 				fetchpriority="high"
 				on:contextmenu|preventDefault
 				draggable="false"
@@ -25,7 +25,7 @@
 		</div>
 		<!-- Blend gradients -->
 		<div
-			class="absolute inset-0 bg-gradient-to-r from-night-900 via-night-900/70 to-night-900/10 md:via-night-900/40 md:to-transparent"
+			class="absolute inset-0 bg-gradient-to-r from-night-900/80 via-night-900/40 to-night-900/10 md:from-night-900 md:to-transparent"
 		></div>
 		<div
 			class="absolute inset-0 bg-gradient-to-t from-night-900 via-night-900/30 to-night-900/60"
@@ -51,15 +51,13 @@
 			<!-- Name -->
 			<h1 class="tracking-tight leading-[0.88] mb-8 md:mb-10">
 				<span
-					class="block text-[clamp(4.5rem,16vw,12rem)] text-bone"
+					class="block text-[clamp(4.5rem,16vw,12rem)] md:text-[clamp(4.5rem,11vw,12rem)] text-bone"
 					style="animation: riseIn 1s cubic-bezier(0.16,1,0.3,1) 300ms both"
 				>
-					JJ<span class="ml-[0.4em] text-[0.4em] tracking-normal text-bone-muted"
-						>(Juergen)</span
-					>
+					JJ<span class="ml-[0.4em] text-[0.4em] tracking-normal text-bone-muted">(Juergen)</span>
 				</span>
 				<span
-					class="block text-[clamp(4.5rem,16vw,12rem)] text-brass"
+					class="block text-[clamp(4.5rem,16vw,12rem)] md:text-[clamp(4.5rem,11vw,12rem)] text-brass"
 					style="animation: riseIn 1s cubic-bezier(0.16,1,0.3,1) 450ms both"
 				>
 					Straub

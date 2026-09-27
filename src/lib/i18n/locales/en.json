@@ -29,10 +29,7 @@
 		"titleB": "Work",
 		"productions": "Productions",
 		"filters": {
-			"all": "All",
-			"film": "Film & TV",
-			"commercial": "Commercial",
-			"game": "Video Game",
+			"character": "Characters",
 			"portrait": "Portraits",
 			"clips": "Clips"
 		}
