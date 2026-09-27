@@ -307,8 +307,8 @@ export const works = [
 		src: `${blob}/Black-Kernel.webp`,
 		width: 2987,
 		height: 3000,
-		alt: 'JJ Straub: Black 9',
-		title: 'Black 9',
+		alt: 'JJ Straub: Schwarze 9',
+		title: 'Schwarze 9',
 		role: 'Kernel',
 		category: 'character'
 	},
