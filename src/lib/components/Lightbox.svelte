@@ -88,10 +88,12 @@
 
 	<!-- Media -->
 	{#key item.src}
-		<!-- pointer-events-none lets clicks beside the media fall through to the backdrop -->
+		<!-- pointer-events-none lets clicks beside the media fall through to the backdrop.
+		     Intro only: an outro would keep the old media in the flex column while the
+		     new one enters, squeezing both to half height. -->
 		<div
 			class="flex-1 min-h-0 flex items-center justify-center px-4 md:px-24 pointer-events-none"
-			transition:scale={{ duration: 300, start: 0.97 }}
+			in:scale={{ duration: 300, start: 0.97 }}
 		>
 			{#if item.video}
 				<!-- svelte-ignore a11y_media_has_caption -->
