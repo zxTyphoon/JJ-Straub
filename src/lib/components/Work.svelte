@@ -79,11 +79,11 @@
 
 		<div class="flex flex-wrap items-end justify-between gap-8">
 			<h2
-				class="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-bone"
+				class="font-medium tracking-tight text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-bone"
 				use:reveal={{ delay: 100 }}
 			>
 				{$_('work.titleA')}
-				<em class="italic text-brass">{$_('work.titleB')}</em>
+				<span class="text-brass">{$_('work.titleB')}</span>
 			</h2>
 			<p
 				class="text-xs uppercase tracking-[0.25em] text-bone-faint pb-2"

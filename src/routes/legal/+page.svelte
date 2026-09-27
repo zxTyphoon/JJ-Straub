@@ -19,14 +19,14 @@
 			{$_('backToPortfolio')}
 		</a>
 
-		<h1 class="font-display text-5xl md:text-7xl text-bone mb-4">
+		<h1 class="font-medium tracking-tight text-5xl md:text-7xl text-bone mb-4">
 			{$_('legalNotice')}
 		</h1>
 		<div class="h-px w-24 bg-brass mb-16"></div>
 
 		<div class="space-y-14">
 			<section>
-				<h2 class="font-display italic text-2xl md:text-3xl text-brass mb-5">
+				<h2 class="font-medium tracking-tight text-2xl md:text-3xl text-brass mb-5">
 					Contact Information
 				</h2>
 				<div class="space-y-2 text-sm md:text-base text-bone-muted leading-relaxed">
@@ -48,7 +48,7 @@
 			</section>
 
 			<section class="pt-10 border-t border-white/10">
-				<h2 class="font-display italic text-2xl md:text-3xl text-brass mb-5">
+				<h2 class="font-medium tracking-tight text-2xl md:text-3xl text-brass mb-5">
 					Responsible for Website
 				</h2>
 				<div class="space-y-2 text-sm md:text-base text-bone-muted leading-relaxed">
@@ -60,7 +60,7 @@
 			</section>
 
 			<section class="pt-10 border-t border-white/10">
-				<h2 class="font-display italic text-2xl md:text-3xl text-brass mb-5">Disclaimer</h2>
+				<h2 class="font-medium tracking-tight text-2xl md:text-3xl text-brass mb-5">Disclaimer</h2>
 				<p class="text-sm md:text-base text-bone-muted leading-relaxed">
 					The information contained on this website is for general information purposes only. The
 					information is provided by Sean Tyler Straub and while we endeavour to keep the
@@ -74,7 +74,7 @@
 			</section>
 
 			<section class="pt-10 border-t border-white/10">
-				<h2 class="font-display italic text-2xl md:text-3xl text-brass mb-5">Copyright</h2>
+				<h2 class="font-medium tracking-tight text-2xl md:text-3xl text-brass mb-5">Copyright</h2>
 				<p class="text-sm md:text-base text-bone-muted leading-relaxed">
 					All content included on this site, such as text, graphics, logos, images, and software, is
 					the property of the respective copyright holders, and protected by international copyright
@@ -85,7 +85,9 @@
 			</section>
 
 			<section class="pt-10 border-t border-white/10">
-				<h2 class="font-display italic text-2xl md:text-3xl text-brass mb-5">Privacy Policy</h2>
+				<h2 class="font-medium tracking-tight text-2xl md:text-3xl text-brass mb-5">
+					Privacy Policy
+				</h2>
 				<div class="space-y-4 text-sm md:text-base text-bone-muted leading-relaxed">
 					<p>
 						Our website collects only anonymous data to help us understand usage patterns and
@@ -101,7 +103,9 @@
 			</section>
 
 			<section class="pt-10 border-t border-white/10">
-				<h2 class="font-display italic text-2xl md:text-3xl text-brass mb-5">Representation</h2>
+				<h2 class="font-medium tracking-tight text-2xl md:text-3xl text-brass mb-5">
+					Representation
+				</h2>
 				<p class="text-sm md:text-base text-bone-muted leading-relaxed">
 					Juergen Straub is represented by ZAV-Berlin, which handles all professional inquiries and
 					bookings. For further information, please contact his Agent Sonja Sommer at

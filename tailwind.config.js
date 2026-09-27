@@ -23,8 +23,7 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Space Grotesk Variable', 'system-ui', 'sans-serif'],
-				display: ['Instrument Serif', 'Georgia', 'serif']
+				sans: ['Space Grotesk Variable', 'system-ui', 'sans-serif']
 			},
 			letterSpacing: {
 				widest: '0.3em'

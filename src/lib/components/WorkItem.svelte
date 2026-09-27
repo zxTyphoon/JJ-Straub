@@ -76,7 +76,9 @@
 			<figcaption
 				class="absolute bottom-0 left-0 right-0 p-4 translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out-expo"
 			>
-				<p class="font-display text-lg md:text-xl text-bone leading-tight">{work.title}</p>
+				<p class="font-medium tracking-tight text-lg md:text-xl text-bone leading-tight">
+					{work.title}
+				</p>
 				{#if work.role}
 					<p class="mt-1 text-[0.65rem] uppercase tracking-[0.2em] text-brass-light">
 						{work.role}

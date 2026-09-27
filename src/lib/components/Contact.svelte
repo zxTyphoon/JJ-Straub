@@ -16,11 +16,11 @@
 
 	<!-- Big call to action -->
 	<h2
-		class="font-display text-[clamp(2.75rem,9vw,7.5rem)] leading-[0.95] text-bone mb-12 md:mb-20 max-w-5xl"
+		class="font-medium tracking-tight text-[clamp(2.75rem,9vw,7.5rem)] leading-[0.95] text-bone mb-12 md:mb-20 max-w-5xl"
 		use:reveal={{ delay: 100 }}
 	>
 		{$_('contactSection.titleA')}
-		<em class="italic text-brass">{$_('contactSection.titleB')}</em>
+		<span class="text-brass">{$_('contactSection.titleB')}</span>
 	</h2>
 
 	<div class="grid md:grid-cols-2 gap-12 md:gap-20 max-w-5xl">
@@ -31,7 +31,7 @@
 			</p>
 			<a
 				href="mailto:{contact.email}"
-				class="group inline-block font-display italic text-2xl md:text-3xl text-bone hover:text-brass transition-colors duration-300 break-all"
+				class="group inline-block font-medium tracking-tight text-2xl md:text-3xl text-bone hover:text-brass transition-colors duration-300 break-all"
 			>
 				{contact.email}
 				<span
@@ -45,7 +45,9 @@
 			<p class="text-[0.65rem] uppercase tracking-[0.3em] text-bone-faint mb-5">
 				{$_('agentur')}
 			</p>
-			<p class="font-display text-2xl md:text-3xl text-bone mb-1">{contact.agency.name}</p>
+			<p class="font-medium tracking-tight text-2xl md:text-3xl text-bone mb-1">
+				{contact.agency.name}
+			</p>
 			<p class="text-sm text-bone-muted mb-6">{contact.agency.agent}</p>
 			<div class="flex flex-col gap-2 text-sm">
 				<a

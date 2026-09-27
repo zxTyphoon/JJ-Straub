@@ -6,9 +6,9 @@
 	<div
 		class="px-6 md:px-10 lg:px-16 py-10 flex flex-col md:flex-row items-center justify-between gap-6"
 	>
-		<p class="font-display text-lg text-bone">
-			JJ <em class="italic text-brass">Straub</em>
-			<span class="font-sans text-xs text-bone-faint ml-3 tracking-[0.15em] uppercase">
+		<p class="font-medium tracking-tight text-lg text-bone">
+			JJ <span class="text-brass">Straub</span>
+			<span class="font-normal text-xs text-bone-faint ml-3 tracking-[0.15em] uppercase">
 				{$_('actor')} · Berlin / Los Angeles
 			</span>
 		</p>

@@ -59,10 +59,9 @@
 		<nav class="flex items-center justify-between h-16 md:h-20">
 			<!-- Wordmark -->
 			<button on:click={scrollToTop} class="group" aria-label="JJ Straub — back to top">
-				<span class="font-display text-2xl md:text-[1.7rem] text-bone leading-none">
-					JJ <em
-						class="italic text-brass group-hover:text-brass-light transition-colors duration-300"
-						>Straub</em
+				<span class="font-medium tracking-tight text-2xl md:text-[1.7rem] text-bone leading-none">
+					JJ <span class="text-brass group-hover:text-brass-light transition-colors duration-300"
+						>Straub</span
 					>
 				</span>
 			</button>
@@ -151,7 +150,7 @@
 					>
 						<span class="text-xs text-brass/70 tracking-widest">{item.index}</span>
 						<span
-							class="font-display text-4xl text-bone group-hover:text-brass transition-colors duration-300"
+							class="font-medium tracking-tight text-4xl text-bone group-hover:text-brass transition-colors duration-300"
 						>
 							{item.label}
 						</span>

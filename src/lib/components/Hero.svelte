@@ -47,15 +47,17 @@
 			</div>
 
 			<!-- Name -->
-			<h1 class="font-display leading-[0.88] mb-8 md:mb-10">
+			<h1 class="font-medium tracking-tight leading-[0.88] mb-8 md:mb-10">
 				<span
 					class="block text-[clamp(4.5rem,16vw,12rem)] text-bone"
 					style="animation: riseIn 1s cubic-bezier(0.16,1,0.3,1) 300ms both"
 				>
-					JJ
+					JJ<span class="ml-[0.4em] text-[0.3em] font-normal tracking-normal text-bone-muted"
+						>(Juergen)</span
+					>
 				</span>
 				<span
-					class="block text-[clamp(4.5rem,16vw,12rem)] italic text-brass"
+					class="block text-[clamp(4.5rem,16vw,12rem)] text-brass"
 					style="animation: riseIn 1s cubic-bezier(0.16,1,0.3,1) 450ms both"
 				>
 					Straub
@@ -113,7 +115,7 @@
 			{#each [0, 1] as copy}
 				<div class="flex items-center" aria-hidden={copy === 1}>
 					{#each disciplines as discipline}
-						<span class="ghost font-display italic text-3xl md:text-5xl px-6 md:px-10">
+						<span class="ghost font-medium tracking-tight text-3xl md:text-5xl px-6 md:px-10">
 							{discipline}
 						</span>
 						<span class="w-1.5 h-1.5 rounded-full bg-brass/50 shrink-0"></span>

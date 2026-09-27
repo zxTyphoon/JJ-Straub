@@ -1,6 +1,4 @@
 <script>
-	import '@fontsource/instrument-serif';
-	import '@fontsource/instrument-serif/400-italic.css';
 	import '@fontsource-variable/space-grotesk';
 	import '../app.postcss';
 

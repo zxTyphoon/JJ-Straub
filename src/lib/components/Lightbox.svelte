@@ -135,7 +135,7 @@
 		</button>
 
 		<div class="text-center min-w-0">
-			<p class="font-display italic text-xl md:text-3xl text-bone leading-tight truncate">
+			<p class="font-medium tracking-tight text-xl md:text-3xl text-bone leading-tight truncate">
 				{item.title}
 			</p>
 			{#if item.role}
