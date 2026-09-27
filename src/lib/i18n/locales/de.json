@@ -1,18 +1,60 @@
 {
-	"intro": "Hallo, ich bin ",
+	"actor": "Schauspieler",
 	"about": "Als Schauspieler liegt mein Fokus auf der Darstellung von Charakteren, die ich in LA bei Lee Strasberg und Stella Adler sowie in New York City bei Uta Hagen studiert habe.",
 	"living": "Als Doppelstaatsbürger, Deutscher und Amerikaner, lebe ich jetzt in Berlin.",
-	"contact": "Mich können Sie erreichen per",
-	"seeWork": "Möchten Sie meine Arbeiten sehen? Schauen Sie sich bitte meine Showreels an:",
-	"phone": "Telefon",
-	"or": "oder",
-	"description": "Entdecke das Schauspielportfolio von JJ Straub, mit seinen Karriere-Highlights, Rollen und Erfolgen in der Unterhaltungsbranche.",
-	"actor": "Schauspieler",
-	"agentur": "Agentur",
 	"scroll": "Scrollen",
-	"portfolio": "Portfolio",
-	"featuredWork": "Charaktere - 2024-2026",
-	"connect": "Verbinden",
+	"connect": "Anderswo",
+	"agentur": "Agentur",
+	"legalNotice": "Impressum",
 	"backToPortfolio": "Zurück zum Portfolio",
-	"legalNotice": "Impressum"
+	"nav": {
+		"work": "Arbeiten",
+		"about": "Über mich",
+		"contact": "Kontakt"
+	},
+	"hero": {
+		"viewWork": "Ausgewählte Arbeiten",
+		"getInTouch": "Kontakt aufnehmen"
+	},
+	"marquee": {
+		"film": "Film",
+		"tv": "Fernsehen",
+		"commercial": "Werbung",
+		"mocap": "Motion Capture",
+		"theatre": "Theater"
+	},
+	"work": {
+		"label": "Portfolio",
+		"titleA": "Ausgewählte",
+		"titleB": "Arbeiten",
+		"productions": "Produktionen",
+		"filters": {
+			"all": "Alle",
+			"film": "Film & TV",
+			"commercial": "Werbung",
+			"game": "Videospiel",
+			"portrait": "Porträts",
+			"clips": "Clips"
+		}
+	},
+	"lightbox": {
+		"close": "Schließen",
+		"prev": "Zurück",
+		"next": "Weiter"
+	},
+	"aboutSection": {
+		"label": "Über mich",
+		"training": "Ausbildung",
+		"languages": "Sprachen",
+		"languagesValue": "Deutsch · Englisch",
+		"basedIn": "Wohnort",
+		"representation": "Agentur",
+		"imdb": "IMDb-Profil ansehen"
+	},
+	"contactSection": {
+		"label": "Kontakt",
+		"titleA": "Lassen Sie uns",
+		"titleB": "zusammenarbeiten.",
+		"direct": "Direkt"
+	}
 }

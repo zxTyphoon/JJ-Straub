@@ -1,47 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind variants;
+
+html {
+	scroll-behavior: smooth;
+}
 
 html,
 body {
-	@apply h-full overflow-x-hidden bg-surface-900;
+	@apply min-h-full overflow-x-hidden bg-night-900 text-bone antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-	width: 8px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background: rgb(var(--color-surface-900));
+	background: #0c0c0e;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: rgb(var(--color-primary-500) / 0.5);
-	border-radius: 4px;
+	background: #232329;
+	border: 2px solid #0c0c0e;
+	border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: rgb(var(--color-primary-400) / 0.7);
+	background: #8f7440;
 }
 
 /* Selection styling */
 ::selection {
-	background: rgb(var(--color-primary-500) / 0.3);
-	color: white;
-}
-
-/* Smooth transitions for theme - Apply to specific elements only */
-.theme-transition {
-	transition-property: background-color, border-color;
-	transition-duration: 150ms;
-	transition-timing-function: ease-out;
+	background: rgba(198, 161, 91, 0.35);
+	color: #e9e4da;
 }
 
 /* Focus styles */
 *:focus-visible {
-	outline: 2px solid rgb(var(--color-primary-400));
+	outline: 2px solid #c6a15b;
 	outline-offset: 2px;
 }
 
@@ -51,3 +62,35 @@ img {
 	user-select: none;
 }
 
+/* Film grain overlay — mounted once in the layout */
+.grain::after {
+	content: '';
+	position: fixed;
+	inset: -50%;
+	z-index: 60;
+	pointer-events: none;
+	opacity: 0.05;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Scroll-reveal (paired with the `reveal` action) */
+[data-reveal] {
+	opacity: 0;
+	transform: translateY(1.75rem);
+	transition:
+		opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+		transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+	transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal].is-revealed {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	[data-reveal] {
+		opacity: 1;
+		transform: none;
+	}
+}

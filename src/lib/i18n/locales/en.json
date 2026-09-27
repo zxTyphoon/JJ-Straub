@@ -1,18 +1,60 @@
 {
-	"intro": "Hello, I'm ",
+	"actor": "Actor",
 	"about": "As an actor, my focus is on portraying characters, which I studied in Los Angeles with Lee Strasberg and Stella Adler, as well as in New York City with Uta Hagen.",
 	"living": "I am a dual citizen, German and American, and live in Berlin.",
-	"contact": "Feel free to reach out to me via",
-	"seeWork": "Want to see some of my work? Check out my Showreels:",
-	"phone": "Phone",
-	"or": "or",
-	"description": "JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights.",
-	"actor": "Actor",
-	"agentur": "Agency",
 	"scroll": "Scroll",
-	"portfolio": "Portfolio",
-	"featuredWork": "Characters - 2024-2026",
-	"connect": "Connect",
+	"connect": "Elsewhere",
+	"agentur": "Agency",
+	"legalNotice": "Legal Notice",
 	"backToPortfolio": "Back to Portfolio",
-	"legalNotice": "Legal Notice"
+	"nav": {
+		"work": "Work",
+		"about": "About",
+		"contact": "Contact"
+	},
+	"hero": {
+		"viewWork": "Selected Work",
+		"getInTouch": "Get in Touch"
+	},
+	"marquee": {
+		"film": "Film",
+		"tv": "Television",
+		"commercial": "Commercial",
+		"mocap": "Motion Capture",
+		"theatre": "Theatre"
+	},
+	"work": {
+		"label": "Portfolio",
+		"titleA": "Selected",
+		"titleB": "Work",
+		"productions": "Productions",
+		"filters": {
+			"all": "All",
+			"film": "Film & TV",
+			"commercial": "Commercial",
+			"game": "Video Game",
+			"portrait": "Portraits",
+			"clips": "Clips"
+		}
+	},
+	"lightbox": {
+		"close": "Close",
+		"prev": "Previous",
+		"next": "Next"
+	},
+	"aboutSection": {
+		"label": "About",
+		"training": "Training",
+		"languages": "Languages",
+		"languagesValue": "German · English",
+		"basedIn": "Based in",
+		"representation": "Representation",
+		"imdb": "View IMDb Profile"
+	},
+	"contactSection": {
+		"label": "Contact",
+		"titleA": "Let's work",
+		"titleB": "together.",
+		"direct": "Direct"
+	}
 }
