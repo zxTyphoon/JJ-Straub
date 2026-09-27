@@ -26,6 +26,7 @@ export const works = [
 		video: '/JJStraub_empireagency-THE-WALD.mp4'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_empireagency-Kommissar.webp`,
 		width: 1154,
 		height: 1280,
@@ -54,6 +55,7 @@ export const works = [
 		video: '/JJStraub_empireagency-eBay-social-media.mp4'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_empireagency-JJ-peace.webp`,
 		width: 583,
 		height: 683,
@@ -72,6 +74,7 @@ export const works = [
 		category: 'film'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_empireagency-SAT1-Notruf.webp`,
 		width: 382,
 		height: 346,
@@ -99,6 +102,7 @@ export const works = [
 		category: 'film'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_empireagency-Sylvia.webp`,
 		width: 1495,
 		height: 846,
@@ -139,12 +143,12 @@ export const works = [
 		src: `${blob}/JJStraub_Golfing.webp`,
 		width: 621,
 		height: 923,
-		alt: 'JJ Straub: Golfing',
-		title: 'Golfing',
-		role: '',
+		alt: 'JJ Straub: Portrait',
+		title: 'Portrait',
 		category: 'portrait'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_empireagency-Diamanten.webp`,
 		width: 1554,
 		height: 838,
@@ -154,12 +158,12 @@ export const works = [
 		category: 'film'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_empireagency-TheOffer.webp`,
 		width: 699,
 		height: 498,
 		alt: 'JJ Straub: The Offer',
 		title: 'The Offer',
-		role: '',
 		category: 'film'
 	},
 	{
@@ -191,6 +195,7 @@ export const works = [
 		category: 'film'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_empireagency-Professor.webp`,
 		width: 926,
 		height: 677,
@@ -209,6 +214,7 @@ export const works = [
 		category: 'game'
 	},
 	{
+		//TODO: Delete
 		src: `${blob}/JJStraub_Smiling.webp`,
 		width: 1263,
 		height: 1595,
@@ -236,6 +242,7 @@ export const works = [
 		category: 'game'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_Headshot_Smile-old.webp`,
 		width: 1856,
 		height: 2000,
@@ -263,6 +270,7 @@ export const works = [
 		category: 'film'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_empireagency-Farmer.webp`,
 		width: 590,
 		height: 797,
@@ -272,6 +280,7 @@ export const works = [
 		category: 'film'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_empireagency-Life-KinoLoop.webp`,
 		width: 1119,
 		height: 803,
@@ -299,6 +308,7 @@ export const works = [
 		category: 'film'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_empireagency-RedBloom-CIA.webp`,
 		width: 1933,
 		height: 1137,
@@ -317,6 +327,7 @@ export const works = [
 		category: 'film'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_empireagency-DerPate-HeadShot.webp`,
 		width: 303,
 		height: 361,
@@ -335,6 +346,7 @@ export const works = [
 		category: 'film'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_empireagency-Booth-Game.webp`,
 		width: 399,
 		height: 545,
@@ -433,19 +445,21 @@ export const works = [
 		category: 'film'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJStraub_Pavlo1.webp`,
 		width: 2113,
 		height: 3000,
-		alt: 'JJ Straub: Pavlo1',
-		title: 'Pavlo',
-		category: 'film'
+		alt: 'JJ Straub: Portrait',
+		title: 'Portrait',
+		category: 'portrait'
 	},
 	{
 		src: `${blob}/Black-Kernel.webp`,
 		width: 2987,
 		height: 3000,
-		alt: 'JJ Straub: Black Kernel',
-		title: 'Black Kernel',
+		alt: 'JJ Straub: Black 9',
+		title: 'Black 9',
+		role: 'Kernel',
 		category: 'film'
 	},
 	{
@@ -457,14 +471,16 @@ export const works = [
 		category: 'film'
 	},
 	{
+		//TODO: remove from gallery, use for About section
 		src: `${blob}/JJ%20Straub-ZAV-03-26.webp`,
 		width: 2361,
 		height: 3335,
-		alt: 'JJ Straub: ZAV',
-		title: 'ZAV',
-		category: 'film'
+		alt: 'JJ Straub: Portrait',
+		title: 'Portrait',
+		category: 'portrait'
 	},
 	{
+		//TODO: Delete	
 		src: `${blob}/JJ_looking_back.webp`,
 		width: 293,
 		height: 436,

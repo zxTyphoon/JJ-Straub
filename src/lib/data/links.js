@@ -7,7 +7,7 @@ export const socials = [
 	{ label: 'X', href: 'https://x.com/JJStraub4real' },
 	{ label: 'Xing', href: 'https://www.xing.com/profile/Juergen_Straub23' },
 	{ label: 'Filmmakers', href: 'https://www.filmmakers.eu/de/actors/j-j-straub' },
-	{ label: 'Crew United', href: 'https://www.crew-united.com/en/J-J-Straub.html' }
+	{ label: 'Crew United', href: 'https://www.crew-united.com/en/JJ-Straub_246893.html' }
 ];
 
 export const contact = {

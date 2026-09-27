@@ -31,7 +31,7 @@
 			'https://www.youtube.com/user/JJatUtube',
 			'https://www.xing.com/profile/Juergen_Straub23',
 			'https://www.filmmakers.eu/de/actors/j-j-straub',
-			'https://www.crew-united.com/en/J-J-Straub.html'
+			'https://www.crew-united.com/en/JJ-Straub_246893.html'
 		],
 		occupation: {
 			'@type': 'Occupation',
