@@ -23,7 +23,7 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Space Grotesk Variable', 'system-ui', 'sans-serif']
+				sans: ['Courier Prime', 'Courier New', 'monospace']
 			},
 			letterSpacing: {
 				widest: '0.3em'

@@ -1,5 +1,5 @@
 <script>
-	import '@fontsource-variable/space-grotesk';
+	import '@fontsource/courier-prime';
 	import '../app.postcss';
 
 	import Header from '$lib/components/Header.svelte';

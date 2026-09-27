@@ -34,7 +34,7 @@ The language switcher lives in `Header.svelte` (`setLanguage`), which sets the `
 
 **Data modules (`src/lib/data/`):** `portfolio.js` exports `works` (every credit as `{ src, alt, title, role, category, video? }`) and `categories` (the filter list; `clips` is virtual — derived from the presence of `video`). `links.js` exports `socials` (external profile links) and `contact` (direct email + agency details). Content edits happen here, not in components. Cover images are hotlinked from a Vercel Blob store (`https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/...`); video clips are served from `static/` as root-relative paths.
 
-**Page composition:** `src/routes/+layout.svelte` loads the self-hosted fonts (Fontsource: Instrument Serif display + Space Grotesk Variable), wraps every page with `Header` / `Footer` / `ScrollToTop`, applies the `.grain` film-grain overlay class, and injects Vercel Analytics + Speed Insights. `src/routes/+page.svelte` holds all page-level SEO/meta tags (OpenGraph, Twitter cards, JSON-LD `Person` schema) and renders the four sections: `Hero` → `Work` → `About` → `Contact`. Sections are anchor targets (`#work`, `#about`, `#contact`) navigated from the header.
+**Page composition:** `src/routes/+layout.svelte` loads the self-hosted font (Fontsource: Courier Prime), wraps every page with `Header` / `Footer` / `ScrollToTop`, applies the `.grain` film-grain overlay class, and injects Vercel Analytics + Speed Insights. `src/routes/+page.svelte` holds all page-level SEO/meta tags (OpenGraph, Twitter cards, JSON-LD `Person` schema) and renders the four sections: `Hero` → `Work` → `About` → `Contact`. Sections are anchor targets (`#work`, `#about`, `#contact`) navigated from the header.
 
 **Work/Lightbox pair:** `Work.svelte` owns the category filter state, the masonry grid (CSS columns), and lightbox state incl. keyboard navigation (arrow keys/Escape via `svelte:window`); the lightbox index refers into the _filtered_ list. `WorkItem.svelte` renders one credit card (hover caption, index number, clip badge). `Lightbox.svelte` renders `<img>` or `<video>` based on the item's `video` field, supports touch-swipe navigation, and dispatches `next`/`prev`/`close`.
 
@@ -45,7 +45,7 @@ The language switcher lives in `Header.svelte` (`setLanguage`), which sets the `
 Bespoke Tailwind theme in `tailwind.config.js` — no UI kit:
 
 - **Colors:** `night-*` (near-black canvas shades), `bone` / `bone-muted` / `bone-faint` (warm off-white ink), `brass` / `brass-light` / `brass-dark` (single gold accent).
-- **Type:** `font-display` (Instrument Serif; italics as accent, used for headlines/wordmark) and `font-sans` (Space Grotesk; uppercase + wide tracking for micro-labels).
+- **Type:** one family site-wide, Courier Prime (`font-sans`); hierarchy comes from size, `tracking-tight` on headlines, and uppercase + wide tracking for micro-labels. The brass accent is color only, no italics.
 - **Motifs:** sharp corners (no rounded cards), hairline `border-white/5..15` borders, numbered section labels (`01 — Portfolio`), ghost-outline marquee text, film-grain overlay.
 - **Animations:** `marquee`, `rise-in`, `ken-burns`, `fade-in` keyframes in the Tailwind config; scroll reveals via the `reveal` action.
 

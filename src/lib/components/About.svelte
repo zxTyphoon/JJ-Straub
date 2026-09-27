@@ -58,7 +58,7 @@
 			<!-- Bio + facts -->
 			<div class="lg:col-span-7">
 				<p
-					class="font-medium tracking-tight text-2xl md:text-3xl lg:text-4xl leading-snug text-bone mb-8"
+					class="tracking-tight text-2xl md:text-3xl lg:text-4xl leading-snug text-bone mb-8"
 					use:reveal={{ delay: 150 }}
 				>
 					{$_('about')}

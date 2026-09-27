@@ -41,20 +41,20 @@
 				style="animation: riseIn 0.9s cubic-bezier(0.16,1,0.3,1) 150ms both"
 			>
 				<span class="h-px w-10 md:w-16 bg-brass/60"></span>
-				<p class="text-[0.65rem] md:text-xs uppercase tracking-[0.3em] text-bone-muted">
+				<p
+					class="text-[0.65rem] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] text-bone-muted"
+				>
 					{$_('actor')} — Berlin · Los Angeles
 				</p>
 			</div>
 
 			<!-- Name -->
-			<h1 class="font-medium tracking-tight leading-[0.88] mb-8 md:mb-10">
+			<h1 class="tracking-tight leading-[0.88] mb-8 md:mb-10">
 				<span
 					class="block text-[clamp(4.5rem,16vw,12rem)] text-bone"
 					style="animation: riseIn 1s cubic-bezier(0.16,1,0.3,1) 300ms both"
 				>
-					JJ<span class="ml-[0.4em] text-[0.3em] font-normal tracking-normal text-bone-muted"
-						>(Juergen)</span
-					>
+					JJ<span class="ml-[0.4em] text-[0.3em] tracking-normal text-bone-muted">(Juergen)</span>
 				</span>
 				<span
 					class="block text-[clamp(4.5rem,16vw,12rem)] text-brass"
@@ -115,7 +115,7 @@
 			{#each [0, 1] as copy}
 				<div class="flex items-center" aria-hidden={copy === 1}>
 					{#each disciplines as discipline}
-						<span class="ghost font-medium tracking-tight text-3xl md:text-5xl px-6 md:px-10">
+						<span class="ghost tracking-tight text-3xl md:text-5xl px-6 md:px-10">
 							{discipline}
 						</span>
 						<span class="w-1.5 h-1.5 rounded-full bg-brass/50 shrink-0"></span>

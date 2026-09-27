@@ -79,7 +79,7 @@
 
 		<div class="flex flex-wrap items-end justify-between gap-8">
 			<h2
-				class="font-medium tracking-tight text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-bone"
+				class="tracking-tight text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-bone"
 				use:reveal={{ delay: 100 }}
 			>
 				{$_('work.titleA')}
