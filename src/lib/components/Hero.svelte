@@ -54,7 +54,7 @@
 					class="block text-[clamp(4.5rem,16vw,12rem)] text-bone"
 					style="animation: riseIn 1s cubic-bezier(0.16,1,0.3,1) 300ms both"
 				>
-					JJ<span class="ml-[0.4em] text-[length:calc(0.3em+1px)] tracking-normal text-bone-muted"
+					JJ<span class="ml-[0.4em] text-[0.4em] tracking-normal text-bone-muted"
 						>(Juergen)</span
 					>
 				</span>
