@@ -104,7 +104,7 @@ export const works = [
 		width: 621,
 		height: 923,
 		alt: 'JJ Straub: Portrait',
-		title: 'Portrait',
+		title: 'JJ Straub',
 		category: 'portrait'
 	},
 	{
@@ -230,7 +230,7 @@ export const works = [
 		width: 480,
 		height: 639,
 		alt: 'JJ Straub: Portrait',
-		title: 'Portrait',
+		title: 'JJ Straub',
 		category: 'portrait'
 	},
 	{
@@ -300,7 +300,7 @@ export const works = [
 		width: 341,
 		height: 475,
 		alt: 'JJ Straub: Portrait',
-		title: 'Portrait',
+		title: 'JJ Straub',
 		category: 'portrait'
 	},
 	{
@@ -316,8 +316,8 @@ export const works = [
 		src: `${blob}/JJStraub-Pavlo-head1.webp`,
 		width: 2425,
 		height: 3600,
-		alt: 'JJ Straub: Pavlo',
-		title: 'Pavlo',
-		category: 'character'
+		alt: 'JJ Straub: Portrait',
+		title: 'JJ Straub',
+		category: 'portrait'
 	}
 ];
