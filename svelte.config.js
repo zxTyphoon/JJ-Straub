@@ -9,9 +9,7 @@ const config = {
 		inspector: true
 	},
 	kit: {
-		adapter: adapter({
-			runtime: 'nodejs20.x'
-		})
+		adapter: adapter()
 	}
 };
 export default config;
