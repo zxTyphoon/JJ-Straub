@@ -42,7 +42,6 @@ try {
 }
 
 // --ignore-unknown: prettier has no parser for .yaml-adjacent or binary files
-// we touch (.properties, .daar, .cer); without it those would be an error.
 const run = spawnSync(process.execPath, [prettierBin, '--write', '--ignore-unknown', file], {
 	cwd: repoRoot,
 	stdio: ['ignore', 'pipe', 'pipe'],
