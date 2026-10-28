@@ -7,7 +7,7 @@ export const categories = ['character', 'portrait', 'clips'];
 
 export const works = [
 	{
-		src: `${blob}/JJStraub_empireagency-Sennheiser-Cowboy1.webp`,
+		src: `${blob}/JJStraub-Sennheiser-Cowboy1.webp`,
 		width: 1437,
 		height: 1175,
 		alt: 'JJ Straub: Sennheiser Cowboy',
@@ -16,17 +16,17 @@ export const works = [
 		category: 'character'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-TheWald.webp`,
+		src: `${blob}/JJStraub-TheWald.webp`,
 		width: 1343,
 		height: 719,
 		alt: 'JJ Straub: The Wald',
 		title: 'The Wald',
 		role: 'Injured Soldier',
 		category: 'character',
-		video: '/JJStraub_empireagency-THE-WALD.mp4'
+		video: '/JJStraub-THE-WALD.mp4'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-CuttingSur.webp`,
+		src: `${blob}/JJStraub-CuttingSur.webp`,
 		width: 1250,
 		height: 718,
 		alt: 'JJ Straub: Cutting Surface',
@@ -36,17 +36,17 @@ export const works = [
 		// video coming
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-ebay-social-media.webp`,
+		src: `${blob}/JJStraub-ebay-social-media.webp`,
 		width: 485,
 		height: 677,
 		alt: 'JJ Straub: eBay Social Media Commercial',
 		title: 'eBay',
 		role: 'Social Media Commercial',
 		category: 'character',
-		video: '/JJStraub_empireagency-eBay-social-media.mp4'
+		video: '/JJStraub-eBay-social-media.mp4'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-Reinfressen1-2.webp`,
+		src: `${blob}/JJStraub-Reinfressen1-2.webp`,
 		width: 1676,
 		height: 1934,
 		alt: 'JJ Straub: Reinfressen',
@@ -56,7 +56,7 @@ export const works = [
 	},
 	{
 		// cut out left guy so only face with eyes is still in
-		src: `${blob}/JJStraub_empireagency-RapunzelsFluch2.webp`,
+		src: `${blob}/JJStraub-RapunzelsFluch2.webp`,
 		width: 1255,
 		height: 729,
 		alt: "JJ Straub: Rapunzel's Curse",
@@ -66,7 +66,7 @@ export const works = [
 		// video coming
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-General.webp`,
+		src: `${blob}/JJStraub-General.webp`,
 		width: 1707,
 		height: 2220,
 		alt: 'JJ Straub: General',
@@ -75,7 +75,7 @@ export const works = [
 		category: 'character'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-LastCustomer-Walter.webp`,
+		src: `${blob}/JJStraub-LastCustomer-Walter.webp`,
 		width: 805,
 		height: 472,
 		alt: 'JJ Straub: Last Customer',
@@ -85,17 +85,17 @@ export const works = [
 		//video coming
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-LA-Kings.webp`,
+		src: `${blob}/JJStraub-LA-Kings.webp`,
 		width: 1555,
 		height: 833,
 		alt: 'JJ Straub: LA Kings',
 		title: 'LA Kings',
 		role: 'Commercial',
 		category: 'character',
-		video: '/JJStraub_empireagency-LAKings.mp4'
+		video: '/JJStraub-LAKings.mp4'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-L.I.F.E.-KinoLoop.webp`,
+		src: `${blob}/JJStraub-L.I.F.E.-KinoLoop.webp`,
 		width: 637,
 		height: 661,
 		alt: 'JJ Straub: L.I.F.E. KinoLoop',
@@ -112,17 +112,17 @@ export const works = [
 		category: 'portrait'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-eBay.webp`,
+		src: `${blob}/JJStraub-eBay.webp`,
 		width: 1277,
 		height: 807,
 		alt: 'JJ Straub: eBay',
 		title: 'eBay',
 		role: 'Commercial',
 		category: 'character',
-		video: '/JJStraub_EmpireAgency-eBay3.MP4'
+		video: '/JJStraub-eBay3.mp4'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-Coinstar.webp`,
+		src: `${blob}/JJStraub-Coinstar.webp`,
 		width: 310,
 		height: 423,
 		alt: 'JJ Straub: Coinstar',
@@ -133,7 +133,7 @@ export const works = [
 	},
 	{
 		//cut out white line from the left
-		src: `${blob}/JJStraub_empireagency-Piano-Bar.webp`,
+		src: `${blob}/JJStraub-Piano-Bar.webp`,
 		width: 797,
 		height: 1200,
 		alt: 'JJ Straub: Piano Bar',
@@ -142,7 +142,7 @@ export const works = [
 		category: 'character'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-Kingdom-Come-Deliverance-char.webp`,
+		src: `${blob}/JJStraub-Kingdom-Come-Deliverance-char.webp`,
 		width: 480,
 		height: 570,
 		alt: 'JJ Straub: Kingdom Come Deliverance',
@@ -151,7 +151,7 @@ export const works = [
 		category: 'character'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-Jawlock-DR-Dentist.webp`,
+		src: `${blob}/JJStraub-Jawlock-DR-Dentist.webp`,
 		width: 444,
 		height: 687,
 		alt: 'JJ Straub: Jawlock DR Dentist',
@@ -161,7 +161,7 @@ export const works = [
 	},
 	{
 		// cut bottom away to just above chest
-		src: `${blob}/JJStraub_empireagency-Kingdom-Come-Deliverance.webp`,
+		src: `${blob}/JJStraub-Kingdom-Come-Deliverance.webp`,
 		width: 842,
 		height: 1600,
 		alt: 'JJ Straub: Kingdom Come Deliverance',
@@ -170,7 +170,7 @@ export const works = [
 		category: 'character'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-NYPD.webp`,
+		src: `${blob}/JJStraub-NYPD.webp`,
 		width: 434,
 		height: 588,
 		alt: 'JJ Straub: NYPD',
@@ -180,7 +180,7 @@ export const works = [
 	},
 	{
 		//cut away a bit on the right and left
-		src: `${blob}/JJStraub_empireagency-TheWindow1.webp`,
+		src: `${blob}/JJStraub-TheWindow1.webp`,
 		width: 1600,
 		height: 809,
 		alt: 'JJ Straub: The Window',
@@ -189,7 +189,7 @@ export const works = [
 		category: 'character'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-From Russia with Love-BND-Agent.webp`,
+		src: `${blob}/JJStraub-From-Russia-with-Love-BND-Agent.webp`,
 		width: 508,
 		height: 588,
 		alt: 'JJ Straub: From Russia with Love',
@@ -198,7 +198,7 @@ export const works = [
 		category: 'character'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-Karma.webp`,
+		src: `${blob}/JJStraub-Karma.webp`,
 		width: 640,
 		height: 428,
 		alt: 'JJ Straub: Karma',
@@ -207,7 +207,7 @@ export const works = [
 		category: 'character'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-Feeder.webp`,
+		src: `${blob}/JJStraub-Feeder.webp`,
 		width: 1240,
 		height: 718,
 		alt: 'JJ Straub: Feeder',
@@ -218,7 +218,7 @@ export const works = [
 	},
 	{
 		//cut out left character, till the curtains
-		src: `${blob}/JJStraub_empireagency-VonLoewenberg.webp`,
+		src: `${blob}/JJStraub-VonLoewenberg.webp`,
 		width: 1550,
 		height: 841,
 		alt: 'JJ Straub: Von Loewenberg',
@@ -227,7 +227,7 @@ export const works = [
 		category: 'character'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-Reinfressen.webp`,
+		src: `${blob}/JJStraub-Reinfressen.webp`,
 		width: 1599,
 		height: 1066,
 		alt: 'JJ Straub: Reinfressen',
@@ -237,7 +237,7 @@ export const works = [
 		//video coming
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-TJ.webp`,
+		src: `${blob}/JJStraub-TJ.webp`,
 		width: 480,
 		height: 639,
 		alt: 'JJ Straub: Portrait',
@@ -245,7 +245,7 @@ export const works = [
 		category: 'portrait'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-100Stories.webp`,
+		src: `${blob}/JJStraub-100Stories.webp`,
 		width: 1098,
 		height: 1328,
 		alt: 'JJ Straub: 100 Stories',
@@ -254,7 +254,7 @@ export const works = [
 		category: 'character'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-Cloud-Lawyer.webp`,
+		src: `${blob}/JJStraub-Cloud-Lawyer.webp`,
 		width: 1024,
 		height: 1240,
 		alt: 'JJ Straub: Cloud Lawyer',
@@ -262,10 +262,10 @@ export const works = [
 		role: 'Larry H. Schitt',
 		category: 'character',
 		//remove this video
-		video: '/JJStraub_empireagency-Cloud-Lawyer.mp4'
+		video: '/JJStraub-Cloud-Lawyer.mp4'
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-Smoking-kills.webp`,
+		src: `${blob}/JJStraub-Smoking-kills.webp`,
 		width: 762,
 		height: 572,
 		alt: 'JJ Straub: Smoking Kills',
@@ -275,7 +275,7 @@ export const works = [
 		//video coming
 	},
 	{
-		src: `${blob}/JJStraub_empireagency-Time.webp`,
+		src: `${blob}/JJStraub-Time.webp`,
 		width: 434,
 		height: 695,
 		alt: 'JJ Straub: Kalt graut der Morgen',
