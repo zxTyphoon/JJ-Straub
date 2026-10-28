@@ -298,8 +298,9 @@ export const works = [
 		src: `${blob}/JJStraub-Pfarrer.webp`,
 		width: 2262,
 		height: 2775,
-		alt: 'JJ Straub: Pfarrer',
-		title: 'Pfarrer',
+		alt: 'JJ Straub: Heilung',
+		title: 'Heilung',
+		role: 'Pfarrer',
 		category: 'character'
 	},
 	{
