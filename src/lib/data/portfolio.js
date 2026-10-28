@@ -33,6 +33,7 @@ export const works = [
 		title: 'Cutting Surface',
 		role: 'Dr. Belial',
 		category: 'character'
+		// video coming
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-ebay-social-media.webp`,
@@ -54,6 +55,7 @@ export const works = [
 		category: 'character'
 	},
 	{
+		// cut out left guy so only face with eyes is still in
 		src: `${blob}/JJStraub_empireagency-RapunzelsFluch2.webp`,
 		width: 1255,
 		height: 729,
@@ -61,6 +63,7 @@ export const works = [
 		title: 'Rapunzels Fluch 2',
 		role: 'Oberkommissar Schulz',
 		category: 'character'
+		// video coming
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-General.webp`,
@@ -79,6 +82,7 @@ export const works = [
 		title: 'Last Customer',
 		role: 'Walter',
 		category: 'character'
+		//video coming
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-LA-Kings.webp`,
@@ -125,8 +129,10 @@ export const works = [
 		title: 'Coinstar',
 		role: 'Commercial',
 		category: 'character'
+		//video coming?
 	},
 	{
+		//cut out white line from the left
 		src: `${blob}/JJStraub_empireagency-Piano-Bar.webp`,
 		width: 797,
 		height: 1200,
@@ -154,6 +160,7 @@ export const works = [
 		category: 'character'
 	},
 	{
+		// cut bottom away to just above chest
 		src: `${blob}/JJStraub_empireagency-Kingdom-Come-Deliverance.webp`,
 		width: 842,
 		height: 1600,
@@ -172,6 +179,7 @@ export const works = [
 		category: 'character'
 	},
 	{
+		//cut away a bit on the right and left
 		src: `${blob}/JJStraub_empireagency-TheWindow1.webp`,
 		width: 1600,
 		height: 809,
@@ -206,8 +214,10 @@ export const works = [
 		title: 'Feeder',
 		role: 'The Vet',
 		category: 'character'
+		//video coming (to the other Feeder image, tba)
 	},
 	{
+		//cut out left character, till the curtains
 		src: `${blob}/JJStraub_empireagency-VonLoewenberg.webp`,
 		width: 1550,
 		height: 841,
@@ -224,6 +234,7 @@ export const works = [
 		title: 'Reinfressen',
 		role: 'Bernd',
 		category: 'character'
+		//video coming
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-TJ.webp`,
@@ -250,6 +261,7 @@ export const works = [
 		title: 'Cloud Lawyer',
 		role: 'Larry H. Schitt',
 		category: 'character',
+		//remove this video
 		video: '/JJStraub_empireagency-Cloud-Lawyer.mp4'
 	},
 	{
@@ -260,6 +272,7 @@ export const works = [
 		title: 'Smoking Kills',
 		role: 'American Cancer Society',
 		category: 'character'
+		//video coming
 	},
 	{
 		src: `${blob}/JJStraub_empireagency-Time.webp`,
@@ -269,6 +282,7 @@ export const works = [
 		title: 'Kalt graut der Morgen',
 		role: 'Grandpa',
 		category: 'character'
+		//video coming
 	},
 	{
 		src: `${blob}/JJStraub-Oberkommissar-Schulz-RapunzelsFluch2.webp`,
@@ -278,6 +292,7 @@ export const works = [
 		title: 'Rapunzels Fluch 2',
 		role: 'Oberkommissar Schulz',
 		category: 'character'
+		//to be replaced with other, tba Rapunzels Fluch
 	},
 	{
 		src: `${blob}/JJStraub-Pfarrer.webp`,
@@ -320,4 +335,5 @@ export const works = [
 		title: 'JJ Straub',
 		category: 'portrait'
 	}
+	//TODO: Add new images, cut images (where comments where added), sort works array better
 ];
