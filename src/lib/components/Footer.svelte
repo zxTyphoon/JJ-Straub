@@ -24,8 +24,15 @@
 
 	<!-- Studio credit: deliberately quiet, below the main footer row -->
 	<p
-		class="px-6 md:px-10 lg:px-16 pb-6 -mt-4 text-center md:text-left text-[0.6rem] uppercase tracking-[0.25em] text-bone-faint/60"
+		class="px-6 md:px-10 lg:px-16 pb-6 -mt-4 text-center md:text-left text-[0.65rem] uppercase tracking-[0.25em]"
 	>
-		{$_('siteBy')} UITY
+		<a
+			href="https://uitystudio.de"
+			target="_blank"
+			rel="noopener"
+			class="text-bone-faint hover:text-brass transition-colors duration-300"
+		>
+			{$_('siteBy')} UITY
+		</a>
 	</p>
 </footer>

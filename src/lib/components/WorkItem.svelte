@@ -60,17 +60,20 @@
 				{String(index + 1).padStart(2, '0')}
 			</span>
 
-			<!-- Play button for credits with a clip: always visible (touch has no hover),
-			     styled like the lightbox nav buttons -->
+			<!-- Play button for credits with a clip: a thin ring, always visible (touch has
+			     no hover). Round on purpose — it's the universally read play affordance. -->
 			{#if work.video}
 				<span
 					class="absolute inset-0 flex items-center justify-center pointer-events-none"
 					aria-hidden="true"
 				>
 					<span
-						class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-night-950/60 backdrop-blur-sm border border-white/20 group-hover:border-brass group-hover:bg-night-950/75 group-hover:-translate-y-2 transition-all duration-500 ease-out-expo"
+						class="w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-bone/60 bg-night-950/25 backdrop-blur-[3px] group-hover:border-brass group-hover:bg-night-950/40 group-hover:-translate-y-2 transition-all duration-500 ease-out-expo"
 					>
-						<svg class="w-4 h-4 md:w-5 md:h-5 fill-brass" viewBox="0 0 24 24">
+						<svg
+							class="w-3.5 h-3.5 md:w-4 md:h-4 fill-bone group-hover:fill-brass transition-colors duration-500"
+							viewBox="0 0 24 24"
+						>
 							<path d="M8 5v14l11-7z" />
 						</svg>
 					</span>
