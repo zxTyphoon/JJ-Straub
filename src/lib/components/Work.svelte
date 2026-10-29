@@ -139,7 +139,10 @@
 
 <svelte:window on:keydown={handleKeydown} bind:innerWidth />
 
-<section id="work" class="relative scroll-mt-20 px-6 md:px-10 lg:px-16 py-24 md:py-36">
+<section
+	id="work"
+	class="relative scroll-mt-20 px-6 md:px-10 lg:px-16 pt-24 md:pt-36 pb-10 md:pb-12"
+>
 	<!-- Section header -->
 	<div class="mb-12 md:mb-16">
 		<div class="flex items-center gap-4 mb-6" use:reveal>
@@ -188,7 +191,10 @@
 	     staggered rise-in (row by row), echoing the scroll-reveal language. -->
 	{#key activeFilter}
 		{#if mounted}
-			<div class="grid gap-x-5" style="grid-template-columns: repeat({cols}, minmax(0, 1fr));">
+			<div
+				class="grid gap-x-5 -mb-5"
+				style="grid-template-columns: repeat({cols}, minmax(0, 1fr));"
+			>
 				{#each columns as column}
 					<div>
 						{#each column as { work, index, delay } (work.src)}
@@ -204,7 +210,7 @@
 				{/each}
 			</div>
 		{:else}
-			<div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-5">
+			<div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-5 -mb-5">
 				{#each filtered as work, index (work.src)}
 					<WorkItem {work} {index} animate={!hasFiltered} on:select={() => openLightbox(index)} />
 				{/each}

@@ -11,23 +11,28 @@
 </script>
 
 <section class="relative min-h-[100svh] flex flex-col overflow-hidden">
-	<!-- Headshot, blended into the canvas. The photo is two portraits side by side: when the
-	     panel is tall and narrow (phones, tablets) only the left face is shown so the crop
-	     never lands on the seam; wide screens show both. -->
+	<!-- Headshot, blended into the canvas. The photo is two portraits side by side.
+	     Portrait screens (phones, upright tablets) get a crop of just the right portrait,
+	     so a sliver of the other face can never show at the edge. Landscape screens get
+	     the full photo: left-aligned when the panel is narrow, both faces from 3:2 up.
+	     The crop's profile faces left, so left alignment also keeps its nose in frame. -->
 	<div class="absolute inset-0">
 		<!-- From md up the photo fades in on its own left edge, so the overlays below only
 		     need to darken where the text sits and the faces stay bright. -->
 		<div
 			class="absolute inset-y-0 right-0 w-full md:w-[62%] lg:w-[55%] md:[mask-image:linear-gradient(to_right,transparent,black_30%)]"
 		>
-			<img
-				src="/JJStraub_Headshot.webp"
-				alt="JJ Straub"
-				class="w-full h-full object-cover object-left-top [@media(min-aspect-ratio:3/2)]:object-top brightness-110 contrast-105 saturate-[.85] animate-ken-burns"
-				fetchpriority="high"
-				on:contextmenu|preventDefault
-				draggable="false"
-			/>
+			<picture class="block w-full h-full">
+				<source media="(max-aspect-ratio: 1/1)" srcset="/JJStraub_Headshot-mobile.webp" />
+				<img
+					src="/JJStraub_Headshot.webp"
+					alt="JJ Straub"
+					class="w-full h-full object-cover object-left-top [@media(min-aspect-ratio:3/2)]:object-top brightness-110 contrast-105 saturate-[.85] animate-ken-burns"
+					fetchpriority="high"
+					on:contextmenu|preventDefault
+					draggable="false"
+				/>
+			</picture>
 		</div>
 		<!-- Blend gradients: behind the text, along the bottom (marquee), and a thin band at
 		     the top so the transparent nav stays readable. -->
