@@ -138,8 +138,8 @@
 
 <style>
 	.ghost {
-		color: transparent;
-		-webkit-text-stroke: 1px rgba(233, 228, 218, 0.25);
+		color: rgba(233, 228, 218, 0.1);
+		-webkit-text-stroke: 1px rgba(233, 228, 218, 0.35);
 	}
 
 	.scroll-line {
