@@ -15,22 +15,30 @@
 	     panel is tall and narrow (phones, tablets) only the left face is shown so the crop
 	     never lands on the seam; wide screens show both. -->
 	<div class="absolute inset-0">
-		<div class="absolute inset-y-0 right-0 w-full md:w-[62%] lg:w-[55%]">
+		<!-- From md up the photo fades in on its own left edge, so the overlays below only
+		     need to darken where the text sits and the faces stay bright. -->
+		<div
+			class="absolute inset-y-0 right-0 w-full md:w-[62%] lg:w-[55%] md:[mask-image:linear-gradient(to_right,transparent,black_30%)]"
+		>
 			<img
 				src="/JJStraub_Headshot.webp"
 				alt="JJ Straub"
-				class="w-full h-full object-cover object-left-top [@media(min-aspect-ratio:3/2)]:object-top grayscale-[15%] contrast-105 animate-ken-burns"
+				class="w-full h-full object-cover object-left-top [@media(min-aspect-ratio:3/2)]:object-top brightness-110 contrast-105 saturate-[.85] animate-ken-burns"
 				fetchpriority="high"
 				on:contextmenu|preventDefault
 				draggable="false"
 			/>
 		</div>
-		<!-- Blend gradients -->
+		<!-- Blend gradients: behind the text, along the bottom (marquee), and a thin band at
+		     the top so the transparent nav stays readable. -->
 		<div
-			class="absolute inset-0 bg-gradient-to-r from-night-900/80 via-night-900/40 to-night-900/10 md:from-night-900 md:to-transparent"
+			class="absolute inset-0 bg-gradient-to-r from-night-900/70 via-night-900/30 to-night-900/5 md:from-night-900 md:via-night-900/50 md:via-35% md:to-transparent md:to-55%"
 		></div>
 		<div
-			class="absolute inset-0 bg-gradient-to-t from-night-900 via-night-900/30 to-night-900/60"
+			class="absolute inset-0 bg-gradient-to-t from-night-900 via-night-900/75 via-50% to-transparent to-85% md:via-night-900/10 md:via-35% md:to-50%"
+		></div>
+		<div
+			class="absolute inset-x-0 top-0 h-28 md:h-32 bg-gradient-to-b from-night-900/70 to-transparent"
 		></div>
 	</div>
 
@@ -53,13 +61,13 @@
 			<!-- Name -->
 			<h1 class="tracking-tight leading-[0.88] mb-8 md:mb-10">
 				<span
-					class="block text-[clamp(4.5rem,16vw,12rem)] md:text-[clamp(4.5rem,11vw,12rem)] text-bone"
+					class="block text-[clamp(4rem,14.5vw,10.75rem)] md:text-[clamp(4rem,10vw,10.75rem)] text-bone"
 					style="animation: riseIn 1s cubic-bezier(0.16,1,0.3,1) 300ms both"
 				>
 					JJ<span class="ml-[0.4em] text-[0.4em] tracking-normal text-bone-muted">(Juergen)</span>
 				</span>
 				<span
-					class="block text-[clamp(4.5rem,16vw,12rem)] md:text-[clamp(4.5rem,11vw,12rem)] text-brass"
+					class="block text-[clamp(4rem,14.5vw,10.75rem)] md:text-[clamp(4rem,10vw,10.75rem)] text-brass"
 					style="animation: riseIn 1s cubic-bezier(0.16,1,0.3,1) 450ms both"
 				>
 					Straub
@@ -71,7 +79,7 @@
 				class="max-w-md lg:max-w-lg"
 				style="animation: riseIn 1s cubic-bezier(0.16,1,0.3,1) 650ms both"
 			>
-				<p class="text-sm md:text-base text-bone-muted leading-relaxed mb-8">
+				<p class="text-base md:text-lg text-bone-muted leading-relaxed mb-8">
 					{$_('about')}
 				</p>
 
