@@ -60,15 +60,20 @@
 				{String(index + 1).padStart(2, '0')}
 			</span>
 
-			<!-- Clip badge -->
+			<!-- Play button for credits with a clip: always visible (touch has no hover),
+			     styled like the lightbox nav buttons -->
 			{#if work.video}
 				<span
-					class="absolute top-3 right-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-night-950/70 backdrop-blur-sm border border-white/10 text-[0.6rem] uppercase tracking-[0.2em] text-bone"
+					class="absolute inset-0 flex items-center justify-center pointer-events-none"
+					aria-hidden="true"
 				>
-					<svg class="w-2 h-2 fill-brass" viewBox="0 0 24 24">
-						<path d="M8 5v14l11-7z" />
-					</svg>
-					Clip
+					<span
+						class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-night-950/60 backdrop-blur-sm border border-white/20 group-hover:border-brass group-hover:bg-night-950/75 group-hover:-translate-y-2 transition-all duration-500 ease-out-expo"
+					>
+						<svg class="w-4 h-4 md:w-5 md:h-5 fill-brass" viewBox="0 0 24 24">
+							<path d="M8 5v14l11-7z" />
+						</svg>
+					</span>
 				</span>
 			{/if}
 

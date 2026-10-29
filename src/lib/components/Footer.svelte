@@ -21,4 +21,11 @@
 			<span class="text-bone-faint">© {new Date().getFullYear()} JJ Straub</span>
 		</div>
 	</div>
+
+	<!-- Studio credit: deliberately quiet, below the main footer row -->
+	<p
+		class="px-6 md:px-10 lg:px-16 pb-6 -mt-4 text-center md:text-left text-[0.6rem] uppercase tracking-[0.25em] text-bone-faint/60"
+	>
+		{$_('siteBy')} UITY
+	</p>
 </footer>
