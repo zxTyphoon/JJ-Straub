@@ -26,6 +26,15 @@ export const works = [
 		video: '/JJStraub-THE-WALD.mp4'
 	},
 	{
+		src: `${blob}/JJStraub-TheWald-Soldat.webp`,
+		width: 1426,
+		height: 2200,
+		alt: 'JJ Straub: The Wald',
+		title: 'The Wald',
+		role: 'Soldat',
+		category: 'character'
+	},
+	{
 		src: `${blob}/JJStraub-CuttingSur.webp`,
 		width: 1250,
 		height: 718,
@@ -55,9 +64,8 @@ export const works = [
 		category: 'character'
 	},
 	{
-		// cut out left guy so only face with eyes is still in
-		src: `${blob}/JJStraub-RapunzelsFluch2.webp`,
-		width: 1255,
+		src: `${blob}/JJStraub-RapunzelsFluch2-crop.webp`,
+		width: 555,
 		height: 729,
 		alt: "JJ Straub: Rapunzel's Curse",
 		title: 'Rapunzels Fluch 2',
@@ -132,10 +140,9 @@ export const works = [
 		//video coming?
 	},
 	{
-		//cut out white line from the left
-		src: `${blob}/JJStraub-Piano-Bar.webp`,
-		width: 797,
-		height: 1200,
+		src: `${blob}/JJStraub-Piano-Bar-crop.webp`,
+		width: 793,
+		height: 980,
 		alt: 'JJ Straub: Piano Bar',
 		title: 'Piano Bar',
 		role: 'John',
@@ -160,10 +167,9 @@ export const works = [
 		category: 'character'
 	},
 	{
-		// cut bottom away to just above chest
-		src: `${blob}/JJStraub-Kingdom-Come-Deliverance.webp`,
+		src: `${blob}/JJStraub-Kingdom-Come-Deliverance-crop.webp`,
 		width: 842,
-		height: 1600,
+		height: 660,
 		alt: 'JJ Straub: Kingdom Come Deliverance',
 		title: 'Kingdom Come Deliverance 2',
 		role: 'Motion Capture',
@@ -179,9 +185,8 @@ export const works = [
 		category: 'character'
 	},
 	{
-		//cut away a bit on the right and left
-		src: `${blob}/JJStraub-TheWindow1.webp`,
-		width: 1600,
+		src: `${blob}/JJStraub-TheWindow1-crop.webp`,
+		width: 1260,
 		height: 809,
 		alt: 'JJ Straub: The Window',
 		title: 'The Window',
@@ -214,17 +219,34 @@ export const works = [
 		title: 'Feeder',
 		role: 'The Vet',
 		category: 'character'
-		//video coming (to the other Feeder image, tba)
 	},
 	{
-		//cut out left character, till the curtains
-		src: `${blob}/JJStraub-VonLoewenberg.webp`,
-		width: 1550,
+		src: `${blob}/JJStraub-Vet-Feeder.webp`,
+		width: 1587,
+		height: 2200,
+		alt: 'JJ Straub: Feeder',
+		title: 'Feeder',
+		role: 'The Vet',
+		category: 'character'
+		//video coming
+	},
+	{
+		src: `${blob}/JJStraub-VonLoewenberg-crop.webp`,
+		width: 970,
 		height: 841,
 		alt: 'JJ Straub: Von Loewenberg',
 		title: 'Mask of the Schwarzen-Loewenbergs',
 		role: 'Hans',
 		category: 'character'
+	},
+	{
+		src: `${blob}/JJStraub-Booth-Game.webp`,
+		width: 399,
+		height: 545,
+		alt: 'JJ Straub: The Booth Game',
+		title: 'The Booth Game',
+		category: 'character',
+		video: '/JJStraub-Booth-Game.mp4'
 	},
 	{
 		src: `${blob}/JJStraub-Reinfressen.webp`,
@@ -260,9 +282,7 @@ export const works = [
 		alt: 'JJ Straub: Cloud Lawyer',
 		title: 'Cloud Lawyer',
 		role: 'Larry H. Schitt',
-		category: 'character',
-		//remove this video
-		video: '/JJStraub-Cloud-Lawyer.mp4'
+		category: 'character'
 	},
 	{
 		src: `${blob}/JJStraub-Smoking-kills.webp`,
@@ -285,19 +305,27 @@ export const works = [
 		//video coming
 	},
 	{
-		src: `${blob}/JJStraub-Oberkommissar-Schulz-RapunzelsFluch2.webp`,
-		width: 1690,
-		height: 2535,
+		src: `${blob}/JJStraub-Kommissar.webp`,
+		width: 1154,
+		height: 1280,
 		alt: 'JJ Straub: Kommissar',
 		title: 'Rapunzels Fluch 2',
 		role: 'Oberkommissar Schulz',
 		category: 'character'
-		//to be replaced with other, tba Rapunzels Fluch
 	},
 	{
 		src: `${blob}/JJStraub-Pfarrer.webp`,
 		width: 2262,
 		height: 2775,
+		alt: 'JJ Straub: Heilung',
+		title: 'Heilung',
+		role: 'Pfarrer',
+		category: 'character'
+	},
+	{
+		src: `${blob}/JJStraub-Prieste-1.webp`,
+		width: 1778,
+		height: 2200,
 		alt: 'JJ Straub: Heilung',
 		title: 'Heilung',
 		role: 'Pfarrer',
@@ -335,6 +363,105 @@ export const works = [
 		alt: 'JJ Straub: Portrait',
 		title: 'JJ Straub',
 		category: 'portrait'
+	},
+	{
+		//TODO: movie title
+		src: `${blob}/JJStraub-im-Krankenhaus.webp`,
+		width: 1041,
+		height: 1400,
+		alt: 'JJ Straub: Patient',
+		role: 'Patient',
+		category: 'character'
+	},
+	{
+		//TODO: movie title and role
+		src: `${blob}/JJStraub-Fisch22.webp`,
+		width: 1828,
+		height: 2200,
+		alt: 'JJ Straub: Film still',
+		category: 'character'
+	},
+	{
+		//TODO: movie title
+		src: `${blob}/JJStraub-Syfy1.webp`,
+		width: 1605,
+		height: 2200,
+		alt: 'JJ Straub: Farmer',
+		role: 'Farmer',
+		category: 'character'
+	},
+	{
+		src: `${blob}/JJStraub-black_mountain-blood-BMW.webp`,
+		width: 2041,
+		height: 2200,
+		alt: 'JJ Straub: BMW Black Mountain',
+		title: 'BMW Black Mountain',
+		role: 'Forest Ranger',
+		category: 'character'
+	},
+	{
+		src: `${blob}/JJStraub-head-4.webp`,
+		width: 1468,
+		height: 2200,
+		alt: 'JJ Straub: Portrait',
+		title: 'JJ Straub',
+		category: 'portrait'
+	},
+	{
+		src: `${blob}/JJStraub-Headshot-Chair.webp`,
+		width: 1793,
+		height: 2200,
+		alt: 'JJ Straub: Portrait',
+		title: 'JJ Straub',
+		category: 'portrait'
+	},
+	{
+		src: `${blob}/JJStraub-ZAV-2026.webp`,
+		width: 1455,
+		height: 2200,
+		alt: 'JJ Straub: Portrait',
+		title: 'JJ Straub',
+		category: 'portrait'
+	},
+	{
+		src: `${blob}/JJStraub-headshot-2.webp`,
+		width: 1504,
+		height: 2200,
+		alt: 'JJ Straub: Portrait',
+		title: 'JJ Straub',
+		category: 'portrait'
+	},
+	{
+		src: `${blob}/JJStraub-headshot-3.webp`,
+		width: 1738,
+		height: 2200,
+		alt: 'JJ Straub: Portrait',
+		title: 'JJ Straub',
+		category: 'portrait'
+	},
+	{
+		src: `${blob}/JJStraub-Boot-Steen-08-2026.webp`,
+		width: 1874,
+		height: 2200,
+		alt: 'JJ Straub: Portrait',
+		title: 'JJ Straub',
+		category: 'portrait'
+	},
+	{
+		src: `${blob}/JJStraub-Felix3.webp`,
+		width: 1647,
+		height: 2200,
+		alt: 'JJ Straub: Portrait',
+		title: 'JJ Straub',
+		category: 'portrait'
+	},
+	{
+		src: `${blob}/JJStraub-Netflix-LA.webp`,
+		width: 1379,
+		height: 2200,
+		alt: 'JJ Straub: Portrait',
+		title: 'JJ Straub',
+		category: 'portrait'
 	}
-	//TODO: Add new images, cut images (where comments where added), sort works array better
+	//TODO: sort works array better
 ];
