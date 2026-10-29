@@ -50,8 +50,10 @@
 	}
 </script>
 
+<!-- safe-top: the header reaches up behind the iPhone status bar, so once scrolled its
+     background covers that strip instead of the page showing through beside the island -->
 <header
-	class="fixed top-0 left-0 right-0 z-40 transition-all duration-500 {scrolled
+	class="fixed top-0 left-0 right-0 z-40 safe-top safe-x transition-all duration-500 {scrolled
 		? 'bg-night-900/85 backdrop-blur-md border-b border-white/5'
 		: 'border-b border-transparent'}"
 >
@@ -86,26 +88,68 @@
 				{/each}
 			</div>
 
-			<!-- Language toggle -->
+			<!-- Language toggle. Flags are inline SVG, not emoji: Windows has no flag emoji
+			     and would show the letters instead. -->
 			<div class="hidden md:flex items-center gap-1 text-xs lg:text-sm uppercase tracking-[0.2em]">
 				<button
 					on:click={() => setLanguage('en')}
-					class="px-2 py-1 transition-colors duration-300 {currentLang === 'en'
-						? 'text-bone underline underline-offset-4 decoration-brass'
+					class="group flex items-center gap-2 px-2 py-1 transition-colors duration-300 {currentLang ===
+					'en'
+						? 'text-bone'
 						: 'text-bone-faint hover:text-bone-muted'}"
 					aria-label="Switch to English"
 				>
-					EN
+					<svg
+						class="w-5 h-3 shrink-0 ring-1 ring-white/15 transition-all duration-300 {currentLang ===
+						'en'
+							? ''
+							: 'opacity-40 grayscale-[60%] group-hover:opacity-80'}"
+						viewBox="0 0 190 100"
+						preserveAspectRatio="none"
+						aria-hidden="true"
+					>
+						<defs>
+							<pattern id="flag-us-stars" width="15.2" height="10.77" patternUnits="userSpaceOnUse">
+								<circle cx="7.6" cy="5.38" r="2.4" fill="#fff" />
+							</pattern>
+						</defs>
+						<rect width="190" height="100" fill="#fff" />
+						<path
+							fill="#B22234"
+							d="M0 0h190v7.69H0zm0 15.38h190v7.7H0zm0 15.39h190v7.69H0zm0 15.38h190v7.7H0zm0 15.39h190v7.69H0zm0 15.38h190v7.7H0zm0 15.39h190v7.69H0z"
+						/>
+						<rect width="76" height="53.85" fill="#3C3B6E" />
+						<rect width="76" height="53.85" fill="url(#flag-us-stars)" />
+					</svg>
+					<span class={currentLang === 'en' ? 'underline underline-offset-4 decoration-brass' : ''}
+						>EN</span
+					>
 				</button>
 				<span class="text-bone-faint">/</span>
 				<button
 					on:click={() => setLanguage('de')}
-					class="px-2 py-1 transition-colors duration-300 {currentLang === 'de'
-						? 'text-bone underline underline-offset-4 decoration-brass'
+					class="group flex items-center gap-2 px-2 py-1 transition-colors duration-300 {currentLang ===
+					'de'
+						? 'text-bone'
 						: 'text-bone-faint hover:text-bone-muted'}"
 					aria-label="Auf Deutsch umschalten"
 				>
-					DE
+					<svg
+						class="w-5 h-3 shrink-0 ring-1 ring-white/15 transition-all duration-300 {currentLang ===
+						'de'
+							? ''
+							: 'opacity-40 grayscale-[60%] group-hover:opacity-80'}"
+						viewBox="0 0 5 3"
+						preserveAspectRatio="none"
+						aria-hidden="true"
+					>
+						<rect width="5" height="1" fill="#000" />
+						<rect y="1" width="5" height="1" fill="#DD0000" />
+						<rect y="2" width="5" height="1" fill="#FFCE00" />
+					</svg>
+					<span class={currentLang === 'de' ? 'underline underline-offset-4 decoration-brass' : ''}
+						>DE</span
+					>
 				</button>
 			</div>
 
@@ -140,7 +184,9 @@
 
 <!-- Mobile menu overlay -->
 {#if menuOpen}
-	<div class="fixed inset-0 z-30 md:hidden bg-night-950/98 backdrop-blur-xl overflow-y-auto">
+	<div
+		class="fixed inset-0 z-30 md:hidden bg-night-950/98 backdrop-blur-xl overflow-y-auto safe-top safe-bottom safe-x"
+	>
 		<div class="min-h-full flex flex-col justify-between px-8 pt-28 pb-10">
 			<nav class="flex flex-col gap-2">
 				{#each navItems as item, i}

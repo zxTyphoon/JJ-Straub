@@ -4,7 +4,10 @@
 	import { contact } from '$lib/data/links.js';
 </script>
 
-<section id="contact" class="relative scroll-mt-20 px-6 md:px-10 lg:px-16 py-24 md:py-36">
+<section
+	id="contact"
+	class="relative scroll-mt-[calc(5rem_+_env(safe-area-inset-top))] px-6 md:px-10 lg:px-16 py-24 md:py-36"
+>
 	<!-- Section label -->
 	<div class="flex items-center gap-4 mb-12 md:mb-16" use:reveal>
 		<span class="text-[0.65rem] uppercase tracking-[0.3em] text-brass">03</span>

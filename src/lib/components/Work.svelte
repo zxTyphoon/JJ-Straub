@@ -141,7 +141,7 @@
 
 <section
 	id="work"
-	class="relative scroll-mt-20 px-6 md:px-10 lg:px-16 pt-24 md:pt-36 pb-10 md:pb-12"
+	class="relative scroll-mt-[calc(5rem_+_env(safe-area-inset-top))] px-6 md:px-10 lg:px-16 pt-24 md:pt-36 pb-10 md:pb-12"
 >
 	<!-- Section header -->
 	<div class="mb-12 md:mb-16">

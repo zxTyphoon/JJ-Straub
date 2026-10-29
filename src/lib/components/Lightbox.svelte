@@ -52,7 +52,7 @@
 
 <div
 	bind:this={dialogEl}
-	class="fixed inset-0 z-50 flex flex-col bg-night-950/[0.97] backdrop-blur-lg"
+	class="fixed inset-0 z-50 flex flex-col bg-night-950/[0.97] backdrop-blur-lg safe-top safe-bottom safe-x"
 	transition:fade={{ duration: 250 }}
 	on:click={handleBackdropClick}
 	on:keydown={handleBackdropKeydown}

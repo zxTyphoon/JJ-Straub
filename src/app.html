@@ -3,7 +3,9 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- viewport-fit=cover: the page runs edge to edge on iPhones so the fixed header can
+		     cover the status bar / Dynamic Island strip (see .safe-* in app.postcss) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 		<meta name="theme-color" content="#0c0c0e" />
 		%sveltekit.head%
 	</head>

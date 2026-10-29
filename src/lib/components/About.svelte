@@ -24,7 +24,10 @@
 	];
 </script>
 
-<section id="about" class="relative scroll-mt-20 bg-night-950 border-y border-white/5">
+<section
+	id="about"
+	class="relative scroll-mt-[calc(5rem_+_env(safe-area-inset-top))] bg-night-950 border-y border-white/5"
+>
 	<div class="px-6 md:px-10 lg:px-16 py-24 md:py-36">
 		<!-- Section label -->
 		<div class="flex items-center gap-4 mb-12 md:mb-16" use:reveal>

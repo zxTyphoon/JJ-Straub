@@ -2,7 +2,7 @@
 	import { _ } from 'svelte-i18n';
 </script>
 
-<footer class="relative bg-night-950 border-t border-white/5">
+<footer class="relative bg-night-950 border-t border-white/5 safe-bottom">
 	<div
 		class="px-6 md:px-10 lg:px-16 py-10 flex flex-col md:flex-row items-center justify-between gap-6"
 	>
