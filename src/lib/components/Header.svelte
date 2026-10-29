@@ -59,7 +59,9 @@
 		<nav class="flex items-center justify-between h-16 md:h-20">
 			<!-- Wordmark -->
 			<button on:click={scrollToTop} class="group" aria-label="JJ Straub — back to top">
-				<span class="tracking-tight text-2xl md:text-[1.7rem] text-bone leading-none">
+				<span
+					class="tracking-tight text-2xl md:text-[1.7rem] lg:text-[1.9rem] text-bone leading-none"
+				>
 					JJ <span class="text-brass group-hover:text-brass-light transition-colors duration-300"
 						>Straub</span
 					>
@@ -71,9 +73,9 @@
 				{#each navItems as item}
 					<a
 						href={item.href}
-						class="group flex items-baseline gap-2 text-xs uppercase tracking-[0.25em] text-bone-muted hover:text-bone transition-colors duration-300"
+						class="group flex items-baseline gap-2 text-xs lg:text-sm uppercase tracking-[0.25em] text-bone-muted hover:text-bone transition-colors duration-300"
 					>
-						<span class="text-[0.6rem] text-brass/70">{item.index}</span>
+						<span class="text-[0.6rem] lg:text-[0.7rem] text-brass/70">{item.index}</span>
 						<span class="relative">
 							{item.label}
 							<span
@@ -85,7 +87,7 @@
 			</div>
 
 			<!-- Language toggle -->
-			<div class="hidden md:flex items-center gap-1 text-xs uppercase tracking-[0.2em]">
+			<div class="hidden md:flex items-center gap-1 text-xs lg:text-sm uppercase tracking-[0.2em]">
 				<button
 					on:click={() => setLanguage('en')}
 					class="px-2 py-1 transition-colors duration-300 {currentLang === 'en'

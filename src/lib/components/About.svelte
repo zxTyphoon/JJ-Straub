@@ -1,7 +1,8 @@
 <script>
 	import { _ } from 'svelte-i18n';
 	import { reveal } from '$lib/actions/reveal.js';
-	import { contact } from '$lib/data/links.js';
+	import { contact, socials } from '$lib/data/links.js';
+	import { aboutPortrait } from '$lib/data/portfolio.js';
 
 	$: facts = [
 		{
@@ -40,7 +41,7 @@
 				<div class="relative max-w-md mx-auto lg:mx-0">
 					<div class="absolute -top-4 -left-4 w-full h-full border border-brass/40"></div>
 					<img
-						src="https://iet4nqumkcygt4t7.public.blob.vercel-storage.com/JJ%20Straub-ZAV-03-26.webp"
+						src={aboutPortrait}
 						alt="JJ Straub portrait"
 						class="relative w-full grayscale-[20%] contrast-105"
 						loading="lazy"
@@ -85,19 +86,28 @@
 					{/each}
 				</div>
 
-				<a
-					href="https://www.imdb.com/name/nm0833707/"
-					target="_blank"
-					rel="noreferrer"
-					class="group inline-flex items-center gap-3 mt-12 px-6 py-3 border border-bone/25 text-xs uppercase tracking-[0.25em] text-bone hover:border-brass hover:text-brass transition-colors duration-300"
-					use:reveal={{ delay: 350 }}
-				>
-					{$_('aboutSection.imdb')}
-					<span
-						class="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
-						>↗</span
-					>
-				</a>
+				<!-- Profiles (IMDb first), moved up from the contact section -->
+				<div class="mt-12" use:reveal={{ delay: 350 }}>
+					<p class="text-[0.65rem] uppercase tracking-[0.3em] text-bone-faint mb-5">
+						{$_('connect')}
+					</p>
+					<div class="flex flex-wrap gap-x-8 gap-y-3">
+						{#each socials as { label, href }}
+							<a
+								{href}
+								target="_blank"
+								rel="noreferrer"
+								class="group text-base md:text-lg text-bone-muted hover:text-bone transition-colors duration-300"
+							>
+								{label}
+								<span
+									class="inline-block text-brass/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
+									>↗</span
+								>
+							</a>
+						{/each}
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

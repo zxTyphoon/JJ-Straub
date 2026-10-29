@@ -3,6 +3,10 @@
 // "clips" filter is derived from the `video` field.
 const blob = 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com';
 
+// Portrait in the About section; also the `image` of the JSON-LD Person schema.
+// The social preview (og:image) is a square crop of it: static/JJStraub-og.jpg.
+export const aboutPortrait = `${blob}/JJ%20Straub-ZAV-03-26.webp`;
+
 export const categories = ['character', 'portrait', 'clips'];
 
 export const works = [

@@ -46,8 +46,7 @@
 		"languages": "Sprachen",
 		"languagesValue": "Deutsch · Englisch",
 		"basedIn": "Wohnort",
-		"representation": "Agentur",
-		"imdb": "IMDb-Profil ansehen"
+		"representation": "Agentur"
 	},
 	"contactSection": {
 		"label": "Kontakt",

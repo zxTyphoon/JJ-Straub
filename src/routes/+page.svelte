@@ -4,6 +4,10 @@
 	import About from '$lib/components/About.svelte';
 	import Contact from '$lib/components/Contact.svelte';
 	import { locale, _ } from 'svelte-i18n';
+	import { aboutPortrait } from '$lib/data/portfolio.js';
+
+	// Social preview: 1200×1200 crop of the About portrait (JPEG for the widest support)
+	const ogImage = 'https://www.jjstraub.com/JJStraub-og.jpg';
 
 	$: title = `JJ Straub - ${$_('actor')} Portfolio`;
 
@@ -15,7 +19,7 @@
 		name: 'JJ Straub',
 		alternateName: 'Juergen J. Straub',
 		url: 'https://www.jjstraub.com',
-		image: 'https://www.jjstraub.com/JJStraub_Headshot-og.webp',
+		image: aboutPortrait,
 		jobTitle: 'Actor',
 		description:
 			'JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights.',
@@ -54,7 +58,7 @@
 		content="actor, portfolio, Juergen Straub, JJ, JJ Straub, jj, jj straub, juergen"
 	/>
 	<meta name="author" content="Juergen Straub" />
-	<meta name="image" content="https://www.jjstraub.com/JJStraub_Headshot-og.webp" />
+	<meta name="image" content={ogImage} />
 	<meta name="robots" content="index, follow" />
 	<link rel="canonical" href="https://www.jjstraub.com" />
 	<link rel="preconnect" href="https://iet4nqumkcygt4t7.public.blob.vercel-storage.com" />
@@ -65,12 +69,15 @@
 		name="twitter:description"
 		content="JJ Straub is a professional actor showcasing his portfolio of film, theater, and television roles — including career highlights, achievements, and behind-the-scenes insights."
 	/>
-	<meta name="twitter:image" content="https://www.jjstraub.com/JJStraub_Headshot-og.webp" />
+	<meta name="twitter:image" content={ogImage} />
 
 	<meta property="og:title" content={title} />
 	<meta property="og:type" content="profile" />
 	<meta property="og:url" content="https://www.jjstraub.com" />
-	<meta property="og:image" content="https://www.jjstraub.com/JJStraub_Headshot-og.webp" />
+	<meta property="og:image" content={ogImage} />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="1200" />
 	<meta property="og:image:alt" content="Juergen Straub, professional actor" />
 	<meta
 		property="og:description"

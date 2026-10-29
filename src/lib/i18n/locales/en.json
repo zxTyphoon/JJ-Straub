@@ -46,8 +46,7 @@
 		"languages": "Languages",
 		"languagesValue": "German · English",
 		"basedIn": "Based in",
-		"representation": "Representation",
-		"imdb": "View IMDb Profile"
+		"representation": "Representation"
 	},
 	"contactSection": {
 		"label": "Contact",

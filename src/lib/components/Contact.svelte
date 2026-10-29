@@ -1,7 +1,7 @@
 <script>
 	import { _ } from 'svelte-i18n';
 	import { reveal } from '$lib/actions/reveal.js';
-	import { socials, contact } from '$lib/data/links.js';
+	import { contact } from '$lib/data/links.js';
 </script>
 
 <section id="contact" class="relative scroll-mt-20 px-6 md:px-10 lg:px-16 py-24 md:py-36">
@@ -63,29 +63,6 @@
 					{contact.agency.email}
 				</a>
 			</div>
-		</div>
-	</div>
-
-	<!-- Elsewhere -->
-	<div class="mt-20 md:mt-28 pt-10 border-t border-white/10" use:reveal={{ delay: 200 }}>
-		<p class="text-[0.65rem] uppercase tracking-[0.3em] text-bone-faint mb-6">
-			{$_('connect')}
-		</p>
-		<div class="flex flex-wrap gap-x-8 gap-y-4">
-			{#each socials as { label, href }}
-				<a
-					{href}
-					target="_blank"
-					rel="noreferrer"
-					class="group text-sm text-bone-muted hover:text-bone transition-colors duration-300"
-				>
-					{label}
-					<span
-						class="inline-block text-brass/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
-						>↗</span
-					>
-				</a>
-			{/each}
 		</div>
 	</div>
 </section>
