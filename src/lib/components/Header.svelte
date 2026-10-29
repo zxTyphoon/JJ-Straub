@@ -96,14 +96,14 @@
 					class="group flex items-center gap-2 px-2 py-1 transition-colors duration-300 {currentLang ===
 					'en'
 						? 'text-bone'
-						: 'text-bone-faint hover:text-bone-muted'}"
+						: 'text-bone-muted hover:text-bone'}"
 					aria-label="Switch to English"
 				>
 					<svg
 						class="w-5 h-3 shrink-0 ring-1 ring-white/15 transition-all duration-300 {currentLang ===
 						'en'
 							? ''
-							: 'opacity-40 grayscale-[60%] group-hover:opacity-80'}"
+							: 'opacity-75 grayscale-[20%] group-hover:opacity-100 group-hover:grayscale-0'}"
 						viewBox="0 0 190 100"
 						preserveAspectRatio="none"
 						aria-hidden="true"
@@ -131,14 +131,14 @@
 					class="group flex items-center gap-2 px-2 py-1 transition-colors duration-300 {currentLang ===
 					'de'
 						? 'text-bone'
-						: 'text-bone-faint hover:text-bone-muted'}"
+						: 'text-bone-muted hover:text-bone'}"
 					aria-label="Auf Deutsch umschalten"
 				>
 					<svg
 						class="w-5 h-3 shrink-0 ring-1 ring-white/15 transition-all duration-300 {currentLang ===
 						'de'
 							? ''
-							: 'opacity-40 grayscale-[60%] group-hover:opacity-80'}"
+							: 'opacity-75 grayscale-[20%] group-hover:opacity-100 group-hover:grayscale-0'}"
 						viewBox="0 0 5 3"
 						preserveAspectRatio="none"
 						aria-hidden="true"

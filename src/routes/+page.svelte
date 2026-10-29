@@ -6,8 +6,10 @@
 	import { locale, _ } from 'svelte-i18n';
 	import { aboutPortrait } from '$lib/data/portfolio.js';
 
-	// Social preview: 1200×1200 crop of the About portrait (JPEG for the widest support)
-	const ogImage = 'https://www.jjstraub.com/JJStraub-og.jpg';
+	// Social preview: the full About portrait centred on a dark 1200×630 card, so wide
+	// previews (Facebook, LinkedIn, X) show it uncropped and square thumbnails
+	// (WhatsApp) take exactly the portrait. JPEG for the widest support.
+	const ogImage = 'https://www.jjstraub.com/JJStraub-share.jpg';
 
 	$: title = `JJ Straub - ${$_('actor')} Portfolio`;
 
@@ -77,7 +79,7 @@
 	<meta property="og:image" content={ogImage} />
 	<meta property="og:image:type" content="image/jpeg" />
 	<meta property="og:image:width" content="1200" />
-	<meta property="og:image:height" content="1200" />
+	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="Juergen Straub, professional actor" />
 	<meta
 		property="og:description"
