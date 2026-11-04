@@ -1,6 +1,6 @@
-// All portfolio credits. Cover images live in the Vercel Blob store; video
-// clips are served from static/. `category` is character | portrait; the
-// "clips" filter is derived from the `video` field.
+// All portfolio credits. Cover images and video clips live in the Vercel Blob
+// store. `category` is character | portrait; the "clips" filter is derived
+// from the `video` field.
 const blob = 'https://iet4nqumkcygt4t7.public.blob.vercel-storage.com';
 
 // Portrait in the About section; also the `image` of the JSON-LD Person schema.
@@ -27,7 +27,7 @@ export const works = [
 		title: 'The Wald',
 		role: 'Injured Soldier',
 		category: 'character',
-		video: '/JJStraub-THE-WALD.mp4'
+		video: `${blob}/JJStraub-THE-WALD.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-TheWald-Soldat.webp`,
@@ -45,8 +45,8 @@ export const works = [
 		alt: 'JJ Straub: Cutting Surface',
 		title: 'Cutting Surface',
 		role: 'Dr. Belial',
-		category: 'character'
-		// video coming
+		category: 'character',
+		video: `${blob}/JJStraub-DrBelial.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-ebay-social-media.webp`,
@@ -56,7 +56,7 @@ export const works = [
 		title: 'eBay',
 		role: 'Social Media Commercial',
 		category: 'character',
-		video: '/JJStraub-eBay-social-media.mp4'
+		video: `${blob}/JJStraub-eBay-social-media.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-Reinfressen1-2.webp`,
@@ -74,8 +74,8 @@ export const works = [
 		alt: "JJ Straub: Rapunzel's Curse",
 		title: 'Rapunzels Fluch 2',
 		role: 'Oberkommissar Schulz',
-		category: 'character'
-		// video coming
+		category: 'character',
+		video: `${blob}/JJStraub-Rapunzel2.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-General.webp`,
@@ -93,8 +93,8 @@ export const works = [
 		alt: 'JJ Straub: Last Customer',
 		title: 'Last Customer',
 		role: 'Walter',
-		category: 'character'
-		//video coming
+		category: 'character',
+		video: `${blob}/JJStraub-LastCostumer.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-LA-Kings.webp`,
@@ -104,7 +104,7 @@ export const works = [
 		title: 'LA Kings',
 		role: 'Commercial',
 		category: 'character',
-		video: '/JJStraub-LAKings.mp4'
+		video: `${blob}/JJStraub-LAKings.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-L.I.F.E.-KinoLoop.webp`,
@@ -131,7 +131,7 @@ export const works = [
 		title: 'eBay',
 		role: 'Commercial',
 		category: 'character',
-		video: '/JJStraub-eBay3.mp4'
+		video: `${blob}/JJStraub-eBay3.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-Coinstar.webp`,
@@ -150,7 +150,8 @@ export const works = [
 		alt: 'JJ Straub: Piano Bar',
 		title: 'Piano Bar',
 		role: 'John',
-		category: 'character'
+		category: 'character',
+		video: `${blob}/JJStraub-PianoBar.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-Kingdom-Come-Deliverance-char.webp`,
@@ -159,7 +160,8 @@ export const works = [
 		alt: 'JJ Straub: Kingdom Come Deliverance',
 		title: 'Kingdom Come Deliverance 2',
 		role: 'Martin Oderin',
-		category: 'character'
+		category: 'character',
+		video: `${blob}/JJStraub-Kingdom-Come-Deliverance-2.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-Jawlock-DR-Dentist.webp`,
@@ -195,7 +197,8 @@ export const works = [
 		alt: 'JJ Straub: The Window',
 		title: 'The Window',
 		role: 'Frederick',
-		category: 'character'
+		category: 'character',
+		video: `${blob}/JJStraub-Window.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-From-Russia-with-Love-BND-Agent.webp`,
@@ -204,7 +207,8 @@ export const works = [
 		alt: 'JJ Straub: From Russia with Love',
 		title: 'From Russia with Love',
 		role: 'BND Agent',
-		category: 'character'
+		category: 'character',
+		video: `${blob}/JJStraub-From-Russia-with-Love.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-Karma.webp`,
@@ -231,8 +235,8 @@ export const works = [
 		alt: 'JJ Straub: Feeder',
 		title: 'Feeder',
 		role: 'The Vet',
-		category: 'character'
-		//video coming
+		category: 'character',
+		video: `${blob}/JJStraub-FEEDER.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-VonLoewenberg-crop.webp`,
@@ -250,7 +254,7 @@ export const works = [
 		alt: 'JJ Straub: The Booth Game',
 		title: 'The Booth Game',
 		category: 'character',
-		video: '/JJStraub-Booth-Game.mp4'
+		video: `${blob}/JJStraub-Booth-Game.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-Reinfressen.webp`,
@@ -259,8 +263,8 @@ export const works = [
 		alt: 'JJ Straub: Reinfressen',
 		title: 'Reinfressen',
 		role: 'Bernd',
-		category: 'character'
-		//video coming
+		category: 'character',
+		video: `${blob}/JJStraub-Reinfresse.mp4`
 	},
 	{
 		src: `${blob}/JJStraub-TJ.webp`,
@@ -332,7 +336,36 @@ export const works = [
 		height: 3333,
 		alt: 'JJ Straub: Rick',
 		title: 'Rick',
-		category: 'character'
+		category: 'character',
+		video: `${blob}/JJStraub-Casablanka-ADR-JJ_V2.mp4`
+	},
+	{
+		src: `${blob}/JJStraub-Diamanten.webp`,
+		width: 1920,
+		height: 1072,
+		alt: 'JJ Straub: Diamanten',
+		title: 'Diamanten',
+		category: 'character',
+		video: `${blob}/JJStraub-Diamanten.mp4`
+	},
+	{
+		src: `${blob}/JJStraub-Notruf.webp`,
+		width: 1440,
+		height: 800,
+		alt: 'JJ Straub: Sat.1 Notruf',
+		title: 'Sat.1 Notruf',
+		role: 'Besorgter Vater',
+		category: 'character',
+		video: `${blob}/JJStraub-Notruf-2.mp4`
+	},
+	{
+		src: `${blob}/JJStraub-Hermannplatz.webp`,
+		width: 1920,
+		height: 960,
+		alt: 'JJ Straub: Hermannplatz',
+		title: 'Hermannplatz',
+		category: 'character',
+		video: `${blob}/JJStraub-Herrmansplatz.mp4`
 	},
 	{
 		src: `${blob}/JJStraub_TJ2.webp`,
